@@ -1,0 +1,233 @@
+.footer {
+  .info {
+    background: #88b14b;
+
+    .wrapper {
+      padding-left: 35px;
+      padding-right: 55px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (min-width: $desktop) {
+        padding-left: 45px;
+        padding-right: 160px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-left: 55px;
+        padding-right: 240px;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        max-width: max-content;
+        margin-bottom: 35px;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 0;
+        }
+
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: #ffffff;
+          letter-spacing: 0;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .categories {
+        display: flex;
+        flex-direction: column;
+        max-width: max-content;
+        margin-bottom: 35px;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 0;
+        }
+
+        a {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          color: #ffffff;
+          letter-spacing: 0;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .address-share {
+        max-width: 180px;
+
+        .address {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: #ffffff;
+          letter-spacing: 0;
+          line-height: 24px;
+          margin-bottom: 35px;
+
+          @media (min-width: $tablet) {
+            margin-bottom: 70px;
+          }
+        }
+
+        .share {
+          display: flex;
+          flex-wrap: wrap;
+
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            color: #ffffff;
+            letter-spacing: 0;
+            width: 100%;
+            margin-bottom: 15px;
+          }
+
+          .twitter {
+            @mixin bg footer/twitter.svg;
+          }
+
+          .vk {
+            margin-left: 10px;
+            margin-right: 10px;
+
+            @mixin bg footer/vk.svg;
+          }
+
+          .facebook {
+            @mixin bg footer/facebook.svg;
+          }
+        }
+      }
+    }
+  }
+
+  .end {
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding-top: 35px;
+      padding-bottom: 50px;
+      padding-left: 22px;
+      padding-right: 35px;
+
+      @media (min-width: $tablet) {
+        padding-top: 25px;
+        padding-left: 35px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-top: 35px;
+        padding-bottom: 70px;
+      }
+
+      .owner {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        margin-bottom: 30px;
+        padding-right: 30px;
+
+        @media (min-width: 620px) {
+          margin-bottom: 0;
+        }
+
+        @media (min-width: $tablet) {
+          width: 48%;
+        }
+
+        @media (min-width: 850px) {
+          width: auto;
+        }
+      }
+
+      .creator-company {
+        display: block;
+        margin-bottom: 25px;
+
+        @media (min-width: 448px) {
+          width: min-content;
+          margin-left: auto;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        @media (min-width: 620px) {
+          width: auto;
+          margin-bottom: 0;
+        }
+
+        p {
+          width: max-content;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: #4a4a4a;
+          letter-spacing: 0;
+        }
+
+        &::before {
+          content: "";
+          margin-bottom: 20px;
+
+          @mixin bg footer/web-mechanica.svg;
+
+          @media (min-width: 448px) {
+            margin-bottom: 10px;
+          }
+
+          @media (min-width: 620px) {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      .creator-people {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #9b9b9b;
+        letter-spacing: 0;
+
+        @media (min-width: 448px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        @media (min-width: 620px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
