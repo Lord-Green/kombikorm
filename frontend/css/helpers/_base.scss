@@ -1,5 +1,16 @@
+@media (max-width: $desktop) {
+  @reset-global mobile;
+}
+
+@media (min-width: $desktop) {
+  @reset-global pc;
+}
+
 @media (max-width: $tablet) {
   .wrapper {
   }
 }
 
+body {
+  font-family: $RobotoSlab;
+}

@@ -1,0 +1,442 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 10px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+    padding-top: 27px;
+    max-width: 95.58%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 95.9%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 27px;
+    font-style: normal;
+    font-weight: 400;
+    color: #4a4a4a;
+    margin-left: 22px;
+    margin-right: auto;
+
+    &::before {
+      content: "";
+      display: inline-flex;
+      margin-right: 6px;
+
+      @mixin bg header/logo.svg;
+
+      @media (min-width: $tablet) {
+        @mixin bg header/logo--middle.svg;
+        margin-right: 9px;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      max-width: 28%;
+      margin-right: auto;
+      font-size: 24px;
+    }
+  }
+
+  .menu {
+    margin-left: 15px;
+    margin-right: 15px;
+
+    @media (min-width: $tablet) {
+      min-width: 50.5%;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    @media (min-width: $desktop) {
+      width: 100%;
+      max-width: 74%;
+      margin-left: 0;
+    }
+
+    .top-menu {
+      position: relative;
+      display: flex;
+
+      @media (min-width: $desktop) {
+        max-width: 77%;
+        margin-left: auto;
+      }
+
+      .gamburger {
+        height: 18px;
+        cursor: pointer;
+
+        @media (min-width: $tablet) {
+          display: none;
+        }
+      }
+    }
+
+    .top-menu ul {
+      position: absolute;
+      box-sizing: border-box;
+      margin-top: 57px;
+      width: 200px;
+      background: #fff;
+      z-index: 900;
+      flex-wrap: wrap;
+      display: none;
+      left: -5px;
+      background: #fe702b;
+      padding-left: 18px;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        background: none;
+        position: initial;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    .top-menu ul li {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+      transition: all 1.5s ease;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      color: #4a4a4a;
+      line-height: 1.9;
+
+      @media (min-width: $tablet) {
+        margin: 0;
+        width: auto;
+      }
+
+      &.more {
+        display: none;
+      }
+
+      .popup {
+        display: none;
+      }
+    }
+
+    .top-menu ul li:first-child {
+      margin-top: 15px;
+
+      @media (min-width: $tablet) {
+        margin-top: 0;
+      }
+    }
+
+    .top-menu ul li:nth-child(n+5) {
+      display: none;
+
+      @media (min-width: $desktop) {
+        display: block;
+      }
+    }
+
+    .top-menu ul li:last-child {
+      margin-bottom: 20px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 0;
+      }
+    }
+
+    .top-menu ul li a {
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.625;
+      color: #4a4a4a;
+      cursor: pointer;
+      transition: 2s ease;
+
+      &:focus {
+        color: white;
+      }
+    }
+
+    .icon-menu {
+      cursor: pointer;
+      display: block;
+    }
+
+    .sw-topper,
+    .sw-bottom,
+    .sw-footer {
+      display: block;
+      position: relative;
+      width: 23px;
+      height: 2px;
+      background: #88b14b;
+      border: none;
+      transition: transform 0.5s, top 0.2s;
+      transition-delay: 0.2s, 0s;
+    }
+
+    .sw-topper {
+      top: 0;
+    }
+
+    .sw-bottom {
+      top: 5px;
+    }
+
+    .sw-footer {
+      top: 10px;
+    }
+  }
+
+  .searh {
+    margin-right: 10px;
+
+    a {
+      @mixin bg header/searh.svg;
+
+      @media (min-width: $tablet) {
+        margin-left: auto;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      margin-right: 0;
+      width: 12%;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: 2.8vw;
+      width: auto;
+    }
+  }
+
+  .cart {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      background-color: #ef562d;
+      position: absolute;
+      right: -30px;
+      top: 100px;
+    }
+
+    .icon {
+      @mixin bg header/cart.svg;
+      position: relative;
+
+      @media (min-width: $tablet) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &::after {
+        content: "3";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #000000;
+        font-size: 16.25px;
+        color: #ffffff;
+        text-align: center;
+        left: 50%;
+        bottom: 50%;
+      }
+    }
+  }
+
+  .all-product {
+    width: 100%;
+    height: 60px;
+    background: #ef562d;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 3.6;
+    margin-top: 8px;
+
+    @media (min-width: $tablet) {
+      margin: 0;
+      margin-top: 22px;
+      margin-bottom: 22px;
+      width: 218px;
+      border-radius: 69px;
+      margin-right: auto;
+    }
+  }
+
+  .tel {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+
+      .number {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        line-height: 27px;
+        margin-right: 15px;
+
+        @media (min-width: $desktop) {
+          margin-right: 22px;
+        }
+      }
+
+      .call {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        line-height: 16px;
+        width: min-content;
+
+        @media (min-width: $desktop) {
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  .price {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #4a4a4a;
+      letter-spacing: 0;
+      line-height: 27px;
+      min-width: 183px;
+
+      &::before {
+        content: "";
+        margin-right: 12px;
+
+        @mixin bg header/price.svg;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: auto;
+    }
+  }
+
+  .animals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: $tablet) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .block {
+      height: 144px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33%;
+      border: 1px solid #e7e7e7;
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: auto;
+        border-top: none;
+        box-sizing: content-box;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-bottom: none;
+      }
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        border-left: none;
+        border-right: none;
+      }
+
+      @media (min-width: $tablet) {
+        height: 130px;
+        width: auto;
+        max-width: 12.6%;
+        border: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:last-child {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      .img {
+        margin-top: auto;
+        margin-bottom: auto;
+
+        @media (min-width: $tablet) {
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        margin-bottom: auto;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        color: #4a4a4a;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 0;
+          margin-top: auto;
+          margin-left: auto;
+          margin-right: auto;
+          height: 36px;
+          width: 100%;
+        }
+      }
+
+      @for $i from 1 to 7 {
+        &:nth-child($i) {
+          .img {
+            @mixin bg header/block-$i.svg;
+          }
+        }
+      }
+    }
+  }
+}

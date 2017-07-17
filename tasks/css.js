@@ -20,7 +20,7 @@ const base_plugins = [
   precss,
   assets({ loadPaths: ['img/'] }),
   sprites({ spritePath: './public/img' }),
-  fonts({ formats: 'woff2 woff', protocol: 'https:', display: 'swap' }),
+  // fonts({ formats: 'woff2 woff', protocol: 'https:', display: 'swap' }),
   postcss_css_reset,
   autoprefixer({ browsers: ['last 3 version'] }),
   mqpacker({ sort: true })
