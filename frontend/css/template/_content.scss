@@ -1,0 +1,133 @@
+.content {
+  flex: 1 0 auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $desktop) {
+    width: 91.8%;
+  }
+
+  @media (min-width: $big-desktop) {
+    max-width: $big-desktop;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 24px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  img {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  ul {
+    margin-bottom: 40px;
+
+    li {
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 14px;
+      color: #4a4a4a;
+      letter-spacing: 0;
+      line-height: 28px;
+      margin-bottom: 20px;
+
+      &::before {
+        @mixin bg content/ul--marker.svg;
+        content: "";
+        margin-right: 20px;
+      }
+    }
+  }
+
+  ol {
+    margin-bottom: 40px;
+    list-style-type: none;
+    counter-reset: num;
+
+    li {
+      font-weight: 400;
+      font-size: 14px;
+      color: #4a4a4a;
+      letter-spacing: 0;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &::before {
+        content: counter(num) '.';
+        counter-increment: num;
+        margin-right: 20px;
+        font-weight: 400;
+        font-size: 18px;
+        color: #ef562d;
+        letter-spacing: 0;
+        line-height: 28px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    table-layout: auto;
+    margin-bottom: 40px;
+
+    tr {
+      td {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        padding-left: 45px;
+        padding-top: 17px;
+        padding-bottom: 16px;
+        width: 290px;
+      }
+
+      &:first-child td {
+        font-weight: 700;
+      }
+
+      &:nth-child(2n+1) {
+        background: #f3f3f3;
+      }
+    }
+  }
+}
