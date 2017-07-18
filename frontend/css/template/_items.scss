@@ -1,0 +1,238 @@
+.items {
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    &.best {
+      color: #ef562d;
+    }
+
+    &.new {
+      color: #88b14b;
+    }
+  }
+
+  .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 50px;
+    border: 1px solid #cbcbcb;
+    border-radius: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #9b9b9b;
+    letter-spacing: 0;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #e7e7e7;
+    height: 403px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 35px;
+    align-items: flex-end;
+
+    @media (min-width: $tablet) {
+      height: 423px;
+      width: 33.3%;
+      padding-right: 27px;
+      padding-left: 27px;
+    }
+
+    @media (min-width: $desktop) {
+      height: 400px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    @media (min-width: $big-desktop) {
+      height: 423px;
+      padding-bottom: 22px;
+      width: 20%;
+    }
+
+    .text {
+      display: none;
+      flex-wrap: wrap;
+      margin-bottom: auto;
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        color: #ffffff;
+        letter-spacing: 0;
+        margin-bottom: 9px;
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        font-weight: 700;
+        font-size: 12px;
+        color: #ffffff;
+        letter-spacing: 0;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @mixin bg content/compare.svg;
+          content: "";
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .img {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+
+      &::before {
+        align-items: center;
+        text-align: center;
+        transform: rotate(-15deg);
+        font-style: normal;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0;
+        position: absolute;
+        left: -35px;
+        top: -23px;
+
+        @media (min-width: $tablet) {
+          left: 0;
+          top: -35px;
+        }
+      }
+    }
+
+    .title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      color: #4a4a4a;
+      letter-spacing: 0;
+      width: 100%;
+    }
+
+    .price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      color: #88b14b;
+      letter-spacing: 0;
+      width: calc(100% - 26px);
+      height: 50px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .cart {
+      @mixin bg content/cart.svg;
+      color: transparent;
+    }
+
+    &:hover {
+      background: #ef562d;
+      transition: 2s ease;
+
+      @media (min-width: $big-desktop) {
+        padding-left: 27px;
+        padding-right: 18px;
+      }
+
+      .price {
+        width: calc(100% - 118px);
+        align-items: center;
+      }
+
+      .title,
+      .price,
+      .cart {
+        color: #ffffff;
+      }
+
+      .img {
+        display: none;
+      }
+
+      .text {
+        display: flex;
+      }
+
+      .cart {
+        background: transparent;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0;
+        width: 118px;
+        height: 50px;
+        border: 1px solid #ffffff;
+        display: flex;
+        align-items: center;
+        border-radius: 60px;
+
+        p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}
+
+.items .item.circle .img img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.items .item.best .img::before {
+  content: "ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ";
+  font-size: 8px;
+
+  @mixin bg content/item--best.svg;
+  display: flex;
+
+  @media (min-width: $tablet) {
+    font-size: 9px;
+    font-weight: 400;
+  }
+}
+
+.items .item.new .img::before {
+  content: "НОВИНКА";
+  font-size: 12px;
+  padding-left: 9px;
+  box-sizing: border-box;
+
+  @mixin bg content/item--new.svg;
+  display: flex;
+}

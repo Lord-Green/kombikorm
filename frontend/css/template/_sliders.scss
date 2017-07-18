@@ -1,0 +1,126 @@
+.owl-carousel-for-1 {
+  .owl-item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 320px;
+    height: calc(192px + 40vw);
+    max-height: 430px;
+
+    @media (min-width: $tablet) {
+      max-height: 576px;
+      height: calc(123px + 40vw);
+    }
+
+    @media (min-width: $desktop) {
+      height: calc(126px + 44vw);
+      max-height: 810px;
+    }
+
+    @media (min-width: $big-desktop) {
+      height: 810px;
+    }
+
+    h2 {
+      position: absolute;
+      font-weight: 400;
+      font-size: 48px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 48px;
+      z-index: 1;
+      top: 40px;
+      left: 30px;
+      max-width: 81%;
+
+      @media (min-width: $tablet) {
+        top: 70px;
+        left: 50px;
+      }
+
+      @media (min-width: $big-desktop) {
+        top: 100px;
+        left: 70px;
+      }
+    }
+
+    picture {
+      width: 100%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .owl-nav {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: block;
+
+      .owl-prev {
+        background-color: rgba(136, 177, 75, 0.5);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -28px;
+        left: 25px;
+
+        &::before {
+          @mixin bg content/slider--arrows--prev.svg;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 15px;
+        }
+      }
+
+      .owl-next {
+        background-color: rgba(136, 177, 75, 0.5);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        margin-top: -28px;
+        right: 25px;
+
+        &::before {
+          @mixin bg content/slider--arrows--next.svg;
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 15px;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+      left: 45%;
+      bottom: 30px;
+      position: absolute;
+
+      .owl-dot {
+        span {
+          width: 15px;
+          height: 16px;
+          background: #e7e7e7;
+        }
+
+        &.active span,
+        &:hover span,
+        &:focus span {
+          background: #ef562d;
+        }
+      }
+    }
+  }
+}
