@@ -1,11 +1,13 @@
 @import "helpers/_variables.scss";
 @import "helpers/_base.scss";
 @import "helpers/_mixins.scss";
-// @import "template/_content.scss";
+@import "template/_content.scss";
 @import "template/_header.scss";
 @import "template/_footer.scss";
 @import "template/_items.scss";
 @import "template/_categories.scss";
 @import "template/_banners.scss";
 @import "template/_sliders.scss";
+@import "template/_filters.scss";
 @import "pages/_main.scss";
+@import "pages/_product.scss";
