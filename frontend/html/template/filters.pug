@@ -1,9 +1,75 @@
-.filters
-  .title
-    p Фильтры
-  .currents
-    .block: p Куры
-    .block: p Куры
-    a(href="#").reset Сбросить все фильтры
-  .filter
-    .title  Животные
+.catalog-sidebar-filters.filfers(data-cat-id="2" data-params="")
+  .catalog-filters__header
+    .heading Фильтры
+    a(href="#").form__clear x
+
+  
+  form(lpformnum="1")
+    input(type="hidden" value="test1/").product-category-url
+    input(type="hidden" value="").filter-parameters
+
+  <div class="filter_cont">
+    <div id="filters_list">
+        <div id="filters" class="catalog-filters">
+
+            <form class="group catalog-filters__section">
+                <div class="catalog-sidebar-filters__header param_group">
+                    <div class="contgr heading">Животные</div>
+                </div>
+                <div class="catalog-sidebar-filters__body">
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_1" id="check_1_1">                     
+                        <label for="check_1_1" class="cnts">
+                            <span class="param_list">Куры</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_2" id="check_1_2">
+                        <label for="check_1_2" class="cnts">
+                            <span class="param_list">Индейки</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_3" id="check_1_3">
+                        <label for="check_1_3" class="cnts">
+                            <span class="param_list">Коровы</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <form class="group catalog-filters__section">
+                <div class="catalog-sidebar-filters__header param_group">
+                    <div class="contgr heading">Категория</div>
+                </div>
+                <div class="catalog-sidebar-filters__body">
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="2_1" id="check_2_1">                     
+                        <label for="check_2_1" class="cnts">
+                            <span class="param_list">Бройлер</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="2_2" id="check_2_2">
+                        <label for="check_2_2" class="cnts">
+                            <span class="param_list">Несушка</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="2_3" id="check_2_3">
+                        <label for="check_2_3" class="cnts">
+                            <span class="param_list">Индейка</span>
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <a id="show__link" href="#">Показать</a>
+            <a id="reset__link" href="#">Сбросить</a>
+        </div>
+    </div>
+</div>
