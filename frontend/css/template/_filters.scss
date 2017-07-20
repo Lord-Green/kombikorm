@@ -1,5 +1,6 @@
 .filters {
   border: 1px solid #e7e7e7;
+  background: #e7e7e7;
 
   .catalog-filters__header {
     .button {
@@ -28,8 +29,6 @@
   }
 
   .filter_cont {
-    background: #e7e7e7;
-
     .current-filters {
       padding-left: 23px;
       padding-right: 23px;

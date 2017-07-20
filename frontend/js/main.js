@@ -10,9 +10,32 @@ function filters_button_mobile() {
   });
 }
 
+function preset_button_catalog() {
+  $(".catalog--header .presets a").click(function () {
+    if (!$(this).hasClass('current')) {
+      $(".catalog--header .presets a.current").removeClass('current');
+      $(this).addClass('current');
+    }
+  });
+}
+
+function view_mode_catalog() {
+  $(".content.catalog.catalog-page .click-filters .position a").click(function () {
+    if (!$(this).hasClass('active')) {
+      $(".content.catalog.catalog-page .click-filters .position a.active").removeClass('active');
+      $(".content.catalog.catalog-page .items").attr("class", "items " + $(this).attr("class"));
+      $(this).addClass('active');
+      // 
+
+    }
+  });
+}
+
 
 $(document).ready(function ($) {
   filters_button_mobile();
+  preset_button_catalog();
+  view_mode_catalog();
 });
 
 // $("#check_1_1").click(function () {
