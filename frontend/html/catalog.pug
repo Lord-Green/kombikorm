@@ -7,20 +7,20 @@ head
   link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')
   link(rel='stylesheet' href='styles/style.css')
   
-include template/header.pug 
+include template/header.pug
+.catalog--header
+  a(href="#").down Все товары 
+  h2.title Корм
 .content.catalog
-  .catalog--header
-    a(href="#").down Все товары
-    h2.title Корм
-    .click-filters
-      .sort
-        a(href="#").active дешёвые
-        a(href="#") дорогие
-        a(href="#") популярные      
-      .position
-        a(href="#").multi-colons
-        a(href="#").with-options
-        a(href="#").short-list
+  .click-filters
+    .sort
+      a(href="#").active дешёвые
+      a(href="#") дорогие
+      a(href="#") популярные      
+    .position
+      a(href="#").multi-colons
+      a(href="#").with-options
+      a(href="#").short-list
   include template/filters.pug
   .items
     .item.best.circle

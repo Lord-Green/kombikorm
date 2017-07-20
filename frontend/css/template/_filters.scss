@@ -71,6 +71,10 @@
       max-height: 0px;
       overflow: hidden;
 
+      @media (min-width: $tablet) {
+        max-height: none;
+      }
+
       #filters {
         .catalog-filters__section {
           margin-bottom: 35px;
