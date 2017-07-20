@@ -1,0 +1,195 @@
+.filters {
+  border: 1px solid #e7e7e7;
+
+  .catalog-filters__header {
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+      background: #88b14b;
+      font-weight: 400;
+      font-size: 16px;
+      color: #ffffff;
+      letter-spacing: 0;
+      cursor: pointer;
+
+      &::before {
+        @mixin bg content/filters--settings.svg;
+        content: "";
+        margin-right: 12px;
+      }
+
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .filter_cont {
+    background: #e7e7e7;
+
+    .current-filters {
+      padding-left: 23px;
+      padding-right: 23px;
+      padding-top: 30px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .filter {
+        display: flex;
+        align-items: center;
+
+        .name {
+          font-weight: 400;
+          font-size: 18px;
+          color: #4a4a4a;
+          letter-spacing: 0;
+          margin-right: 13px;
+        }
+
+        input {
+          @mixin bg content/close--gray.svg;
+          background-color: transparent;
+          border: none;
+        }
+      }
+
+      #reset-all-filters {
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        line-height: 27px;
+        width: 100%;
+      }
+    }
+
+    #filters_list {
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 1000ms ease;
+
+      #filters {
+        .catalog-filters__section {
+          margin-bottom: 35px;
+          padding-left: 23px;
+          padding-right: 23px;
+
+          .heading {
+            font-weight: 400;
+            font-size: 18px;
+            color: #4a4a4a;
+            letter-spacing: 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #9b9b9b;
+            margin-bottom: 10px;
+          }
+
+          .form-control {
+            position: relative;
+            margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            input[type=checkbox]:checked + label:after {
+              opacity: 1;
+            }
+
+            input[type=checkbox]:checked + label::before {
+              background: #ef562d;
+              border-color: #ef562d;
+            }
+
+            input {
+              width: 24px;
+              height: 24px;
+              position: absolute;
+            }
+
+            label {
+              cursor: pointer;
+              position: absolute;
+              width: 24px;
+              height: 24px;
+              top: 0;
+              left: 0;
+              // background: #ffffff;
+              // border: 1px solid #b7b7b7;
+              position: relative;
+              height: auto;
+
+              &::after {
+                @mixin bg content/filter--check--white.svg;
+                opacity: 0;
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 13px;
+                height: 14px;
+              }
+
+              &::before {
+                content: "";
+                display: block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                background: #ffffff;
+                border: 1px solid #b7b7b7;
+                box-sizing: border-box;
+              }
+            }
+
+            .param_list {
+              font-weight: 400;
+              font-size: 14px;
+              color: #4a4a4a;
+              letter-spacing: 0;
+              margin-left: 35px;
+              // min-width: max-content;
+              display: inline-flex;
+            }
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+
+        @media (min-width: $tablet) {
+          display: none;
+        }
+
+        #show__link,
+        #reset__link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          height: 60px;
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 0;
+          line-height: 21px;
+        }
+
+        #show__link {
+          color: #ffffff;
+          background: #ef562d;
+        }
+
+        #reset__link {
+          color: #4a4a4a;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}

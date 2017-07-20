@@ -1,14 +1,15 @@
-.catalog-sidebar-filters.filfers(data-cat-id="2" data-params="")
+.catalog-sidebar-filters.filters(data-cat-id="2" data-params="")
   .catalog-filters__header
-    .heading Фильтры
-    a(href="#").form__clear x
-
-  
-  form(lpformnum="1")
-    input(type="hidden" value="test1/").product-category-url
-    input(type="hidden" value="").filter-parameters
+    .button Фильтры
 
   <div class="filter_cont">
+    <div class="current-filters">
+      <div class="filter">
+        <p class="name">Куры</p>
+        <input type="button" id="uncheck_1_1">
+      </div>
+      a(href="product.html")#reset-all-filters Сбросить все фильтры
+    </div>
     <div id="filters_list">
         <div id="filters" class="catalog-filters">
 
@@ -37,6 +38,34 @@
                             <span class="param_list">Коровы</span>
                         </label>
                     </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_4" id="check_1_4">
+                        <label for="check_1_4" class="cnts">
+                            <span class="param_list">Свиньи</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_5" id="check_1_5">
+                        <label for="check_1_5" class="cnts">
+                            <span class="param_list">Козы</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_6" id="check_1_6">
+                        <label for="check_1_6" class="cnts">
+                            <span class="param_list">Утки, гуси, перепела Утки, гуси, перепела Утки, гуси, перепела</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="1_7" id="check_1_7">
+                        <label for="check_1_7" class="cnts">
+                            <span class="param_list">Кролики</span>
+                        </label>
+                    </div>
                 </div>
             </form>
 
@@ -62,14 +91,127 @@
                     <div class="form-control">
                         <input type="checkbox" name="cnts3" value="2_3" id="check_2_3">
                         <label for="check_2_3" class="cnts">
+                            <span class="param_list">Водоплавающая птица</span>
+                        </label>
+                    </div>
+
+                     <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="2_4" id="check_2_4">
+                        <label for="check_2_4" class="cnts">
                             <span class="param_list">Индейка</span>
+                        </label>
+                    </div>
+
+                     <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="2_5" id="check_2_5">
+                        <label for="check_2_5" class="cnts">
+                            <span class="param_list">Перепелка</span>
                         </label>
                     </div>
                 </div>
             </form>
 
-            <a id="show__link" href="#">Показать</a>
-            <a id="reset__link" href="#">Сбросить</a>
+            <form class="group catalog-filters__section">
+                <div class="catalog-sidebar-filters__header param_group">
+                    <div class="contgr heading">Вид продукта</div>
+                </div>
+                <div class="catalog-sidebar-filters__body">
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="3_1" id="check_3_1">                     
+                        <label for="check_3_1" class="cnts">
+                            <span class="param_list">БВМД</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="3_2" id="check_3_2">
+                        <label for="check_3_2" class="cnts">
+                            <span class="param_list">Комбикорм</span>
+                        </label>
+                    </div>                 
+                </div>
+            </form>  
+
+            <form class="group catalog-filters__section">
+                <div class="catalog-sidebar-filters__header param_group">
+                    <div class="contgr heading">Фазы кормления</div>
+                </div>
+                <div class="catalog-sidebar-filters__body">
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_1" id="check_4_1">                     
+                        <label for="check_4_1" class="cnts">
+                            <span class="param_list">Все</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_2" id="check_4_2">
+                        <label for="check_4_2" class="cnts">
+                            <span class="param_list">Молодняк</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_3" id="check_4_3">
+                        <label for="check_4_3" class="cnts">
+                            <span class="param_list">Рост</span>
+                        </label>
+                    </div>
+
+                     <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_4" id="check_4_4">
+                        <label for="check_4_4" class="cnts">
+                            <span class="param_list">Старт</span>
+                        </label>
+                    </div>
+
+                     <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_5" id="check_4_5">
+                        <label for="check_4_5" class="cnts">
+                            <span class="param_list">Финиш</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="4_5" id="check_4_5">
+                        <label for="check_4_5" class="cnts">
+                            <span class="param_list">Яйцекладка</span>
+                        </label>
+                    </div>
+                </div>
+            </form>  
+
+            <form class="group catalog-filters__section">
+                <div class="catalog-sidebar-filters__header param_group">
+                    <div class="contgr heading">Страна</div>
+                </div>
+                <div class="catalog-sidebar-filters__body">
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="5_1" id="check_5_1">                     
+                        <label for="check_5_1" class="cnts">
+                            <span class="param_list">Россия</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="5_2" id="check_5_2">
+                        <label for="check_5_2" class="cnts">
+                            <span class="param_list">Беларусь</span>
+                        </label>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="checkbox" name="cnts3" value="5_3" id="check_5_3">
+                        <label for="check_5_3" class="cnts">
+                            <span class="param_list">Польша/span>
+                        </label>
+                    </div>
+                </div>
+            </form>              
         </div>
+        .buttons
+          a(href="#")#show__link Показать
+          a(href="product.html")#reset__link Сбросить
     </div>
-</div>
+    
+  </div>

@@ -11,3 +11,18 @@ owl.owlCarousel({
     }
   }
 })
+
+$(".filters .catalog-filters__header .button").click(function () {
+  $(".filters #filters_list").css("max-height", "none");
+});
+
+$("#check_1_1").click(function () {
+  $("#check_1_1").attr("checked", "checked");
+});
+
+$("#uncheck_1_1").click(function () {
+  $("#check_1_1").removeAttr("checked");
+});
+
+// document.getElementById('uncheck_1_1').onclick = function () { document.getElementById('check_1_1').checked = "false" }
+
