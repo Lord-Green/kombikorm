@@ -26,10 +26,12 @@
       height: 200px;
       height: calc(120px + 25vw);
       max-height: 300px;
-      font-weight: 700;
+      font-weight: 500;
       font-size: 24px;
       color: #ffffff;
       letter-spacing: 0;
+      padding-left: 60px;
+      padding-right: 60px;
 
       &:nth-child(1) {
         background-image: radial-gradient(50% 100%, #bdd982 0%, #88b14b 100%);
@@ -47,6 +49,11 @@
         display: none;
       }
 
+      @media (min-width: $tablet) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
       @media (min-width: $big-desktop) {
         &:nth-child(4) {
           display: flex;
@@ -57,6 +64,10 @@
           display: flex;
           background-image: radial-gradient(50% 100%, rgba(85, 135, 162, 0.62) 3%, #5587a2 100%);
         }
+      }
+
+      p {
+        text-align: center;
       }
     }
   }

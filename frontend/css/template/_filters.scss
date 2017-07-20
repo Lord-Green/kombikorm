@@ -34,8 +34,7 @@
       padding-left: 23px;
       padding-right: 23px;
       padding-top: 30px;
-      margin-bottom: 40px;
-      display: flex;
+      display: none;
       flex-wrap: wrap;
 
       .filter {
@@ -71,13 +70,16 @@
     #filters_list {
       max-height: 0px;
       overflow: hidden;
-      transition: max-height 1000ms ease;
 
       #filters {
         .catalog-filters__section {
           margin-bottom: 35px;
           padding-left: 23px;
           padding-right: 23px;
+
+          &:first-child {
+            margin-top: 35px;
+          }
 
           .heading {
             font-weight: 400;

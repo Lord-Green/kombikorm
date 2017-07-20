@@ -14,6 +14,10 @@
       height: 60px;
       position: relative;
 
+      @media (min-width: $tablet) {
+        display: none;
+      }
+
       &::before {
         @mixin bg content/down.svg;
         content: "";
@@ -28,6 +32,10 @@
       color: #4a4a4a;
       letter-spacing: 0;
       text-align: center;
+
+      @media (min-width: $tablet) {
+        border-top: 1px solid #e7e7e7;
+      }
     }
 
     .click-filters {
@@ -60,7 +68,36 @@
       }
 
       .position {
+        @media (min-width: $tablet) {
+          .multi-colons {
+            @mixin bg content/catalog--multi-colons.svg;
+          }
+
+          .with-options {
+            @mixin bg content/catalog--with-options.svg;
+          }
+
+          .short-list {
+            @mixin bg content/catalog--short-list.svg;
+          }
+        }
       }
+    }
+  }
+
+  .categories {
+    margin-bottom: 60px;
+
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .danners {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: flex;
     }
   }
 }
