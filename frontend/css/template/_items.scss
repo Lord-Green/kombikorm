@@ -238,7 +238,7 @@
 }
 
 .items.with-options {
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     .item {
       width: 100%;
       flex-wrap: nowrap;
@@ -294,12 +294,13 @@
 }
 
 .items.short-list {
-  @media (min-width: $desktop) {
+  @media (min-width: $tablet) {
     .item {
       width: 100%;
       flex-wrap: nowrap;
       height: 70px;
       align-items: center;
+      position: relative;
 
       &:hover {
         padding-bottom: 0;
@@ -321,9 +322,13 @@
 
       .img {
         margin-left: 0;
-        margin-right: 40px;
+        margin-right: 25px;
         width: 50px;
         height: 50px;
+
+        @media (min-width: $desktop) {
+          margin-right: 40px;
+        }
 
         &::before {
           top: 0px;
@@ -343,6 +348,12 @@
         min-width: max-content;
         height: auto;
         margin-right: auto;
+        position: absolute;
+        right: 31%;
+
+        @media (min-width: $desktop) {
+          right: 25%;
+        }
       }
 
       .title {
@@ -351,7 +362,7 @@
       }
 
       .text {
-        margin-right: auto;
+        margin-top: auto;
 
         p {
           display: none;
@@ -361,7 +372,11 @@
           font-size: 0;
           margin-top: 0;
           width: 60px;
-          margin-right: 38px;
+          margin-right: 13px;
+
+          @media (min-width: $desktop) {
+            margin-right: 38px;
+          }
 
           &::before {
             margin-left: auto;
