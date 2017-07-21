@@ -71,12 +71,27 @@ function menu_gamburger() {
   });
 }
 
+function show_search_form() {
+  $('.header .search .img').click(function () {
+    if (!$(".header .search").hasClass('active')) {
+      $(".header .search").addClass('active');
+    }
+  });
+  $('.header .top-menu nav .close .button').click(function () {
+    if ($(".header .top-menu").hasClass('active')) {
+      $('.header .top-menu nav').css('display', 'none');
+      $(".header .top-menu").removeClass('active');
+    }
+  });
+}
+
 $(document).ready(function ($) {
   filters_button_mobile();
   preset_button_catalog();
   view_mode_catalog();
   sort_mode_catalog();
   menu_all_products();
+  show_search_form();
 
   if (currentWidthWindow < tabletSize) {
     menu_gamburger();

@@ -294,11 +294,75 @@
     }
   }
 
-  .searh {
+  .search {
     margin-right: 10px;
 
-    a {
+    &.active {
+      padding: 40px;
+      background: #ffffff;
+      border: 1px solid #e7e7e7;
+      box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.17);
+      position: absolute;
+      display: flex;
+      top: 0;
+      z-index: 100;
+      width: 100vw;
+      max-width: $big-desktop;
+      height: 100px;
+      left: 0;
+
+      @media (min-width: $tablet) {
+        left: -2.5%;
+      }
+
+      .input {
+        display: block;
+        position: absolute;
+        left: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #4a4a4a;
+        letter-spacing: 0;
+        border: none;
+        border-bottom: 1px solid #979797;
+        width: calc(100% - 100px);
+        padding-bottom: 5px;
+
+        @media (min-width: $desktop) {
+          left: 35px;
+        }
+      }
+
+      .submit {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        font-size: 0;
+        right: 20px;
+        background-color: transparent;
+        border: transparent;
+        z-index: 1;
+      }
+
+      .img {
+        position: absolute;
+        right: 35px;
+        z-index: 0;
+      }
+    }
+
+    .input {
+      display: none;
+    }
+
+    .submit {
+      display: none;
+    }
+
+    .img {
       @mixin bg header/searh.svg;
+      cursor: pointer;
 
       @media (min-width: $tablet) {
         margin-left: auto;

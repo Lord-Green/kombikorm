@@ -43,8 +43,10 @@
       .sw-bottom
       .sw-footer  
         
-  .searh
-    a(href="#")
+  form(action="/search/" method="get").search
+    input(type="search" placeholder="Что ищем?").input
+    input(type="submit").submit
+    .img
   a(href="#").cart
     .icon(data-label="3")
   .all-product 
