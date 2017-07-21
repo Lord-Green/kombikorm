@@ -1,7 +1,9 @@
 .header
   .logo Комбикорма
-  .menu
-    nav.top-menu
+  .top-menu
+    nav
+      .close
+        .button
       ul
         li 
           a(href="#") О компании
@@ -9,47 +11,116 @@
           a(href="#") Доставка
         li 
           a(href="#") Полезная инф.
-        li.more 
-          a(href="#") Ещё
+          ul
+            li 
+              a(href="#") О компании   О компании   О компании   О компании   О компании   О компании   О компании   О компании   О компании
+            li 
+              a(href="#") Доставка
+            li 
+              a(href="#") Полезная инф.  
+            li 
+              a(href="#") Вит.комплексы
+            li 
+              a(href="#") Контакты    
         li 
           a(href="#") Вит. комплексы   
         li 
           a(href="#") Контакты
+        li.more 
+          a(href="#") Ещё
+          ul
+            li 
+              a(href="#") Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   Вит. комплексы   
+            li 
+              a(href="#") Контакты
+      .tel
+        a(href="tel:89506270333").number 8 950 627 03 33
+        a(href="#").call Заказать звонок
+      a(href="#" download).price Скачать прайс   
 
-      .gamburger
-        .icon-menu
-          .sw-topper
-          .sw-bottom
-          .sw-footer  
+    .gamburger
+      .sw-topper
+      .sw-bottom
+      .sw-footer  
         
   .searh
     a(href="#")
   a(href="#").cart
-    .icon
-  a(href="#").all-product Все товары
+    .icon(data-label="3")
+  .all-product 
+    a(href="#") Все товары
+    .menu
+      .title
+        p Каталог
+        .close  
+      ul
+        li: a(href="#") Инкубация
+          ul
+            li: a(href="#") 1 1
+            li: a(href="#") 1 2
+        li: a(href="#")  Отопление
+          ul
+            li: a(href="#") 2 1
+            li: a(href="#") 2 2
+        li: a(href="#")  Системы автоматического поения
+          ul
+            li: a(href="#") Поилки ниппельные
+            li: a(href="#") Каплеуловители
+            li: a(href="#") Поилки чашечные
+            li: a(href="#") Поилки колокольные автоматические
+            li: a(href="#") Регуляторы давления и деаэраторы
+            li: a(href="#") Комплектующие и запчасти
+            li: a(href="#") Емкости для воды
+            li: a(href="#") Трубы
+            li: a(href="#") Шланги
+        li: a(href="#")  Ручное поение
+        li: a(href="#")  Кормление
+        li: a(href="#")  Содержание сельхоз. животных и птиц
+        li: a(href="#")  Стрижка
+        li: a(href="#")  Маркировка
+        li: a(href="#")  Молоко
+        li: a(href="#")  Убой и переработка
+        li: a(href="#")  Транспортировка
+        li: a(href="#")  Содержание домашних животных, птиц и рыб
+        li: a(href="#")  Термометры и гигрометры
+        li: a(href="#")  Ветеринария
+        li: a(href="#")  Литература
+        li: a(href="#")  Ловушки
+        li: a(href="#")  Садовый инвентарь
+        li: a(href="#")  Коптильники и сушилки
+        li: a(href="#")  Гидропонные установки
+
   .tel
     a(href="tel:89506270333").number 8 950 627 03 33
     a(href="#").call Заказать звонок
   a(href="#" download).price Скачать прайс     
-  .animals
-    a(href="#").block
-      .img
-      p Куры
-    a(href="#").block
-      .img
-      p Индейки
-    a(href="#").block
-      .img
-      p Коровы
-    a(href="#").block
-      .img
-      p Свиньи
-    a(href="#").block
-      .img
-      p Козы
-    a(href="#").block
-      .img
-      p Утки, гуси, перепела
-    a(href="#").block
-      .img
-      p Кролики
+  nav.animals
+    ul
+      li 
+        a(href="#")
+          img(src="img/content/block--1.svg")
+          p Куры
+      li
+        a(href="#")
+          img(src="img/content/block--2.svg")
+          p Индейки
+      li
+        a(href="#")
+          img(src="img/content/block--3.svg")
+          p Коровы
+      li
+        a(href="#")
+          img(src="img/content/block--4.svg")
+          p Свиньи
+      li
+        a(href="#")
+          img(src="img/content/block--5.svg")
+          p Козы
+      li
+        a(href="#")
+          img(src="img/content/block--6.svg")
+          p Утки, гуси, перепела
+      li
+        a(href="#")
+          img(src="img/content/block--7.svg")
+          p Кролики

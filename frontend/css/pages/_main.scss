@@ -87,12 +87,6 @@
     }
   }
 
-  .danners {
-    @media (min-width: $tablet) {
-      margin-top: -20px;
-    }
-  }
-
   .items .item {
     &:nth-child(n+5) {
       display: none;

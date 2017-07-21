@@ -4,10 +4,6 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: $desktop) {
-    width: 91.8%;
-  }
-
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
   }

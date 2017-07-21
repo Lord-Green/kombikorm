@@ -215,7 +215,7 @@
 }
 
 .items .item.best .img::before {
-  content: "ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ";
+  content: attr(data-label);
   font-size: 8px;
 
   @mixin bg content/item--best.svg;
@@ -228,7 +228,7 @@
 }
 
 .items .item.new .img::before {
-  content: "НОВИНКА";
+  content: attr(data-label);
   font-size: 12px;
   padding-left: 9px;
   box-sizing: border-box;
@@ -301,8 +301,22 @@
       height: 70px;
       align-items: center;
 
+      &:hover {
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+
       &.best .img::before {
         @mixin bg content/item--best--mini.svg;
+        font-size: 5.5px;
+        display: flex;
+      }
+
+      &.new .img::before {
+        @mixin bg content/item--new--mini.svg;
+        font-size: 7.1px;
+        display: flex;
+        padding-left: 6px;
       }
 
       .img {
@@ -344,8 +358,10 @@
         }
 
         a {
-          flex-wrap: wrap;
-          width: 90px;
+          font-size: 0;
+          margin-top: 0;
+          width: 60px;
+          margin-right: 38px;
 
           &::before {
             margin-left: auto;

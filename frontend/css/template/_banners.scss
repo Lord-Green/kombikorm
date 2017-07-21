@@ -4,6 +4,7 @@
 
   @media (min-width: $tablet) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .block {
@@ -12,6 +13,7 @@
 
     @media (min-width: $tablet) {
       height: 250px;
+      width: 50%;
     }
 
     @media (min-width: $desktop) {
@@ -46,6 +48,7 @@
         font-size: 16px;
         color: #ffffff;
         letter-spacing: 0;
+        border: 1px solid;
       }
     }
 
@@ -57,12 +60,22 @@
     }
 
     &.vitamins {
+      @media (min-width: $tablet) {
+        width: 33.5%;
+      }
+
       h2 {
         color: #000000;
       }
 
       .read-more {
         background: #ef562d;
+        border-color: #ef562d;
+
+        &:hover {
+          background: #ffffff;
+          color: #ef562d;
+        }
       }
 
       img {
@@ -76,7 +89,7 @@
 
     &.delivery {
       @media (min-width: $tablet) {
-        min-width: 66.5%;
+        width: 66.5%;
       }
 
       h2 {
@@ -85,6 +98,12 @@
 
       .read-more {
         background: #88b14b;
+        border-color: #88b14b;
+
+        &:hover {
+          background: #ffffff;
+          color: #88b14b;
+        }
       }
 
       img {
