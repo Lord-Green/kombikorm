@@ -221,7 +221,7 @@
     }
   }
 
-  .items {
+  .product-items {
     @media (min-width: $tablet) {
       max-width: calc(100% - 255px);
     }
@@ -235,7 +235,7 @@
     }
 
     &.multi-colons {
-      .item {
+      .product-item {
         @media (min-width: $tablet) {
           width: 50%;
         }

@@ -1,4 +1,4 @@
-.items {
+.product-items {
   @media (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@
     margin-right: auto;
   }
 
-  .item {
+  .product-item {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #e7e7e7;
@@ -208,13 +208,13 @@
   }
 }
 
-.items .item.circle .img img {
+.product-items .product-item.circle .img img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
-.items .item.best .img::before {
+.product-items .product-item.best .img::before {
   content: attr(data-label);
   font-size: 8px;
 
@@ -227,7 +227,7 @@
   }
 }
 
-.items .item.new .img::before {
+.product-items .product-item.new .img::before {
   content: attr(data-label);
   font-size: 12px;
   padding-left: 9px;
@@ -237,9 +237,9 @@
   display: flex;
 }
 
-.items.with-options {
+.product-items.with-options {
   @media (min-width: $tablet) {
-    .item {
+    .product-item {
       width: 100%;
       flex-wrap: nowrap;
       height: 150px;
@@ -293,9 +293,9 @@
   }
 }
 
-.items.short-list {
+.product-items.short-list {
   @media (min-width: $tablet) {
-    .item {
+    .product-item {
       width: 100%;
       flex-wrap: nowrap;
       height: 70px;

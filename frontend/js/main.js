@@ -26,7 +26,7 @@ function view_mode_catalog() {
   $(".content.catalog.catalog-page .click-filters .position a").click(function () {
     if (!$(this).hasClass('active')) {
       $(".content.catalog.catalog-page .click-filters .position a.active").removeClass('active');
-      $(".content.catalog.catalog-page .items").attr("class", "items " + $(this).attr("class"));
+      $(".content.catalog.catalog-page .product-items").attr("class", "product-items " + $(this).attr("class"));
       $(this).addClass('active');
     }
   });
