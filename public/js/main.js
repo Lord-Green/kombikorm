@@ -54,6 +54,18 @@ function menu_all_products() {
       $(".header .all-product").removeClass('active');
     }
   });
+
+  $(".header .all-product .menu ul li .submenu").click(function () {
+    $(this).parent("li").find("ul").css("display", "flex");
+  });
+
+  $(".header .all-product .menu ul li ul .subtitle .down").click(function () {
+    $(this).parent(".subtitle").parent("ul").css("display", "none");
+  });
+
+  $(".header .all-product .menu ul li ul .subtitle .close").click(function () {
+    $(".header .all-product .menu .title .close").trigger("click");
+  });
 }
 
 function menu_gamburger() {
@@ -68,6 +80,15 @@ function menu_gamburger() {
       $('.header .top-menu nav').css('display', 'none');
       $(".header .top-menu").removeClass('active');
     }
+  });
+  $(".header .top-menu nav ul li .submenu").click(function () {
+    $(this).parent("li").find("ul").css("display", "flex");
+  });
+  $(".header .top-menu nav ul li ul .subtitle .close").click(function () {
+    $(".header .top-menu nav .close .button").trigger("click");
+  });
+  $(".header .top-menu nav ul li ul .subtitle .down").click(function () {
+    $(this).parent(".subtitle").parent("ul").css("display", "none");
   });
 }
 
@@ -90,9 +111,11 @@ $(document).ready(function ($) {
   preset_button_catalog();
   view_mode_catalog();
   sort_mode_catalog();
-  menu_all_products();
   show_search_form();
 
+  if (currentWidthWindow < desktopSize) {
+    menu_all_products();
+  }
   if (currentWidthWindow < tabletSize) {
     menu_gamburger();
   }
