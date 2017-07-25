@@ -14,9 +14,9 @@ function filters_button_mobile() {
 }
 
 function preset_button_catalog() {
-  $(".catalog--header .presets a").click(function () {
+  $(".catalog-page--header .presets a").click(function () {
     if (!$(this).hasClass('current')) {
-      $(".catalog--header .presets a.current").removeClass('current');
+      $(".catalog-page--header .presets a.current").removeClass('current');
       $(this).addClass('current');
     }
   });
