@@ -23,19 +23,19 @@ function preset_button_catalog() {
 }
 
 function view_mode_catalog() {
-  $(".content.catalog.catalog-page .click-filters .position a").click(function () {
+  $(".content.catalog-page .click-filters .position a").click(function () {
     if (!$(this).hasClass('active')) {
-      $(".content.catalog.catalog-page .click-filters .position a.active").removeClass('active');
-      $(".content.catalog.catalog-page .product-items").attr("class", "product-items " + $(this).attr("class"));
+      $(".content.catalog-page .click-filters .position a.active").removeClass('active');
+      $(".content.catalog-page .product-items").attr("class", "product-items " + $(this).attr("class"));
       $(this).addClass('active');
     }
   });
 }
 
 function sort_mode_catalog() {
-  $(".content.catalog.catalog-page .click-filters .sort a").click(function () {
+  $(".content.catalog-page .click-filters .sort a").click(function () {
     if (!$(this).hasClass('active')) {
-      $(".content.catalog.catalog-page .click-filters .sort a.active").removeClass('active');
+      $(".content.catalog-page .click-filters .sort a.active").removeClass('active');
       $(this).addClass('active');
     }
   });
