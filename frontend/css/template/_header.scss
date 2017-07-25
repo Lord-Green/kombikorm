@@ -737,9 +737,18 @@
     display: none;
     align-items: center;
     margin-right: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     @media (min-width: $tablet) {
       display: flex;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 35px;
+      padding-right: 35px;
     }
 
     .number {

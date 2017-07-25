@@ -1,4 +1,4 @@
-.catalog--header {
+.catalog--page--header {
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
     margin-left: auto;
@@ -98,7 +98,7 @@
   }
 }
 
-.content.catalog {
+.content.catalog-page {
   width: 100%;
 
   @media (min-width: $tablet) {
@@ -281,5 +281,121 @@
   }
 }
 
-.catalog--content {
+.catalog--header {
+  width: 100%;
+
+  @media (min-width: $big-desktop) {
+    max-width: $big-desktop;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 32px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    text-align: center;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    margin-top: -1px;
+
+    @media (min-width: $tablet) {
+      text-align: left;
+      padding-left: 35px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-left: 40px;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-left: 50px;
+    }
+  }
 }
+
+.content.catalog {
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    // flex-wrap: wrap;
+  }
+
+  .filters-categories {
+    border: none;
+
+    @media (min-width: $desktop) {
+      padding-top: 10px;
+    }
+
+    #filters_list {
+      max-height: 0;
+      overflow: hidden;
+
+      @media (min-width: $tablet) {
+        max-height: none;
+        overflow: initial;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      // max-width: 255px;
+      min-width: 33%;
+      max-width: max-content;
+    }
+
+    // @media (min-width: $desktop) {
+    //   max-width: 340px;
+    // }
+
+    // @media (min-width: $big-desktop) {
+    //   max-width: 290px;
+    // }
+  }
+
+  .product-items-easy {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+
+    @media (min-width: $tablet) {
+      // max-width: calc(100% - 255px);
+      width: 100%;
+      max-width: none;
+    }
+
+    // @media (min-width: $desktop) {
+    //   max-width: calc(100% - 340px);
+    // }
+
+    // @media (min-width: $big-desktop) {
+    //   max-width: calc(100% - 290px);
+    // }
+
+    .block {
+      align-content: flex-start;
+
+      @media (min-width: $tablet) {
+        width: 50%;
+      }
+
+      @media (min-width: $big-desktop) {
+        width: 25%;
+      }
+    }
+  }
+
+  .danners {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      margin-top: 60px;
+    }
+  }
+}
+

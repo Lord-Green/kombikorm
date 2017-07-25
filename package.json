@@ -25,7 +25,8 @@
     "postcss-font-magician": "^2.0.0",
     "postcss-scss": "^1.0.2",
     "postcss-sprites": "^4.2.1",
-    "precss": "^2.0.0"
+    "precss": "^2.0.0",
+    "remodal": "^1.1.1"
   },
   "repository": "https://maxim-buslaev@bitbucket.org/maxim-buslaev/gulp-project.git"
 }

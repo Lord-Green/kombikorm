@@ -106,12 +106,30 @@ function show_search_form() {
   });
 }
 
+function accordion_button() {
+  var acc = document.getElementsByClassName("accordion"), i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    }
+  }
+
+}
+
 $(document).ready(function ($) {
   filters_button_mobile();
   preset_button_catalog();
   view_mode_catalog();
   sort_mode_catalog();
   show_search_form();
+  accordion_button();
 
   if (currentWidthWindow < desktopSize) {
     menu_all_products();

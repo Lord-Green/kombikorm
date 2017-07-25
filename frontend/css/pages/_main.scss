@@ -1,4 +1,6 @@
 .content.main {
+  width: 100%;
+
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
     margin-left: auto;

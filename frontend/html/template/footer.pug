@@ -40,3 +40,13 @@
     a(href="#").creator-company: p  Вебмеханика — создание сайта
     .creator-people     Дизайн сайта - Андрей Чикин<br>Frontend - Максим Люляев
 
+
+
+.remodal.callback(data-remodal-id="callback" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc")
+  form(name="contact" method="post" action="#")#contactform
+    input(type="text" placeholder="Имя *" required).name
+    input(type="tel" placeholder="Телефон *" required).tel
+    .personal-data
+      input(type="checkbox" id="i-agree-give-my-personal-data" required)
+      label(for="i-agree-give-my-personal-data"): p Я даю согласие на обработку моих персональных данных
+    input(type="submit" value="Заказать").submit

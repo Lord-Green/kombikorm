@@ -1,38 +1,41 @@
 doctype html
 html(lang="ru")
-head
-  meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-  meta(name="viewport" content="width=device-width")
-  title Главная  
-  link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')
-  link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
-  link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
-  link(rel='stylesheet' href='styles/style.css')
-  
-include template/header.pug 
-.content.main   
-  include template/sliders.pug
-  include template/banners.pug
-  include template/items.pug
-  include template/items.pug
-  include template/categories.pug
-  .about
-    h2 О компании
-    p.
-      В представленных товарах собран опыт итальянских и голландских фермеров, корейских и китайских птицеводов, английских, немецких и швейцарских специалистов, а так же производителей из других стран Европы и Азии, в том числе и России.
-      
-    p.
-      До 95% ассортимента товаров интернет-магазина BigFarmer имеется в наличии на складе. Все поставки товаров из Европы и Азии осуществляются напрямую от производителей без посредников, что позволяет предложить нашим клиентам конкурентные цены.
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width")
+    title Главная  
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')
+    link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
+    link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")
+    link(href="js/remodal/remodal.css" rel="stylesheet")
+    link(href="js/remodal/remodal-default-theme.css" rel="stylesheet")  
+    link(rel='stylesheet' href='styles/style.css')
+    
+  include template/header.pug 
+  .content.main   
+    include template/sliders.pug
+    include template/banners.pug
+    include template/items.pug
+    include template/items.pug
+    include template/categories.pug
+    .about
+      h2 О компании
+      p.
+        В представленных товарах собран опыт итальянских и голландских фермеров, корейских и китайских птицеводов, английских, немецких и швейцарских специалистов, а так же производителей из других стран Европы и Азии, в том числе и России.
+        
+      p.
+        До 95% ассортимента товаров интернет-магазина BigFarmer имеется в наличии на складе. Все поставки товаров из Европы и Азии осуществляются напрямую от производителей без посредников, что позволяет предложить нашим клиентам конкурентные цены.
 
-    p.
-      В нашей компании работают квалифицированные специалисты. Так как с каждым годом сельскохозяйственная отрасль развивается все больше, мы растем, и с каждым годом количество сотрудников увеличивается. На данный момент число сотрудников составляет 60 человек.
-    p.  
-      Складское помещение размером 2000 кв. метров, позволяет хранить большие запасы товара, поэтому отгрузка происходит в кратчайшие сроки, без задержек. Профессиональная слаженная работа персонала, наличие специализированной техники, адресная система хранения – все это позволяет качественно выполнять отправку заказов.
-    p. 
-      Наш интернет-магазин всегда открыт для покупателей! Оформление не составит никакого труда – всего несколько кликов мышкой! На следующий рабочий день мы уже отправим ваш заказ.
-    a(href="#").read-more Показать ещё
-include template/footer.pug
+      p.
+        В нашей компании работают квалифицированные специалисты. Так как с каждым годом сельскохозяйственная отрасль развивается все больше, мы растем, и с каждым годом количество сотрудников увеличивается. На данный момент число сотрудников составляет 60 человек.
+      p.  
+        Складское помещение размером 2000 кв. метров, позволяет хранить большие запасы товара, поэтому отгрузка происходит в кратчайшие сроки, без задержек. Профессиональная слаженная работа персонала, наличие специализированной техники, адресная система хранения – все это позволяет качественно выполнять отправку заказов.
+      p. 
+        Наш интернет-магазин всегда открыт для покупателей! Оформление не составит никакого труда – всего несколько кликов мышкой! На следующий рабочий день мы уже отправим ваш заказ.
+      a(href="#").read-more Показать ещё
+  include template/footer.pug
 
-script(src="js/jquery.min.js")
-script(src="js/owl.carousel/owl.carousel.min.js")
-script(src="js/main.js")
+  script(src="js/jquery.min.js")
+  script(src="js/owl.carousel/owl.carousel.min.js")
+  script(src="js/remodal/remodal.min.js")
+  script(src="js/main.js")

@@ -1,0 +1,146 @@
+.remodal-overlay {
+  background: none;
+}
+
+.remodal {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.17);
+  padding: 30px;
+  margin: 0;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .name,
+    .tel {
+      font-weight: 400;
+      font-size: 14px;
+      color: #4a4a4a;
+
+      &::-webkit-input-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        opacity: 1;
+      }
+
+      &::-moz-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        opacity: 1;
+      }
+
+      &:-moz-placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
+        opacity: 1;
+      }
+      border: none;
+      border-bottom: 1px solid #979797;
+      padding-bottom: 6px;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    .submit {
+      background: #ef562d;
+      border: 1px solid #ef562d;
+      border-radius: 60px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #ffffff;
+      letter-spacing: 0;
+      height: 50px;
+      width: 140px;
+    }
+
+    .personal-data {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      input {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        opacity: 0;
+      }
+
+      input[type=checkbox]:checked + label::before {
+        background: #ef562d;
+        border-color: #ef562d;
+      }
+
+      input[type=checkbox]:checked + label:after {
+        opacity: 1;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          min-width: 24px;
+          height: 24px;
+          background: #ffffff;
+          border: 1px solid #b7b7b7;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-right: 8px;
+        }
+
+        &::after {
+          @mixin bg content/filter--check--white.svg;
+          opacity: 0;
+          content: '';
+          position: absolute;
+          left: 6px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          color: #4a4a4a;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+
+.remodal.callback {
+  @media (min-width: $tablet) {
+    width: 580px;
+    position: absolute;
+    left: calc(50% - 280px);
+    top: 164px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 41%;
+    margin-left: -140px;
+    top: 160px;
+  }
+}
+
+.remodal-is-locked {
+  .header .tel {
+    background: #e7e7e7;
+  }
+}
