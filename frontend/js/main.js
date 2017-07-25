@@ -1,5 +1,5 @@
 var currentWidthWindow = document.documentElement.clientWidth;
-const tabletSize = 768, desktopSize = 1024;
+var tabletSize = 768, desktopSize = 1024;
 
 function filters_button_mobile() {
   $(".filters .catalog-filters__header .button").click(function () {

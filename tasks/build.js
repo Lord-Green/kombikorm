@@ -12,7 +12,7 @@ const
 gulp.task('js-optim', function () {
   return gulp.src('public/js/**/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('public/js'));
+    .pipe(gulp.dest('public/js/'));
 });
 
 gulp.task('сss-optim', function () {
