@@ -214,6 +214,10 @@
           margin-bottom: 0;
         }
 
+        @media (min-width: 850px) {
+          align-items: center;
+        }
+
         p {
           width: max-content;
           font-style: normal;
@@ -235,6 +239,10 @@
 
           @media (min-width: 620px) {
             margin-right: 20px;
+          }
+
+          @media (min-width: 850px) {
+            margin-bottom: 0;
           }
         }
       }

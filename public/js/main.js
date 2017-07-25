@@ -107,20 +107,15 @@ function show_search_form() {
 }
 
 function accordion_button() {
-  var acc = document.getElementsByClassName("accordion"), i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+  $('.accordion').click(function () {
+    if (!$(this).next().hasClass('active')) {
+      $(this).next().addClass('active');
+      $(this).next().css('display', 'flex');
+    } else {
+      $(this).next().removeClass('active');
+      $(this).next().css('display', 'none');
     }
-  }
-
+  });
 }
 
 $(document).ready(function ($) {

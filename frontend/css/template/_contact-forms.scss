@@ -111,6 +111,10 @@
           content: '';
           position: absolute;
           left: 6px;
+
+          @media (min-width: $tablet) {
+            top: 6px;
+          }
         }
 
         p {

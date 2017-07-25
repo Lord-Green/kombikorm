@@ -350,6 +350,8 @@
         margin-right: auto;
         position: absolute;
         right: 31%;
+        top: 50%;
+        margin-top: -10px;
 
         @media (min-width: $desktop) {
           right: 25%;

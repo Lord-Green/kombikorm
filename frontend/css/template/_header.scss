@@ -157,6 +157,7 @@
         @media (min-width: $tablet) {
           display: flex;
           justify-content: space-between;
+          position: relative;
         }
 
         li {
@@ -186,10 +187,12 @@
             ul {
               right: 0;
               max-width: calc(88vw);
+              width: 100%;
             }
 
             @media (min-width: $tablet) and (max-width: $desktop) {
               display: flex;
+              position: initial;
             }
           }
 
