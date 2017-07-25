@@ -508,31 +508,18 @@
     margin-top: 8px;
 
     @media (min-width: $desktop) {
-      &::before {
-        content: "";
-        background: #9b9b9b;
-        opacity: 0.4;
-        width: 130vw;
-        height: 300vh;
-        position: absolute;
-        left: -30vw;
-        top: -10vh;
-        z-index: 2;
-        display: none;
-      }
-
       &:hover {
-        &::before {
-          display: block;
-        }
-
-        a {
+        & > a {
           background: #ffffff;
           color: #ef562d;
         }
 
         .menu {
           max-height: none;
+        }
+
+        .fon {
+          display: block;
         }
       }
     }
@@ -556,6 +543,21 @@
 
       @media (min-width: $tablet) {
         border-radius: 60px;
+      }
+    }
+
+    .fon {
+      @media (min-width: $tablet) {
+        display: block;
+        background: #9b9b9b;
+        opacity: 0.4;
+        width: 130vw;
+        height: 300vh;
+        position: absolute;
+        left: -30vw;
+        top: -10vh;
+        z-index: 2;
+        display: none;
       }
     }
 
