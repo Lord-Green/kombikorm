@@ -45,12 +45,18 @@ function menu_all_products() {
   $(".header .all-product > a").click(function () {
     if (!$(".header .all-product").hasClass('active')) {
       $(".header .all-product .menu").css("max-height", "none");
+      $(".header .all-product .fon").css("display", "block");
       $(".header .all-product").addClass('active');
+    } else {
+      $(".header .all-product .menu").css("max-height", "0");
+      $(".header .all-product .fon").css("display", "none");
+      $(".header .all-product").removeClass('active');
     }
   });
   $('.header .all-product .menu .title .close').click(function () {
     if ($(".header .all-product").hasClass('active')) {
       $(".header .all-product .menu").css("max-height", "0");
+      $(".header .all-product .fon").css("display", "none");
       $(".header .all-product").removeClass('active');
     }
   });
@@ -129,10 +135,8 @@ $(document).ready(function ($) {
   show_search_form();
   accordion_button();
   tamingselect();
+  menu_all_products();
 
-  if (currentWidthWindow < desktopSize) {
-    menu_all_products();
-  }
   if (currentWidthWindow < tabletSize) {
     menu_gamburger();
   }

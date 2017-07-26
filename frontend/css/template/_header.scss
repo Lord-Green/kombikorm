@@ -5,20 +5,25 @@
   padding-top: 10px;
 
   @media (min-width: $tablet) {
-    position: relative;
+    // position: relative;
     padding-top: 27px;
     padding-bottom: 20px;
-    max-width: 95.58%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-right: 40px;
+    padding-left: 35px;
+    // max-width: 95.58%;
+    // margin-left: auto;
+    // margin-right: auto;
   }
 
-  @media (min-width: $desktop) {
-    max-width: 95.9%;
-  }
+  // @media (min-width: $desktop) {
+  //   max-width: 95.9%;
+  // }
 
   @media (min-width: $big-desktop) {
-    max-width: 1384px;
+    // max-width: 1384px;
+    max-width: $big-desktop;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .logo {
@@ -47,9 +52,11 @@
 
     @media (min-width: $tablet) {
       margin: 0;
-      max-width: 28%;
+      // max-width: 28%;
+      max-width: 30%;
       margin-right: auto;
       font-size: 24px;
+      order: 0;
     }
 
     @media (min-width: $big-desktop) {
@@ -66,6 +73,7 @@
       margin-left: 0;
       width: 65%;
       margin-right: auto;
+      order: 1;
     }
 
     @media (min-width: $desktop) {
@@ -378,6 +386,10 @@
   .search {
     margin-right: 10px;
 
+    @media (min-width: $tablet) {
+      order: 2;
+    }
+
     &.active {
       padding: 40px;
       background: #ffffff;
@@ -392,8 +404,8 @@
       height: 100px;
       left: 0;
 
-      @media (min-width: $tablet) {
-        left: -2.5%;
+      @media (min-width: $big-desktop) {
+        left: calc((100vw - 1440px)/2);
       }
 
       .input {
@@ -473,9 +485,12 @@
 
     @media (min-width: $tablet) {
       background-color: #ef562d;
-      position: absolute;
-      right: -21px;
-      top: 100px;
+      // position: absolute;
+      // right: -21px;
+      // top: 100px;
+      margin-left: auto;
+      margin-right: -40px;
+      order: 6;
     }
 
     .icon {
@@ -510,22 +525,30 @@
     height: 60px;
     margin-top: 8px;
 
-    @media (min-width: $desktop) {
-      &:hover {
-        & > a {
-          background: #ffffff;
-          color: #ef562d;
-        }
-
-        .menu {
-          max-height: none;
-        }
-
-        .fon {
-          display: block;
-        }
-      }
+    @media (min-width: $tablet) {
+      order: 3;
     }
+
+    @media (min-width: $desktop) {
+      position: relative;
+    }
+
+    // @media (min-width: $desktop) {
+    //   &:hover {
+    //     & > a {
+    //       background: #ffffff;
+    //       color: #ef562d;
+    //     }
+
+    //     .menu {
+    //       max-height: none;
+    //     }
+
+    //     .fon {
+    //       display: block;
+    //     }
+    //   }
+    // }
 
     & > a {
       text-decoration: none;
@@ -554,11 +577,11 @@
         display: block;
         background: #9b9b9b;
         opacity: 0.4;
-        width: 130vw;
-        height: 300vh;
-        position: absolute;
-        left: -30vw;
-        top: -10vh;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
         z-index: 2;
         display: none;
       }
@@ -575,14 +598,17 @@
       top: 0;
 
       @media (min-width: $tablet) {
-        width: 102vw;
-        left: -3vw;
+        width: 100vw;
+        // left: -3vw;
       }
 
       @media (min-width: $desktop) {
-        width: 100%;
+        // width: 100%;
+        width: calc(100vw - 40px);
+        max-width: 1400px;
         left: 0;
-        top: 170px;
+        // top: 170px;
+        top: 90px;
       }
 
       .title {
@@ -749,6 +775,7 @@
 
     @media (min-width: $tablet) {
       display: flex;
+      order: 4;
     }
 
     @media (min-width: $desktop) {
@@ -804,6 +831,8 @@
 
     @media (min-width: $tablet) {
       display: flex;
+      order: 5;
+      min-width: 0;
     }
 
     @media (min-width: $desktop) {
@@ -811,13 +840,17 @@
     }
 
     @media (min-width: $big-desktop) {
-      min-width: 42.6%;
+      // min-width: 42.6%;
       margin-right: 0;
     }
   }
 
   .animals {
     width: 100%;
+
+    @media (min-width: $tablet) {
+      order: 7;
+    }
 
     ul {
       display: flex;
@@ -860,7 +893,8 @@
         @media (min-width: $tablet) {
           height: 130px;
           width: auto;
-          max-width: 12.6%;
+          // max-width: 12.6%;
+          max-width: 13.5%;
           border: none;
           flex-direction: row;
           flex-wrap: wrap;
