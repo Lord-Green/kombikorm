@@ -11,8 +11,8 @@ html(lang="ru")
     
   include template/header.pug
   .catalog--header
-    h2.title Корм  
-  .content.catalog
+    h1.title Корм  
+  main.content.catalog
     include template/filters-categories.pug
     .product-items-easy
       a(href="#").block
@@ -56,9 +56,8 @@ html(lang="ru")
       a(href="#").block
         img(src="img/content/catalog/block--6.jpg" alt="")
         .text: p Инкубация 4
-  
-  .content.catalog
     include template/banners.pug
+    
 
   include template/footer.pug
 

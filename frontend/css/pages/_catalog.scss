@@ -329,7 +329,7 @@
 
   @media (min-width: $tablet) {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .filters-categories {
@@ -346,13 +346,16 @@
       @media (min-width: $tablet) {
         max-height: none;
         overflow: initial;
+        padding-left: 40px;
+        padding-right: 40px;
       }
     }
 
     @media (min-width: $tablet) {
       // max-width: 255px;
-      min-width: 33%;
-      max-width: max-content;
+      // min-width: 33%;
+      // max-width: max-content;
+      width: 33%;
     }
 
     // @media (min-width: $desktop) {
@@ -371,7 +374,8 @@
 
     @media (min-width: $tablet) {
       // max-width: calc(100% - 255px);
-      width: 100%;
+      // width: 100%;
+      width: 67%;
       max-width: none;
     }
 

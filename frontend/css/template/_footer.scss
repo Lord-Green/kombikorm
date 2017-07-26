@@ -74,7 +74,7 @@
         li {
           margin-bottom: 20px;
 
-          a  p {
+          a {
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -85,10 +85,10 @@
             &:hover {
               color: #000000;
             }
-          }
 
-          a img {
-            display: none;
+            img {
+              display: none;
+            }
           }
 
           &:last-child {
