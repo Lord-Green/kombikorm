@@ -1,0 +1,90 @@
+doctype html
+html(lang="ru")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width")
+    title Оформление заказа 
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')
+    link(href="js/remodal/remodal.css" rel="stylesheet")
+    link(href="js/remodal/remodal-default-theme.css" rel="stylesheet")  
+    link(rel='stylesheet' href='styles/style.css')
+  
+  include template/header.pug 
+  .content.order-page
+    .title-page Оформление заказа
+    .in-basket
+      .product-item
+        img(src="img/content/main/item--3.jpg")
+        a(href="#").title  БВМД Purina® 25 % ЭКО Универсальный для мясной птицы
+        .price 2 150 руб.
+      .product-item.circle
+        img(src="img/content/main/item--2.jpg")
+        a(href="#").title Комбикорм Purina® Финишер для водоплавающей птицыКомбикорм Purina® Финишер для водоплавающей птицыКомбикорм Purina® Финишер для водоплавающей птицыКомбикорм Purina® Финишер для водоплавающей птицыКомбикорм Purina® Финишер для водоплавающей птицы
+        .price  2 150 руб.
+      .product-item
+        img(src="img/content/main/item--4.jpg")
+        a(href="#").title БВМК Purina® 15 % ЭКО для яичной птицы
+        .price 2 150 руб.
+      .sum
+        .title  Итого  к оплате:
+        .value  22 150 руб.    
+    
+    form(name="contact" method="post").form-for-order
+      input(type="submit" value="Оформить заказ")
+      .content
+        .title Личные данные
+        input(type="text" placeholder="Фамилия *" required)
+        input(type="text" placeholder="Имя *" required)
+        input(type="text" placeholder="Отчество")
+        input(type="e-mail" placeholder="E-mail *" required)
+        input(type="tel" placeholder="Телефон *" required)
+        .personal-data
+          input(type="checkbox" id="subscribe-on-news" required)
+          label(for="subscribe-on-news"): p Подписаться на новости
+          input(type="checkbox" id="i-agree-give-my-personal-data" required)
+          label(for="i-agree-give-my-personal-data"): p Я даю согласие на обработку моих персональных данных
+        .title  Получение
+        input(type="text" placeholder="Адрес доставки")
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Доставка
+            option Англия
+            option Северная Ирландия
+            option Шотландия
+            option Уэльс
+            option Австралия
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Дата доставки
+            option 1
+            option 2
+            option 3
+            option 4
+            option 5
+            option 6    
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Время доставки
+            option 1 ч
+            option 2 ч
+            option 3 ч            
+        form(action="").select
+          label.label
+          select.turnintodropdown_demo2
+            option Город
+            option Берлин
+            option Мюнхен
+            option Гамбург
+            option Дрезден
+            option Дюссельдорф
+            option Кёльн               
+        
+    
+  include template/footer.pug
+
+  script(src="js/jquery.min.js")
+  script(src="js/remodal/remodal.min.js")
+  script(src="js/main.js")
