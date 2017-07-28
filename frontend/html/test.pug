@@ -10,7 +10,7 @@ html(lang="ru")
     link(rel='stylesheet' href='styles/style.css')
 
   include template/header.pug
-  main.content.test  
+  main.content 
     h1 О компании (h1)
     h2 Почему покупают у нас? (h2)
     h3 Причина №1 - ЭКОНОМИЯ СРЕДСТВ (h3)
@@ -30,7 +30,7 @@ html(lang="ru")
       li  Причина №3 - гарантия и ремонт
       li  Причина №4 - индивидуальный подход
     h2 Рекомендации по кормлению (таблица, h2)
-    table
+    table.content-table
       tr
         td  Возраст птицы
         td  Расход корма / гол

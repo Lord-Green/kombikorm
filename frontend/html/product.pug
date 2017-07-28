@@ -1,0 +1,204 @@
+doctype html
+html(lang="ru")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+    meta(name="viewport" content="width=device-width")
+    title Оформление заказа 
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')
+    link(href="js/remodal/remodal.css" rel="stylesheet")
+    link(href="js/remodal/remodal-default-theme.css" rel="stylesheet")
+    link(rel='stylesheet' href='js/lightslider/lightslider.css')  
+    link(rel='stylesheet' href='styles/style.css')
+  
+  include template/header.pug
+  .product-page--header
+    a(href="#").down Все товары
+    h1.title Комбикорм Purina® Стартер для яичной птицы  
+  
+  
+  main.content.product-page
+    .product-content
+        .slider-block
+          ul.slider-gallery
+            li(data-thumb="img/content/main/item--1.jpg").circle: img(src="img/content/main/item--1.jpg")
+            li(data-thumb="img/content/main/item--2.jpg").circle: img(src="img/content/main/item--2.jpg")
+            li(data-thumb="img/content/main/item--3.jpg"): img(src="img/content/main/item--3.jpg")
+            li(data-thumb="img/content/main/item--4.jpg"): img(src="img/content/main/item--4.jpg")
+            li(data-thumb="img/content/main/item--5.jpg").circle: img(src="img/content/main/item--5.jpg")
+        .short-description
+          .main-info
+            .price   2 150 руб.
+            a(href="#").buy  Купить
+            a(href="#").compare К сравнению
+          .add-info
+            .packaging Упаковка: 25 кг / 40 кг
+            .shelf-life Срок хранения: 6 месяцев
+          .add-function
+            .title Брошюра товара
+            a(href="#" download).download.pdf  Скачать pdf
+            a(href="#").print Распечатать
+        .tabs
+          .tab
+            button.accordion Описание
+            .content-accordion: p Текст
+          .tab
+            button.accordion Рекомендации по кормлению
+            .content-accordion
+              table.content-table
+                tr
+                  td  Возраст птицы
+                  td  Расход корма / гол
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+          .tab
+            button.accordion Основные показатели питательности
+            .content-accordion: p Текст текст текст
+          .tab
+            button.accordion Состав
+            .content-accordion
+              table.content-table
+                tr
+                  td  Возраст птицы
+                  td  Расход корма / гол
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+                tr
+                  td  0 - 5 недель
+                  td  6,50 кг за период
+                  td
+    section.product-items
+      h2 Похожие товары
+      
+      .product-item.best.circle
+        .img(data-label="ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ")
+          img(src="img/content/main/item--1.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          БМВК Purina 15% ЭКО для яичной птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      .product-item.new.circle
+        .img(data-label="НОВИНКА")
+          img(src="img/content/main/item--2.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          Комбикорм Purina® Финишер для водоплавающей птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      .product-item
+        .img
+          img(src="img/content/main/item--3.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          БВМД Purina® 25 % ЭКО Универсальный для мясной птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      .product-item
+        .img
+          img(src="img/content/main/item--4.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          Комбикорм Purina® Финишер для водоплавающей птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      .product-item.best
+        .img(data-label="ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ")
+          img(src="img/content/main/item--3.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          БВМД Purina® 25 % ЭКО Универсальный для мясной птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      
+      .product-item
+        .img
+          img(src="img/content/main/item--3.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          БВМД Purina® 25 % ЭКО Универсальный для мясной птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      .product-item
+        .img
+          img(src="img/content/main/item--4.jpg" alt="")
+        .text
+          p Обменная энергия, мин 12,55<br>(3000) МДж/кг (Ккал/кг)
+          p Сырой протеин, мин 16%
+          p Сырой жир, мин 2,5%
+          p Сырая клетчатка, мин 0,65%
+          p Фосфор, мин 0,4%
+          a(href="#") К сравнению
+        a(href="#").title.
+          Комбикорм Purina® Финишер для водоплавающей птицы
+        .price.
+          2 150 руб.
+        a(href="#").cart: p В корзину
+      a(href="#").read-more Показать ещё
+
+    include template/banners.pug
+  include template/footer.pug
+
+  script(src="js/jquery.min.js")
+  script(src="js/remodal/remodal.min.js")
+  script(src="js/lightslider/lightslider.js")
+  script(src="js/main.js")

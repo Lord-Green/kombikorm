@@ -116,18 +116,87 @@ function show_search_form() {
   });
 }
 
-function accordion_button() {
-  $('.accordion').click(function () {
-    if (!$(this).next().hasClass('active')) {
-      $(this).next().addClass('active');
+function catalog_accordion_button() {
+  $('.catalog .accordion').click(function () {
+    if (!$(this).hasClass('active')) {
+      $(this).addClass('active');
       $(this).next().css('display', 'flex');
     } else {
-      $(this).next().removeClass('active');
+      $(this).removeClass('active');
       $(this).next().css('display', 'none');
     }
   });
 }
 
+function light_slider_for_product_page() {
+  var slider_gallery = $('.slider-gallery').lightSlider({
+    gallery: true,
+    item: 1,
+    thumbItem: 5,
+    slideMargin: 0,
+    speed: 500,
+    auto: false,
+    loop: true,
+    onSliderLoad: function () {
+      $('.slider-gallery').removeClass('cS-hidden');
+    },
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          gallery: false,
+        }
+      }
+    ]
+  });
+}
+
+function product_accordion_button() {
+  if (currentWidthWindow >= tabletSize) {
+    var tab_elem = $(".product-page .tabs .tab:first"), tab_height = tab_elem.css('height');
+
+    // т.к. первый элемент у нас активный, то по умолчанию развернём его
+    tab_elem.find(".accordion:first").addClass('active');
+    tab_elem.find(".content-accordion:first").css('display', 'flex');
+    tab_elem.parent().css("height", Number.parseFloat(tab_elem.find(".content-accordion:first").css('height')) + Number.parseFloat(tab_height));
+
+    // у всех табов одинаковая изначально будет одинаковая высота, 
+    // чтобы она не менялась во время перестроения - зафиксируем её
+    for (var i = 0; i < 4; i++) {
+      tab_elem.css("max-height", tab_height);
+      tab_elem = tab_elem.next();
+    }
+  }
+
+  $('.product-page .tabs .tab').click(function () {
+    var element = $(this).find(".accordion"), content_height = 0;
+    // при разворачивании элемента необходимо увеличить высоту блока tabs,
+    // чтобы сохранить отступы
+    if (!element.hasClass('active')) {
+      // если есть другой открытый tab - сбросим его параметры
+      if (currentWidthWindow >= tabletSize) {
+        var temp_elem = $(".product-page .tabs .tab");
+        temp_elem.parent().css("height", tab_height);
+        for (var i = 0; i < 3; i++) {
+          temp_elem.find(".accordion").removeClass('active');
+          temp_elem.find(".content-accordion").css('display', 'none');
+          temp_elem = temp_elem.next();
+        }
+      }
+      element.addClass('active');
+      element.next().css('display', 'flex');
+      // возьмём высоту содержимого текущего аккордеона и добавим к ней высоту вкладки
+      if (currentWidthWindow >= tabletSize) {
+        content_height = element.next().css('height');
+        $(this).parent().css("height", Number.parseFloat(content_height) + Number.parseFloat(tab_height));
+      }
+    } else {
+      element.removeClass('active');
+      element.next().css('display', 'none');
+      if (currentWidthWindow >= tabletSize) { $(this).parent().css("height", tab_height); }
+    }
+  });
+}
 
 
 
@@ -137,9 +206,12 @@ $(document).ready(function ($) {
   view_mode_catalog();
   sort_mode_catalog();
   show_search_form();
-  accordion_button();
+  catalog_accordion_button();
+  product_accordion_button();
   select_button();
   menu_all_products();
+  light_slider_for_product_page();
+
 
   if (currentWidthWindow < tabletSize) {
     menu_gamburger();
@@ -155,6 +227,8 @@ $(document).ready(function ($) {
 // });
 
 // document.getElementById('uncheck_1_1').onclick = function () { document.getElementById('check_1_1').checked = "false" }
+
+
 
 var owl = $('.owl-carousel-for-1');
 owl.owlCarousel({
@@ -282,3 +356,4 @@ function select_button() {
     }
   });
 }
+
