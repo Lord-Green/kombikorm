@@ -153,7 +153,7 @@ function light_slider_for_product_page() {
 
 function product_accordion_button() {
   if (currentWidthWindow >= tabletSize) {
-    var tab_elem = $(".product-page .tabs .tab:first"), tab_height = tab_elem.css('height');
+    var tab_elem = $(".product-page .tabs .tab:first"), tab_height = tab_elem.parent().css('height');
 
     // т.к. первый элемент у нас активный, то по умолчанию развернём его
     tab_elem.find(".accordion:first").addClass('active');
@@ -163,7 +163,7 @@ function product_accordion_button() {
     // у всех табов одинаковая изначально будет одинаковая высота, 
     // чтобы она не менялась во время перестроения - зафиксируем её
     for (var i = 0; i < 4; i++) {
-      tab_elem.css("max-height", tab_height);
+      tab_elem.css("height", tab_height);
       tab_elem = tab_elem.next();
     }
   }
