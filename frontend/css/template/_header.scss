@@ -566,15 +566,18 @@
       border: 1px solid #ef562d;
       z-index: 3;
       position: relative;
-      transition: 1.5s ease;
 
       @media (min-width: $tablet) {
         border-radius: 60px;
       }
 
-      &:hover {
-        background: #ffffff;
-        color: #ef562d;
+      @media (min-width: $desktop) {
+        transition: 1.5s ease;
+
+        &:hover {
+          background: #ffffff;
+          color: #ef562d;
+        }
       }
     }
 
