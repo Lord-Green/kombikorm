@@ -132,6 +132,12 @@
 
     input[type="submit"] {
       order: 1;
+      transition: 1.5s ease;
+
+      &:hover {
+        color: #ef562d;
+        background: #ffffff;
+      }
     }
   }
 }

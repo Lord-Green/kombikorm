@@ -201,4 +201,25 @@ html(lang="ru")
   script(src="js/jquery.min.js")
   script(src="js/remodal/remodal.min.js")
   script(src="js/lightslider/lightslider.js")
+  script.
+      var slider_gallery = $('.slider-gallery').lightSlider({
+      gallery: true,
+      item: 1,
+      thumbItem: 5,
+      slideMargin: 0,
+      speed: 500,
+      auto: false,
+      loop: true,
+      onSliderLoad: function () {
+        $('.slider-gallery').removeClass('cS-hidden');
+      },
+      responsive: [
+        {
+          breakpoint: 767,
+          settings: {
+            gallery: false,
+          }
+        }
+      ]
+    });
   script(src="js/main.js")

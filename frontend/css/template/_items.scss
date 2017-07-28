@@ -34,10 +34,20 @@
     font-weight: 400;
     font-size: 16px;
     color: #9b9b9b;
+    // color: #ffffff;
+    background: #ffffff;
+    // background: #ef562d;
     letter-spacing: 0;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    transition: 1.5s ease;
+
+    &:hover {
+      color: #ffffff;
+      background: #ef562d;
+      border-color: #ef562d;
+    }
   }
 
   .product-item {
@@ -101,6 +111,14 @@
         display: flex;
         align-items: center;
 
+        &:hover {
+          text-decoration: underline;
+
+          &::before {
+            @mixin bg content/compare--white.svg;
+          }
+        }
+
         &::before {
           @mixin bg content/compare.svg;
           content: "";
@@ -140,6 +158,10 @@
       color: #4a4a4a;
       letter-spacing: 0;
       width: 100%;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .price {
@@ -157,11 +179,20 @@
     .cart {
       @mixin bg content/cart.svg;
       color: transparent;
+
+      &:hover {
+        background: #ffffff !important;
+        transition: background 1.5s ease;
+
+        p {
+          color: #ef562d;
+        }
+      }
     }
 
     &:hover {
       background: #ef562d;
-      transition: 2s ease;
+      // transition: 1.5s ease;
 
       @media (min-width: $big-desktop) {
         padding-left: 27px;

@@ -69,6 +69,7 @@
         top: 50%;
         margin-top: -28px;
         left: 25px;
+        transition: 1.5s ease;
 
         &::before {
           @mixin bg content/slider--arrows--prev.svg;
@@ -88,6 +89,7 @@
         top: 50%;
         margin-top: -28px;
         right: 25px;
+        transition: 1.5s ease;
 
         &::before {
           @mixin bg content/slider--arrows--next.svg;
@@ -114,6 +116,7 @@
           width: 15px;
           height: 16px;
           background: #e7e7e7;
+          transition: 1.5s ease;
         }
 
         &.active span,

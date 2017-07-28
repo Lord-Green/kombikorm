@@ -86,6 +86,12 @@
         border-bottom: none;
       }
 
+      @media (min-width: $tablet) {
+        width: 41%;
+        border-top: none;
+        border-bottom: none;
+      }
+
       @media (min-width: $big-desktop) {
         width: 52%;
         display: flex;
@@ -122,15 +128,27 @@
           border-radius: 60px;
           font-weight: 400;
           font-size: 16px;
-          color: #ef562d;
+          color: #ffffff;
           letter-spacing: 0;
-          background: #ffffff;
+          background: #ef562d;
           margin-bottom: 25px;
+          transition: 1.5s ease;
 
           &::before {
-            @mixin bg content/cart.svg;
+            @mixin bg header/cart--white.svg;
             content: "";
             margin-right: 12px;
+          }
+
+          &:hover {
+            background: #ffffff;
+            color: #ef562d;
+
+            &::before {
+              @mixin bg header/cart.svg;
+              transition-delay: 0.5s;
+              transition: 0.5 ease;
+            }
           }
         }
 
@@ -141,6 +159,11 @@
           font-size: 12px;
           color: #4a4a4a;
           letter-spacing: 0;
+          transition: 1.5s ease;
+
+          &:hover {
+            color: #ef562d;
+          }
 
           &::before {
             @mixin bg content/compare.svg;
@@ -239,6 +262,7 @@
           color: #4a4a4a;
           letter-spacing: 0;
           line-height: 27px;
+          transition: 1.5s ease;
 
           &::before {
             margin-right: 12px;
@@ -250,6 +274,10 @@
               content: "";
             }
           }
+
+          &:hover {
+            color: #ef562d;
+          }
         }
 
         .print {
@@ -260,11 +288,16 @@
           color: #4a4a4a;
           letter-spacing: 0;
           line-height: 27px;
+          transition: 1.5s ease;
 
           &::before {
             @mixin bg content/print.svg;
             content: "";
             margin-right: 12px;
+          }
+
+          &:hover {
+            color: #ef562d;
           }
         }
       }
@@ -286,6 +319,16 @@
 
           &:first-child {
             border-left: 1px solid #e7e7e7;
+          }
+
+          &:hover {
+            .accordion {
+              color: #ef562d;
+
+              &.active {
+                color: #ffffff;
+              }
+            }
           }
         }
 
@@ -309,6 +352,7 @@
           padding-bottom: 25px;
           padding-left: 23px;
           padding-right: 23px;
+          transition: 1.5s ease;
 
           @media (min-width: $tablet) {
             height: 100%;
@@ -390,6 +434,16 @@
         width: 56%;
         padding-top: 60px;
         padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @media (min-width: $desktop) {
+        width: 59%;
+        padding-top: 80px;
+        padding-bottom: 35px;
+        padding-left: 45px;
+        padding-right: 45px;
       }
 
       @media (min-width: $big-desktop) {
@@ -406,6 +460,18 @@
           max-height: 300px;
           overflow: hidden;
 
+          @media (min-width: $tablet) {
+            max-height: 320px;
+          }
+
+          @media (min-width: $desktop) {
+            max-height: 400px;
+          }
+
+          @media (min-width: $big-desktop) {
+            max-height: 420px;
+          }
+
           &.circle img {
             border-radius: 50%;
           }
@@ -421,6 +487,16 @@
             @media (min-width: $tablet) {
               max-width: 320px;
               max-height: 320px;
+            }
+
+            @media (min-width: $desktop) {
+              max-width: 400px;
+              max-height: 400px;
+            }
+
+            @media (min-width: $big-desktop) {
+              max-width: 420px;
+              max-height: 420px;
             }
           }
         }

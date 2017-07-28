@@ -36,6 +36,7 @@
     color: #4a4a4a;
     margin-left: 22px;
     margin-right: auto;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -322,6 +323,7 @@
 
               &:hover a {
                 background: none;
+                color: #ef562d;
               }
 
               a {
@@ -329,6 +331,7 @@
                 font-size: 14px;
                 color: #4a4a4a;
                 letter-spacing: 0;
+                transition: 1s ease;
               }
 
               @media (min-width: $tablet) {
@@ -460,6 +463,10 @@
       @mixin bg header/searh.svg;
       cursor: pointer;
 
+      &:hover {
+        @mixin bg header/searh--orange.svg;
+      }
+
       @media (min-width: $tablet) {
         margin-left: auto;
       }
@@ -536,6 +543,13 @@
       position: relative;
     }
 
+    &.active {
+      a {
+        background: #ffffff;
+        color: #ef562d;
+      }
+    }
+
     & > a {
       text-decoration: none;
       font-style: normal;
@@ -552,9 +566,15 @@
       border: 1px solid #ef562d;
       z-index: 3;
       position: relative;
+      transition: 1.5s ease;
 
       @media (min-width: $tablet) {
         border-radius: 60px;
+      }
+
+      &:hover {
+        background: #ffffff;
+        color: #ef562d;
       }
     }
 
@@ -777,9 +797,14 @@
       letter-spacing: 0;
       line-height: 27px;
       margin-right: 15px;
+      transition: 1.5s ease;
 
       @media (min-width: $desktop) {
         margin-right: 22px;
+      }
+
+      &:hover {
+        color: #ef562d;
       }
     }
 
@@ -791,9 +816,14 @@
       letter-spacing: 0;
       line-height: 16px;
       width: min-content;
+      transition: 1.5s ease;
 
       @media (min-width: $desktop) {
         width: max-content;
+      }
+
+      &:hover {
+        color: #ef562d;
       }
     }
   }
@@ -808,6 +838,7 @@
     letter-spacing: 0;
     line-height: 27px;
     min-width: 195px;
+    transition: 1.5s ease;
 
     &::before {
       @mixin bg header/price.svg;
@@ -828,6 +859,10 @@
     @media (min-width: $big-desktop) {
       // min-width: 42.6%;
       margin-right: 0;
+    }
+
+    &:hover {
+      color: #ef562d;
     }
   }
 
@@ -911,6 +946,7 @@
           img {
             margin-top: auto;
             margin-bottom: auto;
+            transition: 1s ease;
 
             @media (min-width: $tablet) {
               margin: 0 auto;
@@ -925,6 +961,7 @@
             font-style: normal;
             font-weight: 700;
             color: #4a4a4a;
+            transition: 1s ease;
 
             @media (min-width: $tablet) {
               margin-top: auto;

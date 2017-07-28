@@ -49,6 +49,7 @@
             font-size: 14px;
             color: #ffffff;
             letter-spacing: 0;
+            transition: color 1.5s ease;
 
             &:hover {
               color: #000000;
@@ -82,6 +83,7 @@
             color: #ffffff;
             letter-spacing: 0;
             display: inline-flex;
+            transition: color 1.5s ease;
 
             &:hover {
               color: #000000;
@@ -119,6 +121,12 @@
           display: flex;
           flex-wrap: wrap;
 
+          &:hover {
+            p {
+              color: #ef562d;
+            }
+          }
+
           p {
             font-style: normal;
             font-weight: 400;
@@ -127,10 +135,16 @@
             letter-spacing: 0;
             width: 100%;
             margin-bottom: 15px;
+            cursor: pointer;
+            transition: 0.5s ease;
           }
 
           .twitter {
             @mixin bg footer/twitter.svg;
+
+            &:hover {
+              @mixin bg footer/twitter--orange.svg;
+            }
           }
 
           .vk {
@@ -138,10 +152,18 @@
             margin-right: 10px;
 
             @mixin bg footer/vk.svg;
+
+            &:hover {
+              @mixin bg footer/vk--orange.svg;
+            }
           }
 
           .facebook {
             @mixin bg footer/facebook.svg;
+
+            &:hover {
+              @mixin bg footer/facebook--orange.svg;
+            }
           }
         }
       }
@@ -185,6 +207,12 @@
         letter-spacing: 0;
         margin-bottom: 30px;
         padding-right: 30px;
+        transition: color 1.5s ease;
+        cursor: pointer;
+
+        &:hover {
+          color: #ef562d;
+        }
 
         @media (min-width: 620px) {
           margin-bottom: 0;
@@ -219,6 +247,12 @@
           align-items: center;
         }
 
+        &:hover {
+          p {
+            color: #ef562d;
+          }
+        }
+
         p {
           width: max-content;
           font-style: normal;
@@ -226,6 +260,7 @@
           font-size: 14px;
           color: #4a4a4a;
           letter-spacing: 0;
+          transition: color 1.5s ease;
         }
 
         &::before {
@@ -255,6 +290,15 @@
         line-height: 1.5;
         color: #9b9b9b;
         letter-spacing: 0;
+
+        span {
+          transition: color 1.5s ease;
+          cursor: pointer;
+
+          &:hover {
+            color: #ef562d;
+          }
+        }
 
         @media (min-width: 448px) {
           margin-left: auto;

@@ -38,4 +38,18 @@ html(lang="ru")
   script(src="js/jquery.min.js")
   script(src="js/owl.carousel/owl.carousel.min.js")
   script(src="js/remodal/remodal.min.js")
+  script.
+    var owl = $('.owl-carousel-for-1');
+    owl.owlCarousel({
+      margin: 10,
+      nav: true,
+      navText: true,
+      loop: true,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        }
+      }
+    })
   script(src="js/main.js")
