@@ -546,7 +546,8 @@
               padding-bottom: 20px;
             }
 
-            &.active {
+            &.active,
+            &:hover {
               opacity: 0.5;
             }
 
