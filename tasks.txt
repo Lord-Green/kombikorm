@@ -1,0 +1,11 @@
+1. Пиксельное несоответствие - необходимо проверить через наложение превью
+    https://webmechanica.slack.com/files/a_chikin/F6FREH6RH/screen_shot_2017-07-31_at_17.02.26.png
+
+2. Корзина не соответствует макету
+    https://webmechanica.slack.com/files/a_chikin/F6GQFTNRL/screen_shot_2017-07-31_at_17.06.50.png
+
+3. Товары при наведении - цена и кнопка должны быть прижаты к низу
+    https://webmechanica.slack.com/files/a_chikin/F6FRKMQ03/screen_shot_2017-07-31_at_17.11.30.png
+
+4. Мобильные меню - сделать для перехода активным весь пункт
+    https://webmechanica.slack.com/files/a_chikin/F6G04B2EQ/screen_shot_2017-07-31_at_17.16.21.png

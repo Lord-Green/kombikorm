@@ -185,7 +185,13 @@ function cart_remove_item() {
   });
 }
 
-function cart_all_items() {
+function cart_amount_items() {
+  var cart = $(".header .cart .cart-content"), i = 0;
+
+  cart.find(".item").each(function () {
+    i += parseFloat($(this).find('.amount .value').text());
+  });
+  cart.parent().find('.icon').attr("data-label", i);
 
 }
 
@@ -198,9 +204,6 @@ function product_slider_correct_thumb() {
     i++;
   });
 }
-
-
-
 
 function product_accordion_button() {
   if (currentWidthWindow >= tabletSize) {
@@ -381,15 +384,13 @@ function select_button() {
 
 $(document).ready(function ($) {
   /*********    НА ВСЕХ СТРАНИЦАХ    *********/
-  if (currentWidthWindow < tabletSize) {
-    menu_gamburger();
-  }
+  menu_gamburger();
   show_search_form();
   menu_all_products();
   cart_button();
   cart_change_value();
   cart_remove_item();
-  cart_all_items();
+  cart_amount_items();
   select_button();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
