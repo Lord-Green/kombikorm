@@ -153,6 +153,42 @@ function cart_button() {
   });
 }
 
+function cart_change_value() {
+  var cart_content = $('.cart .cart-content'), amount_items = $('.cart .icon');
+
+  cart_content.find(".item .text .amount .plus").click(function () {
+    var current_element = $(this).parent().find('.value'),
+      current_value = parseFloat(current_element.text());
+    current_element.text(current_value + 1);
+  });
+
+  cart_content.find(".item .text .amount .minus").click(function () {
+    var current_element = $(this).parent().find('.value'),
+      current_value = parseFloat(current_element.text());
+    if (current_value == 1) {
+      $(this).parent().parent().find(".close").trigger("click");
+    } else { current_element.text(current_value - 1); }
+  });
+}
+
+function cart_remove_item() {
+  $(".cart .cart-content .item .text .close").click(function () {
+    $(this).parent().parent().remove();
+    //если удалили все товары из корзины - закрываем
+    if ($(".header .cart .cart-content .item").length == 0) {
+      $(".header .cart").removeClass('active');
+      $(".header .cart .cart-content").css('display', 'none');
+      $(".header .cart .cart-content .title").after(function () {
+        return '<p class="empty">Корзина пуста</div>';
+      });
+    }
+  });
+}
+
+function cart_all_items() {
+
+}
+
 function product_slider_correct_thumb() {
   var i = 0;
   $(".slider-block .slider-gallery li").each(function () {
@@ -344,21 +380,39 @@ function select_button() {
 }
 
 $(document).ready(function ($) {
+  /*********    НА ВСЕХ СТРАНИЦАХ    *********/
   if (currentWidthWindow < tabletSize) {
     menu_gamburger();
   }
   show_search_form();
   menu_all_products();
   cart_button();
+  cart_change_value();
+  cart_remove_item();
+  cart_all_items();
+  select_button();
+  /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
+
+
+  /*********    КАТАЛОГ С КАТЕГОРИЯМИ       ********/
+  catalog_accordion_button();
+  /*********   END: КАТАЛОГ С КАТЕГОРИЯМИ   ********/
+
+
+  /*********    КАТАЛОГ С ТОВАРАМИ    *********/
   filters_button_mobile();
   preset_button_catalog();
   view_mode_catalog();
   sort_mode_catalog();
-  catalog_accordion_button();
+  /*********    END:  КАТАЛОГ С ТОВАРАМИ   *********/
+
+
+  /*********    СТРАНИЦА ПРОДУКТА       ********/
   product_accordion_button();
   product_slider_correct_thumb();
-  select_button();
-  // light_slider_for_product_page();
+  // light_slider_for_product_page();  
+  /*********   END: СТРАНИЦА ПРОДУКТА   ********/
+
   // main_slider_init();
 });
 
