@@ -153,6 +153,16 @@ function cart_button() {
   });
 }
 
+function product_slider_correct_thumb() {
+  var i = 0;
+  $(".slider-block .slider-gallery li").each(function () {
+    if ($(this).hasClass('circle')) {
+      $(".slider-block .lSPager li:nth-child(" + i + ")").addClass("circle");
+    }
+    i++;
+  });
+}
+
 
 
 
@@ -346,6 +356,7 @@ $(document).ready(function ($) {
   sort_mode_catalog();
   catalog_accordion_button();
   product_accordion_button();
+  product_slider_correct_thumb();
   select_button();
   // light_slider_for_product_page();
   // main_slider_init();

@@ -472,8 +472,11 @@
             max-height: 420px;
           }
 
-          &.circle img {
-            border-radius: 50%;
+          &.circle {
+            img {
+              border-radius: 50%;
+              object-fit: initial;
+            }
           }
 
           img {
@@ -483,6 +486,7 @@
             height: 100%;
             max-width: 300px;
             max-height: 300px;
+            object-fit: contain;
 
             @media (min-width: $tablet) {
               max-width: 320px;
@@ -545,13 +549,19 @@
             &.active {
               opacity: 0.5;
             }
+
+            &.circle {
+              img {
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
           }
 
           img {
             width: 60px;
             height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
+            object-fit: contain;
           }
         }
       }
