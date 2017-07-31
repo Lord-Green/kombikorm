@@ -51,16 +51,48 @@ header.header
     input(type="search" placeholder="Что ищем?").input
     input(type="submit").submit
     .img
-  a(href="#").cart
-    .icon(data-label="5")
-    //- .cart-content
-    //-   .title Корзина
-    //-   .block
-    //-     .img 
-    //-     .title
-    //-     .amount(data-label="1")
-    //-     .price
-    //-     .close
+  .cart
+    .icon(data-label="6")
+    .cart-content
+      .title 
+        |Корзина
+        .close
+      .item
+        img(src="img/content/main/item--3.jpg" alt="")
+        .text 
+          .description  БВМД Purina® 25 % ЭКО Универсальный для мясной птицы
+          .amount
+            .prev
+            | 2
+            .next            
+          .item-price  2150 руб.
+          .close
+      .item
+        img(src="img/content/main/item--2.jpg" alt="").circle 
+        .text 
+          .description  Комбикорм Purina® Финишер для водоплавающей птицы Комбикорм Purina® Финишер для водоплавающей птицы   Комбикорм Purina® Финишер для водоплавающей птицы Комбикорм Purina® Финишер для водоплавающей птицы Комбикорм Purina® Финишер для водоплавающей птицы
+          .amount
+            .prev
+            | 1
+            .next            
+          .item-price  200 150 руб.
+          .close
+      .item
+        img(src="img/content/main/item--4.jpg" alt="")
+        .text  
+          .description БВМК Purina® 15 % ЭКО для яичной птицы
+          .amount
+            .prev
+            | 3
+            .next            
+          .item-price  20 150 руб.
+          .close
+      .cart-content__footer
+        .make-order Оформить заказ
+        .continue Продолжить покупки
+        .resume
+          span  Итого к оплате:
+          .sum 200 658 руб.
   .all-product 
     a(href="#") Все товары
     .fon    

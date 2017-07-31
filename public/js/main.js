@@ -128,28 +128,33 @@ function catalog_accordion_button() {
   });
 }
 
-// function light_slider_for_product_page() {
-//   var slider_gallery = $('.slider-gallery').lightSlider({
-//     gallery: true,
-//     item: 1,
-//     thumbItem: 5,
-//     slideMargin: 0,
-//     speed: 500,
-//     auto: false,
-//     loop: true,
-//     onSliderLoad: function () {
-//       $('.slider-gallery').removeClass('cS-hidden');
-//     },
-//     responsive: [
-//       {
-//         breakpoint: 767,
-//         settings: {
-//           gallery: false,
-//         }
-//       }
-//     ]
-//   });
-// }
+function cart_button() {
+  var cart = $('.header .cart'), cart_content = cart.find(".cart-content");
+
+  cart.find('.icon').click(function () {
+    if (!cart.hasClass('active')) {
+      cart.addClass('active');
+      cart_content.css('display', 'flex');
+    } else {
+      cart.removeClass('active');
+      cart_content.css('display', 'none');
+    }
+  });
+
+
+  $('.header .cart .title .close').click(function () {
+    cart.removeClass('active');
+    cart_content.css('display', 'none');
+  });
+
+  cart_content.find(".cart-content__footer .continue").click(function () {
+    cart.removeClass('active');
+    cart_content.css('display', 'none');
+  });
+}
+
+
+
 
 function product_accordion_button() {
   if (currentWidthWindow >= tabletSize) {
@@ -212,21 +217,7 @@ function product_accordion_button() {
 
 // document.getElementById('uncheck_1_1').onclick = function () { document.getElementById('check_1_1').checked = "false" }
 
-// function main_slider_init() {
-//   var owl = $('.owl-carousel-for-1');
-//   owl.owlCarousel({
-//     margin: 10,
-//     nav: true,
-//     navText: true,
-//     loop: true,
-//     dots: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       }
-//     }
-//   })
-// }
+
 
 
 function select_button() {
@@ -348,6 +339,7 @@ $(document).ready(function ($) {
   }
   show_search_form();
   menu_all_products();
+  cart_button();
   filters_button_mobile();
   preset_button_catalog();
   view_mode_catalog();
@@ -358,3 +350,43 @@ $(document).ready(function ($) {
   // light_slider_for_product_page();
   // main_slider_init();
 });
+
+
+// function main_slider_init() {
+//   var owl = $('.owl-carousel-for-1');
+//   owl.owlCarousel({
+//     margin: 10,
+//     nav: true,
+//     navText: true,
+//     loop: true,
+//     dots: true,
+//     responsive: {
+//       0: {
+//         items: 1
+//       }
+//     }
+//   })
+// }
+
+// function light_slider_for_product_page() {
+//   var slider_gallery = $('.slider-gallery').lightSlider({
+//     gallery: true,
+//     item: 1,
+//     thumbItem: 5,
+//     slideMargin: 0,
+//     speed: 500,
+//     auto: false,
+//     loop: true,
+//     onSliderLoad: function () {
+//       $('.slider-gallery').removeClass('cS-hidden');
+//     },
+//     responsive: [
+//       {
+//         breakpoint: 767,
+//         settings: {
+//           gallery: false,
+//         }
+//       }
+//     ]
+//   });
+// }
