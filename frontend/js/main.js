@@ -160,6 +160,8 @@ function cart_change_value() {
     var current_element = $(this).parent().find('.value'),
       current_value = parseFloat(current_element.text());
     current_element.text(current_value + 1);
+    cart_amount_items();
+    cart_all_sum();
   });
 
   cart_content.find(".item .text .amount .minus").click(function () {
@@ -168,6 +170,8 @@ function cart_change_value() {
     if (current_value == 1) {
       $(this).parent().parent().find(".close").trigger("click");
     } else { current_element.text(current_value - 1); }
+    cart_amount_items();
+    cart_all_sum();
   });
 }
 
@@ -182,8 +186,12 @@ function cart_remove_item() {
         return '<p class="empty">Корзина пуста</div>';
       });
     }
+    cart_amount_items();
+    cart_all_sum();
   });
 }
+
+
 
 function cart_amount_items() {
   var cart = $(".header .cart .cart-content"), i = 0;
@@ -192,8 +200,17 @@ function cart_amount_items() {
     i += parseFloat($(this).find('.amount .value').text());
   });
   cart.parent().find('.icon').attr("data-label", i);
-
 }
+
+function cart_all_sum() {
+  var cart = $(".header .cart .cart-content"), i = 0;
+
+  cart.find(".item").each(function () {
+    i += parseFloat($(this).find('.item-price').text().replace(' ', '')) * $(this).find(".amount .value").text();
+  });
+  $(".cart .cart-content__footer .resume .sum").text(i + " руб.")
+}
+
 
 function product_slider_correct_thumb() {
   var i = 0;
@@ -391,6 +408,7 @@ $(document).ready(function ($) {
   cart_change_value();
   cart_remove_item();
   cart_amount_items();
+  cart_all_sum();
   select_button();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
