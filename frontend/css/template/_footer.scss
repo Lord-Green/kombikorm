@@ -3,10 +3,10 @@
     background: #88b14b;
 
     .wrapper {
-      padding-left: 35px;
+      padding-left: 21px;
       padding-right: 55px;
-      padding-top: 50px;
-      padding-bottom: 40px;
+      padding-top: 48px;
+      padding-bottom: 50px;
 
       @media (min-width: $tablet) {
         display: flex;
@@ -30,14 +30,14 @@
         display: flex;
         flex-direction: column;
         max-width: max-content;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
 
         @media (min-width: $tablet) {
           margin-bottom: 0;
         }
 
         li {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
 
           ul {
             display: none;
@@ -67,14 +67,14 @@
         flex-direction: column;
         width: auto;
         max-width: max-content;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
 
         @media (min-width: $tablet) {
           margin-bottom: 0;
         }
 
         li {
-          margin-bottom: 20px;
+          margin-bottom: 15px;
 
           a {
             font-style: normal;
@@ -110,7 +110,7 @@
           color: #ffffff;
           letter-spacing: 0;
           line-height: 24px;
-          margin-bottom: 35px;
+          margin-bottom: 30px;
 
           @media (min-width: $tablet) {
             margin-bottom: 70px;
@@ -148,8 +148,8 @@
           }
 
           .vk {
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 12px;
+            margin-right: 12px;
 
             @mixin bg footer/vk.svg;
 
@@ -175,7 +175,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-      padding-top: 35px;
+      padding-top: 32px;
       padding-bottom: 50px;
       padding-left: 22px;
       padding-right: 35px;
@@ -229,7 +229,7 @@
 
       .creator-company {
         display: block;
-        margin-bottom: 25px;
+        margin-bottom: 19px;
 
         @media (min-width: 448px) {
           width: min-content;
@@ -265,7 +265,7 @@
 
         &::before {
           content: "";
-          margin-bottom: 20px;
+          margin-bottom: 15px;
 
           @mixin bg footer/web-mechanica.svg;
 

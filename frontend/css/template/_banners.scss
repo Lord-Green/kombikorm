@@ -81,11 +81,12 @@
       }
 
       img {
-        object-position: 74%;
+        // object-position: 74%;
+        object-fit: initial;
 
-        @media (min-width: 768px) {
-          object-position: 100%;
-        }
+        // @media (min-width: 768px) {
+        //   object-position: 100%;
+        // }
       }
     }
 

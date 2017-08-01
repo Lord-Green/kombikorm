@@ -62,14 +62,17 @@ function menu_all_products() {
   });
 
   $(".header .all-product .menu ul li .submenu").click(function () {
+    $(".header .all-product .menu  ul li").parent("li ul").parent().css("position", "initial");
     $(this).parent("li").find("ul").css("display", "flex");
     $(this).parent("li").find(".subtitle").css("display", "flex");
     $(this).parent("li").find("ul").css("top", $(this).parent("li").find(".subtitle").css("height"));
   });
   $(".header .all-product .menu ul li .subtitle .close").click(function () {
+    $(".header .all-product .menu  ul li").parent("li ul").parent().css("position", "relative");
     $(".header .all-product .menu .title .close").trigger("click");
   });
   $(".header .all-product .menu ul li .subtitle .down").click(function () {
+    $(".header .all-product .menu  ul li").parent("li ul").parent().css("position", "relative");
     $(this).parent().parent().find("ul").css("display", "none");
     $(this).parent(".subtitle").css("display", "none");
   });

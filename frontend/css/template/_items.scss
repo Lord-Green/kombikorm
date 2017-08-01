@@ -11,15 +11,17 @@
     font-size: 32px;
     letter-spacing: 0;
     line-height: 35px;
-    margin-top: 50px;
-    margin-bottom: 30px;
 
     &.best {
       color: #ef562d;
+      margin-top: 40px;
+      margin-bottom: 30px;
     }
 
     &.new {
       color: #88b14b;
+      margin-top: 43px;
+      margin-bottom: 34px;
     }
   }
 
@@ -33,6 +35,7 @@
     border-radius: 60px;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.5;
     color: #9b9b9b;
     // color: #ffffff;
     background: #ffffff;
@@ -55,9 +58,9 @@
     flex-wrap: wrap;
     border: 1px solid #e7e7e7;
     height: 403px;
-    padding-top: 20px;
+    padding-top: 21px;
     padding-bottom: 20px;
-    padding-left: 25px;
+    padding-left: 21px;
     padding-right: 35px;
     align-items: flex-end;
 
@@ -87,13 +90,14 @@
       display: none;
       flex-wrap: wrap;
       margin-bottom: auto;
+      padding-top: 9px;
 
       p {
         font-weight: 400;
         font-size: 12px;
         color: #ffffff;
         letter-spacing: 0;
-        margin-bottom: 9px;
+        margin-bottom: 5px;
         width: 100%;
 
         &:last-child {
@@ -106,7 +110,7 @@
         font-size: 12px;
         color: #ffffff;
         letter-spacing: 0;
-        margin-top: 30px;
+        margin-top: 25px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -131,6 +135,10 @@
       position: relative;
       margin-left: auto;
       margin-right: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 14px;
 
       &::before {
         align-items: center;
@@ -158,6 +166,7 @@
       color: #4a4a4a;
       letter-spacing: 0;
       width: 100%;
+      margin-top: 25px;
 
       &:hover {
         text-decoration: underline;
@@ -171,9 +180,10 @@
       color: #88b14b;
       letter-spacing: 0;
       width: calc(100% - 26px);
-      height: 50px;
-      display: flex;
-      align-items: flex-end;
+      // height: 50px;
+      // display: flex;
+      // align-items: flex-end;
+      padding-bottom: 4px;
     }
 
     .cart {
@@ -192,6 +202,8 @@
 
     &:hover {
       background: #ef562d;
+      padding-right: 26px;
+      padding-bottom: 18px;
       // transition: 1.5s ease;
 
       @media (min-width: $big-desktop) {
@@ -202,12 +214,17 @@
       .price {
         width: calc(100% - 118px);
         align-items: center;
+        padding-bottom: 14px;
       }
 
       .title,
       .price,
       .cart {
         color: #ffffff;
+      }
+
+      .title {
+        margin-top: 42px;
       }
 
       .img {
@@ -223,6 +240,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
+        line-height: 1;
         letter-spacing: 0;
         width: 118px;
         height: 50px;
@@ -249,6 +267,8 @@
 .product-items .product-item.best .img::before {
   content: attr(data-label);
   font-size: 8px;
+  left: -24px;
+  top: -30px;
 
   @mixin bg content/item--best.svg;
   display: flex;

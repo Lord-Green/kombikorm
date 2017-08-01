@@ -84,6 +84,7 @@
 
     .gamburger {
       height: 18px;
+      padding-top: 2px;
       cursor: pointer;
       display: block;
 
@@ -917,10 +918,11 @@
 
       .title {
         background: #e7e7e7;
-        height: 60px;
+        height: 62px;
         display: flex;
         align-items: center;
-        padding-right: 20px;
+        padding-right: 21px;
+        padding-left: 37px;
 
         @media (min-width: $desktop) {
           display: none;
@@ -956,15 +958,36 @@
           border-bottom: 1px solid #e7e7e7;
           display: flex;
           align-items: center;
+          position: relative;
+
+          @media (min-width: $desktop) {
+            position: initial;
+            cursor: pointer;
+          }
 
           .submenu {
-            padding: 20px;
             display: inline-flex;
             margin-left: auto;
+
+            @media (max-width: 1023px) {
+              position: absolute;
+              width: 100%;
+              right: 0;
+              height: 100%;
+              top: 0;
+            }
+
+            @media (min-width: $desktop) {
+              pointer-events: none;
+            }
 
             &::before {
               @mixin bg header/open-submenu.svg;
               content: "";
+              margin-left: auto;
+              margin-right: 20px;
+              margin-top: auto;
+              margin-bottom: auto;
             }
           }
 
@@ -977,6 +1000,7 @@
             position: absolute;
             top: 0;
             width: 100%;
+            z-index: 1;
 
             p {
               font-weight: 400;
@@ -1028,12 +1052,14 @@
           a {
             font-weight: 400;
             font-size: 14px;
+            line-height: 20px;
             color: #4a4a4a;
-            letter-spacing: 0;
-            padding-left: 20px;
-            padding-bottom: 20px;
-            padding-top: 20px;
+            padding-left: 21px;
+            padding-right: 50px;
+            padding-top: 13px;
+            padding-bottom: 14px;
             transition: 0.5s ease;
+            width: 100%;
           }
 
           ul {
@@ -1045,6 +1071,7 @@
             left: 0;
             height: 100%;
             flex-direction: column;
+            z-index: 1;
 
             @media (min-width: $desktop) {
               left: 50%;
@@ -1193,7 +1220,7 @@
       }
 
       li {
-        height: 144px;
+        // height: 144px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1249,11 +1276,17 @@
         a {
           display: flex;
           flex-direction: column;
-          height: 100%;
+          height: 143px;
+          padding-top: 14px;
+          padding-bottom: 14px;
 
           img {
             margin-top: auto;
             margin-bottom: auto;
+            max-height: 75px;
+            max-width: 80px;
+            margin-left: auto;
+            margin-right: auto;
             transition: 1s ease;
 
             @media (min-width: $tablet) {
@@ -1263,7 +1296,11 @@
           }
 
           p {
-            padding-bottom: 15px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // padding-bottom: 15px;
             text-align: center;
             font-size: 16px;
             line-height: 18px;
