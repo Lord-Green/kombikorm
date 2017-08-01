@@ -726,6 +726,7 @@
 
             .plus {
               margin-left: 18px;
+              position: relative;
             }
 
             .minus::before {
@@ -746,6 +747,8 @@
               width: 16px;
               transform: rotate(90deg);
               position: absolute;
+              left: calc(50% - 8px);
+              top: calc(48%);
             }
           }
 

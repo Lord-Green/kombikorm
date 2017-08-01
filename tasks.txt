@@ -1,11 +1,18 @@
 1. Пиксельное несоответствие - необходимо проверить через наложение превью
     https://webmechanica.slack.com/files/a_chikin/F6FREH6RH/screen_shot_2017-07-31_at_17.02.26.png
 
-2. Корзина не соответствует макету
-    https://webmechanica.slack.com/files/a_chikin/F6GQFTNRL/screen_shot_2017-07-31_at_17.06.50.png
 
-3. Товары при наведении - цена и кнопка должны быть прижаты к низу
+2. Товары при наведении - цена и кнопка должны быть прижаты к низу
     https://webmechanica.slack.com/files/a_chikin/F6FRKMQ03/screen_shot_2017-07-31_at_17.11.30.png
 
-4. Мобильные меню - сделать для перехода активным весь пункт
-    https://webmechanica.slack.com/files/a_chikin/F6G04B2EQ/screen_shot_2017-07-31_at_17.16.21.png
+4. Каталоги - ширина сайдбара должна быть одинаковой в обоих шаблонах
+    https://files.slack.com/files-pri/T4PR2JG8N-F6HJEAK63/screen_shot_2017-08-01_at_17.05.03.png
+
+5. Выпадающее меню - высота пунктов и отступы
+    https://files.slack.com/files-pri/T4PR2JG8N-F6FVDHY0H/screen_shot_2017-08-01_at_17.17.33.png
+
+6. Вертикальные оступы у заголовков h1 (mobile)
+      https://files.slack.com/files-pri/T4PR2JG8N-F6HCK4KLN/screen_shot_2017-08-01_at_17.20.40.png
+
+7. Стилизация ввода в формы, корзина на десктопе
+      https://files.slack.com/files-pri/T4PR2JG8N-F6FSA7N3A/screen_shot_2017-08-01_at_17.38.56.png
