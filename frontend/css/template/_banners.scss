@@ -30,12 +30,29 @@
       top: 30px;
       left: 30px;
 
+      @media (min-width: $tablet) {
+        top: 33px;
+      }
+
+      @media (min-width: $desktop) {
+        top: 29px;
+        left: 49px;
+      }
+
       h2 {
         font-weight: 400;
         font-size: 32px;
         line-height: 32px;
         letter-spacing: 0;
         margin-bottom: 30px;
+
+        @media (min-width: $tablet) {
+          font-size: 28px;
+        }
+
+        @media (min-width: $desktop) {
+          font-size: 32px;
+        }
       }
 
       .read-more {
@@ -68,6 +85,14 @@
 
       h2 {
         color: #000000;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 27px;
+        }
+
+        @media (min-width: $desktop) {
+          margin-bottom: 30px;
+        }
       }
 
       .read-more {

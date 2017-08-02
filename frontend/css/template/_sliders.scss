@@ -34,8 +34,15 @@
       max-width: 81%;
 
       @media (min-width: $tablet) {
-        top: 70px;
+        top: 61px;
         left: 50px;
+      }
+
+      @media (min-width: $desktop) {
+        top: 68px;
+        left: 50px;
+        font-size: 72px;
+        line-height: 70px;
       }
 
       @media (min-width: $big-desktop) {
@@ -68,8 +75,13 @@
         position: absolute;
         top: 50%;
         margin-top: -28px;
-        left: 25px;
+        left: 29px;
         transition: 1.5s ease;
+
+        @media (min-width: $desktop) {
+          margin-top: -33px;
+          left: 37px;
+        }
 
         &::before {
           @mixin bg content/slider--arrows--prev.svg;
@@ -88,8 +100,13 @@
         position: absolute;
         top: 50%;
         margin-top: -28px;
-        right: 25px;
+        right: 30px;
         transition: 1.5s ease;
+
+        @media (min-width: $desktop) {
+          margin-top: -33px;
+          right: 35px;
+        }
 
         &::before {
           @mixin bg content/slider--arrows--next.svg;
@@ -107,8 +124,8 @@
 
     @media (min-width: $desktop) {
       display: block;
-      left: 45%;
-      bottom: 30px;
+      left: 44.3%;
+      bottom: 22px;
       position: absolute;
 
       .owl-dot {

@@ -16,6 +16,15 @@
       color: #ef562d;
       margin-top: 40px;
       margin-bottom: 30px;
+
+      @media (min-width: $tablet) {
+        margin-top: 43px;
+        margin-bottom: 33px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-bottom: 35px;
+      }
     }
 
     &.new {
@@ -46,6 +55,14 @@
     margin-right: auto;
     transition: 1.5s ease;
 
+    @media (min-width: $tablet) {
+      margin-top: 29px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-top: 30px;
+    }
+
     &:hover {
       color: #ffffff;
       background: #ef562d;
@@ -65,18 +82,21 @@
     align-items: flex-end;
 
     @media (min-width: $tablet) {
-      height: 423px;
-      // width: 33.3%;
-      width: 33.15%;
-      padding-right: 27px;
-      padding-left: 27px;
+      height: 426px;
+      width: 33.3%;
+      // width: 33.15%;
+      padding-right: 25px;
+      padding-left: 30px;
+      align-items: flex-start;
+      padding-top: 45px;
+      padding-bottom: 22px;
     }
 
     @media (min-width: $desktop) {
-      height: 400px;
-      padding-top: 30px;
-      padding-bottom: 30px;
-      padding-left: 35px;
+      height: 401px;
+      padding-top: 47px;
+      padding-bottom: 27px;
+      padding-left: 30px;
       padding-right: 35px;
     }
 
@@ -139,6 +159,19 @@
       align-items: center;
       justify-content: center;
 
+      @media (min-width: $tablet) {
+        /* height: 218px; */
+        height: 200px;
+        align-items: flex-end;
+        justify-content: center;
+        // margin-top: 0;
+        margin-bottom: 34px;
+      }
+
+      @media (min-width: $desktop) {
+        margin-bottom: 40px;
+      }
+
       &::before {
         align-items: center;
         text-align: center;
@@ -156,6 +189,11 @@
           top: -35px;
         }
       }
+
+      img {
+        max-width: 200px;
+        max-height: 200px;
+      }
     }
 
     .title {
@@ -166,6 +204,11 @@
       letter-spacing: 0;
       width: 100%;
       margin-top: 25px;
+
+      @media (min-width: $tablet) {
+        align-self: flex-start;
+        margin-top: 0;
+      }
 
       &:hover {
         text-decoration: underline;
@@ -183,11 +226,29 @@
       // display: flex;
       // align-items: flex-end;
       padding-bottom: 4px;
+
+      @media (min-width: $tablet) {
+        padding-bottom: 3px;
+        align-self: flex-end;
+      }
     }
 
     .cart {
       @mixin bg content/cart.svg;
       color: transparent;
+
+      @media (min-width: $tablet) {
+        align-self: flex-end;
+      }
+
+      @media (min-width: $desktop) {
+        &::before {
+          @mixin bg header/cart--white.svg;
+          content: "";
+          margin-right: 15px;
+          display: none;
+        }
+      }
 
       &:hover {
         background: #ffffff !important;
@@ -205,6 +266,12 @@
       padding-bottom: 18px;
       // transition: 1.5s ease;
 
+      @media (min-width: $desktop) {
+        padding-right: 21px;
+        padding-bottom: 16px;
+        padding-top: 20px;
+      }
+
       @media (min-width: $big-desktop) {
         padding-left: 27px;
         padding-right: 18px;
@@ -214,6 +281,11 @@
         width: calc(100% - 118px);
         align-items: center;
         padding-bottom: 14px;
+
+        @media (min-width: $desktop) {
+          width: calc(100% - 163px);
+          padding-bottom: 16px;
+        }
       }
 
       .title,
@@ -224,6 +296,11 @@
 
       .title {
         margin-top: 42px;
+
+        @media (min-width: $desktop) {
+          margin-top: 45px;
+          align-self: flex-end;
+        }
       }
 
       .img {
@@ -248,9 +325,26 @@
         align-items: center;
         border-radius: 60px;
 
+        @media (min-width: $desktop) {
+          width: 163px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            display: inline-flex;
+          }
+        }
+
         p {
           margin-left: auto;
           margin-right: auto;
+
+          @media (min-width: $desktop) {
+            margin: 0;
+            margin-top: -1px;
+            margin-left: -3px;
+          }
         }
       }
     }
@@ -274,7 +368,20 @@
 
   @media (min-width: $tablet) {
     font-size: 9px;
+    line-height: 10px;
     font-weight: 400;
+  }
+}
+
+.product-items .product-item.best.circle .img::before {
+  @media (min-width: $tablet) {
+    left: 0px;
+    top: -26px;
+  }
+
+  @media (min-width: $desktop) {
+    left: -30px;
+    top: -28px;
   }
 }
 
