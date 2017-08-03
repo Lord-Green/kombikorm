@@ -53,6 +53,10 @@
         @media (min-width: $desktop) {
           font-size: 32px;
         }
+
+        @media (min-width: $big-desktop) {
+          font-size: 48px;
+        }
       }
 
       .read-more {
@@ -83,6 +87,13 @@
         width: 33.5%;
       }
 
+      .text {
+        @media (min-width: $big-desktop) {
+          top: 34px;
+          left: 70px;
+        }
+      }
+
       h2 {
         color: #000000;
 
@@ -92,6 +103,11 @@
 
         @media (min-width: $desktop) {
           margin-bottom: 30px;
+        }
+
+        @media (min-width: $big-desktop) {
+          font-size: 48px;
+          line-height: 52px;
         }
       }
 
@@ -120,8 +136,20 @@
         width: 66.5%;
       }
 
+      .text {
+        @media (min-width: $big-desktop) {
+          top: 42px;
+          left: 68px;
+        }
+      }
+
       h2 {
         color: #ffffff;
+
+        @media (min-width: $big-desktop) {
+          font-size: 48px;
+          line-height: 32px;
+        }
       }
 
       .read-more {

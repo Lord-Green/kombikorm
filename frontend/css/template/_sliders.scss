@@ -46,7 +46,7 @@
       }
 
       @media (min-width: $big-desktop) {
-        top: 100px;
+        top: 90px;
         left: 70px;
       }
     }
@@ -83,6 +83,11 @@
           left: 37px;
         }
 
+        @media (min-width: $big-desktop) {
+          margin-top: -28px;
+          left: 51px;
+        }
+
         &::before {
           @mixin bg content/slider--arrows--prev.svg;
           content: "";
@@ -106,6 +111,11 @@
         @media (min-width: $desktop) {
           margin-top: -33px;
           right: 35px;
+        }
+
+        @media (min-width: $big-desktop) {
+          margin-top: -28px;
+          right: 51px;
         }
 
         &::before {
@@ -142,6 +152,10 @@
           background: #ef562d;
         }
       }
+    }
+
+    @media (min-width: $big-desktop) {
+      left: 46%;
     }
   }
 }

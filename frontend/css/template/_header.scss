@@ -25,6 +25,8 @@
     max-width: $big-desktop;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 56px;
+    padding-right: 55px;
   }
 
   .logo {
@@ -87,6 +89,13 @@
       margin-left: auto;
     }
 
+    @media (min-width: $big-desktop) {
+      margin-left: auto;
+      width: 71%;
+      margin-right: auto;
+      min-width: 0;
+    }
+
     .gamburger {
       height: 18px;
       padding-top: 2px;
@@ -145,6 +154,10 @@
 
       @media (min-width: $desktop) {
         margin-left: auto;
+      }
+
+      @media (min-width: $big-desktop) {
+        width: 76%;
       }
 
       .close {
@@ -427,7 +440,7 @@
     }
 
     @media (min-width: $big-desktop) {
-      width: 8.7%;
+      // width: 8.7%;
     }
 
     &.active {
@@ -529,6 +542,10 @@
     @media (min-width: $desktop) {
       position: relative;
       margin-right: -39px;
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-right: -54px;
     }
 
     .icon {
@@ -878,6 +895,11 @@
       position: relative;
     }
 
+    @media (min-width: $big-desktop) {
+      width: 21%;
+      margin-right: 0;
+    }
+
     &.active {
       a {
         background: #ffffff;
@@ -915,6 +937,10 @@
           background: #ffffff;
           color: #ef562d;
         }
+      }
+
+      @media (min-width: $big-desktop) {
+        width: 218px;
       }
     }
 
@@ -1235,7 +1261,9 @@
 
     @media (min-width: $big-desktop) {
       // min-width: 42.6%;
-      margin-right: 0;
+      // margin-right: 0;
+      margin-right: auto;
+      padding-right: 332px;
     }
 
     &:hover {
@@ -1433,6 +1461,10 @@
               margin-top: 14px;
               margin-bottom: 2px;
             }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 2px;
+            }
           }
 
           p {
@@ -1442,6 +1474,10 @@
 
             @media (min-width: $desktop) {
               margin-left: -31px;
+            }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 0;
             }
           }
         }
@@ -1469,6 +1505,12 @@
               margin-left: -42px;
               margin-top: 0;
             }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 35px;
+              margin-top: 0;
+              margin-bottom: 4px;
+            }
           }
 
           p {
@@ -1478,6 +1520,10 @@
 
             @media (min-width: $desktop) {
               margin-left: -32px;
+            }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 46px;
             }
           }
         }
@@ -1503,6 +1549,10 @@
               margin-left: -30px;
               margin-top: 33px;
             }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 87px;
+            }
           }
 
           p {
@@ -1513,6 +1563,11 @@
             @media (min-width: $desktop) {
               padding-left: 0;
               margin-left: -11px;
+            }
+
+            @media (min-width: $big-desktop) {
+              padding-left: 0;
+              margin-left: 103px;
             }
           }
         }
@@ -1542,15 +1597,29 @@
               margin-bottom: 4px;
             }
 
-            p {
-              @media (min-width: $tablet) {
-                padding-left: 8px;
-              }
+            @media (min-width: $big-desktop) {
+              margin-left: 137px;
+            }
+          }
+
+          p {
+            // @media (min-width: $tablet) {
+            //   padding-left: 8px;
+            // }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 158px;
             }
           }
         }
 
         &.ytka {
+          @media (min-width: $big-desktop) {
+            max-width: none;
+            margin-right: -46px;
+            margin-left: 46px;
+          }
+
           img {
             width: 56.42px;
             height: 75px;
@@ -1566,6 +1635,10 @@
               min-height: 88.68px;
               margin-top: -1px;
               margin-left: 12px;
+            }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 44px;
             }
           }
         }
@@ -1593,6 +1666,10 @@
               margin-left: -9px;
               margin-bottom: 3px;
             }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 23px;
+            }
           }
 
           p {
@@ -1602,6 +1679,10 @@
 
             @media (min-width: $desktop) {
               margin-left: -15px;
+            }
+
+            @media (min-width: $big-desktop) {
+              margin-left: 16px;
             }
           }
         }

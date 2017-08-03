@@ -25,6 +25,10 @@
       @media (min-width: $desktop) {
         margin-bottom: 35px;
       }
+
+      @media (min-width: $big-desktop) {
+        margin-bottom: 32px;
+      }
     }
 
     &.new {
@@ -101,9 +105,12 @@
     }
 
     @media (min-width: $big-desktop) {
-      height: 423px;
+      // height: 423px;
       padding-bottom: 22px;
       width: 20%;
+      height: auto;
+      padding-right: 30px;
+      padding-left: 32px;
     }
 
     .text {
@@ -172,6 +179,10 @@
         margin-bottom: 40px;
       }
 
+      @media (min-width: $big-desktop) {
+        margin-bottom: 34px;
+      }
+
       &::before {
         align-items: center;
         text-align: center;
@@ -210,6 +221,10 @@
         margin-top: 0;
       }
 
+      @media (min-width: $big-desktop) {
+        margin-top: 10px;
+      }
+
       &:hover {
         text-decoration: underline;
       }
@@ -231,6 +246,10 @@
         padding-bottom: 3px;
         align-self: flex-end;
       }
+
+      @media (min-width: $big-desktop) {
+        padding-bottom: 1px;
+      }
     }
 
     .cart {
@@ -246,8 +265,18 @@
           @mixin bg header/cart--white.svg;
           content: "";
           margin-right: 15px;
-          display: none;
+          display: inline-flex;
+          opacity: 0;
+          position: absolute;
         }
+      }
+
+      @media (min-width: $big-desktop) {
+        margin-top: 30px;
+      }
+
+      p {
+        min-width: 82px;
       }
 
       &:hover {
@@ -285,6 +314,10 @@
         @media (min-width: $desktop) {
           width: calc(100% - 163px);
           padding-bottom: 16px;
+        }
+
+        @media (min-width: $big-desktop) {
+          padding-bottom: 12px;
         }
       }
 
@@ -326,14 +359,34 @@
         border-radius: 60px;
 
         @media (min-width: $desktop) {
-          width: 163px;
+          margin-left: auto;
           display: flex;
           align-items: center;
           justify-content: center;
 
-          &::before {
-            display: inline-flex;
+          &:hover {
+            width: 163px;
+            transition: width 1.5s ease;
+            background: #ef562d !important;
+
+            p {
+              color: #ffffff;
+            }
+
+            &::before {
+              position: relative;
+              display: inline-flex;
+              transition-delay: 1s;
+
+              // transition: 1.5s ease;
+              // display: inline-flex;
+              opacity: 1;
+            }
           }
+        }
+
+        @media (min-width: $big-desktop) {
+          margin-bottom: -4px;
         }
 
         p {
