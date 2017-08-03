@@ -72,16 +72,21 @@
 
       @media (min-width: $tablet) {
         max-height: none;
+        padding-top: 95px;
       }
 
       #filters {
         .catalog-filters__section {
           margin-bottom: 35px;
-          padding-left: 23px;
+          padding-left: 36px;
           padding-right: 23px;
 
+          @media (min-width: $tablet) {
+            margin-bottom: 34px;
+          }
+
           &:first-child {
-            margin-top: 35px;
+            margin-top: 32px;
           }
 
           .heading {
@@ -91,7 +96,7 @@
             letter-spacing: 0;
             padding-bottom: 15px;
             border-bottom: 1px solid #9b9b9b;
-            margin-bottom: 10px;
+            margin-bottom: 9px;
           }
 
           .form-control {
@@ -160,6 +165,11 @@
               margin-left: 35px;
               // min-width: max-content;
               display: inline-flex;
+
+              @media (min-width: $tablet) {
+                margin-left: 32px;
+                margin-top: 2px;
+              }
             }
           }
         }

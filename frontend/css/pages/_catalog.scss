@@ -1,4 +1,8 @@
 .catalog-page--header {
+  @media (min-width: $tablet) {
+    margin-top: 17px;
+  }
+
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
     margin-left: auto;
@@ -43,17 +47,19 @@
     border-bottom: 1px solid #e7e7e7;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 13px;
 
     @media (min-width: $tablet) {
       border-top: 1px solid #e7e7e7;
       text-align: left;
       padding-left: 35px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 23px;
+      padding-bottom: 25px;
     }
 
     @media (min-width: $desktop) {
-      padding-left: 40px;
+      padding-left: 43px;
     }
 
     @media (min-width: $big-desktop) {
@@ -68,7 +74,7 @@
       display: flex;
       flex-wrap: wrap;
       padding-top: 20px;
-      padding-bottom: 5px;
+      padding-bottom: 9px;
       border-bottom: 1px solid #e7e7e7;
       padding-left: 40px;
 
@@ -80,8 +86,8 @@
         font-size: 16px;
         color: #9b9b9b;
         letter-spacing: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 22px;
+        padding-right: 22px;
         height: 50px;
         background: #ffffff;
         border: 1px solid #cbcbcb;
@@ -124,7 +130,7 @@
       margin-left: auto;
       margin-right: auto;
       padding-top: 10px;
-      padding-bottom: 9px;
+      padding-bottom: 12px;
 
       @media (min-width: $tablet) {
         padding-left: 35px;
@@ -175,6 +181,7 @@
       @media (min-width: $tablet) {
         display: flex;
         margin-right: auto;
+        padding-right: 87px;
 
         .multi-colons,
         .with-options,
@@ -203,6 +210,7 @@
 
       @media (min-width: $desktop) {
         margin-right: 40px;
+        padding-right: 0;
       }
 
       @media (min-width: $big-desktop) {
@@ -237,6 +245,43 @@
   }
 
   .product-items {
+    overflow: hidden;
+    max-width: 100%;
+
+    .product-item {
+      &:nth-child(n + 7) {
+        display: none;
+      }
+
+      @media (min-width: $tablet) {
+        &:nth-child(7),
+        &:nth-child(8) {
+          display: flex;
+        }
+
+        &:hover {
+          padding-top: 19px;
+          padding-left: 27px;
+          padding-right: 18px;
+
+          .title {
+            align-self: flex-end;
+            margin-top: 51px;
+          }
+
+          .price {
+            padding-bottom: 9px;
+            align-self: flex-end;
+          }
+
+          .cart {
+            margin-bottom: -7px;
+            align-self: flex-end;
+          }
+        }
+      }
+    }
+
     @media (min-width: $tablet) {
       width: 67%;
     }
@@ -277,7 +322,7 @@
     font-size: 16px;
     color: #9b9b9b;
     letter-spacing: 0;
-    margin-top: 30px;
+    margin-top: 33px;
     margin-left: auto;
     margin-right: auto;
     transition: 1.5s ease;
@@ -291,6 +336,14 @@
 
   .categories {
     margin-bottom: 60px;
+
+    h2 {
+      margin-top: 34px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 37px;
+      }
+    }
 
     @media (min-width: $tablet) {
       margin-bottom: 40px;
@@ -308,6 +361,10 @@
 
 .catalog--header {
   width: 100%;
+
+  @media (min-width: $tablet) {
+    margin-top: 17px;
+  }
 
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
@@ -331,12 +388,12 @@
     @media (min-width: $tablet) {
       text-align: left;
       padding-left: 35px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-top: 23px;
+      padding-bottom: 25px;
     }
 
     @media (min-width: $desktop) {
-      padding-left: 40px;
+      padding-left: 43px;
     }
 
     @media (min-width: $big-desktop) {
