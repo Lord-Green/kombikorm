@@ -637,15 +637,15 @@
       width: 100%;
 
       @media (min-width: $desktop) {
-        padding: 30px;
+        padding: 27px 29px;
       }
 
       p {
         font-weight: 400;
         font-size: 18px;
+        line-height: 22px;
         color: #4a4a4a;
         letter-spacing: 0;
-        text-align: center;
       }
     }
   }

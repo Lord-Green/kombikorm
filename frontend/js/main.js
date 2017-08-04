@@ -123,6 +123,7 @@ function catalog_accordion_button() {
   $('.catalog .accordion').click(function () {
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
+      // $(this).css("margin-bottom", "0");
       $(this).next().css('display', 'flex');
     } else {
       $(this).removeClass('active');

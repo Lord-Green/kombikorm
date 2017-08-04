@@ -5,8 +5,8 @@
 
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-top: 0;
   }
 
   .down {
@@ -63,7 +63,7 @@
     }
 
     @media (min-width: $big-desktop) {
-      padding-left: 50px;
+      padding-left: 55px;
     }
   }
 
@@ -152,7 +152,7 @@
       }
 
       @media (min-width: $big-desktop) {
-        padding-left: 50px;
+        padding-left: 55px;
       }
 
       a {
@@ -230,23 +230,33 @@
     @media (min-width: $desktop) {
       // max-width: 340px;
 
-      .filter_cont #filters_list #filters .catalog-filters__section {
-        padding-left: 40px;
-      }
+      // .filter_cont #filters_list #filters .catalog-filters__section {
+      //   padding-left: 40px;
+      // }
     }
 
     @media (min-width: $big-desktop) {
+      width: 20%;
       // max-width: 290px;
 
-      .filter_cont #filters_list #filters .catalog-filters__section {
-        padding-left: 50px;
-      }
+      // .filter_cont #filters_list #filters .catalog-filters__section {
+      //   padding-left: 50px;
+      // }
     }
   }
 
   .product-items {
     overflow: hidden;
     max-width: 100%;
+
+    @media (min-width: $tablet) {
+      width: 67%;
+    }
+
+    @media (min-width: $big-desktop) {
+      width: 80%;
+      align-content: flex-start;
+    }
 
     .product-item {
       &:nth-child(n + 7) {
@@ -280,11 +290,46 @@
           }
         }
       }
+
+      @media (min-width: $desktop) {
+        &:hover {
+          padding-top: 20px;
+          padding-left: 33px;
+          padding-right: 21px;
+
+          .cart {
+            margin-bottom: 0px;
+          }
+
+          .price {
+            padding-bottom: 16px;
+          }
+
+          .title {
+            margin-top: 43px;
+          }
+        }
+      }
+
+      @media (min-width: $big-desktop) {
+        &:nth-child(n + 9) {
+          display: flex;
+        }
+
+        &:nth-child(n + 17) {
+          display: none;
+        }
+
+        &:hover {
+          padding-top: 16px;
+          padding-bottom: 11px;
+          padding-left: 24px;
+          padding-right: 19px;
+        }
+      }
     }
 
-    @media (min-width: $tablet) {
-      width: 67%;
-    }
+
     // @media (min-width: $tablet) {
     //   max-width: calc(100% - 255px);
     // }
@@ -337,16 +382,24 @@
   .categories {
     margin-bottom: 60px;
 
+    @media (min-width: $tablet) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-bottom: 58px;
+    }
+
     h2 {
       margin-top: 34px;
 
       @media (min-width: $tablet) {
         margin-bottom: 37px;
       }
-    }
 
-    @media (min-width: $tablet) {
-      margin-bottom: 40px;
+      @media (min-width: $big-desktop) {
+        margin-top: 45px;
+      }
     }
   }
 
@@ -360,16 +413,42 @@
 }
 
 .catalog--header {
-  width: 100%;
-
   @media (min-width: $tablet) {
     margin-top: 17px;
   }
 
   @media (min-width: $big-desktop) {
     max-width: $big-desktop;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4a4a4a;
+    letter-spacing: 0;
+    line-height: 27px;
+    background: #e7e7e7;
+    width: 100%;
+    height: 60px;
+    position: relative;
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
+
+    &::before {
+      @mixin bg content/down.svg;
+      content: "";
+      position: absolute;
+      left: calc(8vw);
+      top: 50%;
+      margin-top: -8px;
+    }
   }
 
   .title {
@@ -379,13 +458,16 @@
     color: #4a4a4a;
     letter-spacing: 0;
     text-align: center;
+    margin-top: -1px;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
-    margin-top: -1px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 13px;
 
     @media (min-width: $tablet) {
+      margin-top: 0px;
       text-align: left;
       padding-left: 35px;
       padding-top: 23px;
@@ -394,6 +476,47 @@
 
     @media (min-width: $desktop) {
       padding-left: 43px;
+    }
+
+    @media (min-width: $big-desktop) {
+      padding-left: 55px;
+    }
+  }
+
+  .presets {
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 20px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid #e7e7e7;
+      padding-left: 40px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 16px;
+        color: #9b9b9b;
+        letter-spacing: 0;
+        padding-left: 22px;
+        padding-right: 22px;
+        height: 50px;
+        background: #ffffff;
+        border: 1px solid #cbcbcb;
+        border-radius: 60px;
+        margin-bottom: 15px;
+        margin-right: 15px;
+
+        &.current {
+          background: #4a4a4a;
+          border-color: #4a4a4a;
+          color: #ffffff;
+        }
+      }
     }
 
     @media (min-width: $big-desktop) {
@@ -413,10 +536,6 @@
   .filters-categories {
     border: none;
 
-    @media (min-width: $desktop) {
-      padding-top: 10px;
-    }
-
     #filters_list {
       max-height: 0;
       overflow: hidden;
@@ -424,8 +543,17 @@
       @media (min-width: $tablet) {
         max-height: none;
         overflow: initial;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 36px;
+        padding-right: 23px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-left: 43px;
+        padding-right: 35px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-left: 56px;
       }
     }
 
@@ -436,6 +564,10 @@
       width: 33%;
     }
 
+    @media (min-width: $big-desktop) {
+      width: 20%;
+    }
+
     // @media (min-width: $desktop) {
     //   max-width: 340px;
     // }
@@ -443,6 +575,27 @@
     // @media (min-width: $big-desktop) {
     //   max-width: 290px;
     // }
+
+    .accordion {
+      padding-bottom: 15px;
+      margin-top: 30px;
+    }
+
+    .content-accordion a {
+      // margin-top: 15px;
+
+      // &:first-child {
+      //   margin-top: 4px;
+      // }
+
+      @media (min-width: $desktop) {
+        margin-top: 15px;
+
+        &:first-child {
+          margin-top: 4px;
+        }
+      }
+    }
   }
 
   .product-items-easy {
@@ -455,6 +608,10 @@
       // width: 100%;
       width: 67%;
       max-width: none;
+    }
+
+    @media (min-width: $big-desktop) {
+      width: 80%;
     }
 
     // @media (min-width: $desktop) {

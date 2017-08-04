@@ -32,9 +32,25 @@
     .current-filters {
       padding-left: 23px;
       padding-right: 23px;
-      padding-top: 30px;
-      display: none;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      display: flex;
       flex-wrap: wrap;
+
+      @media (min-width: $tablet) {
+        padding-left: 34px;
+        padding-top: 32px;
+        padding-bottom: 0px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-left: 43px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-left: 56px;
+        padding-top: 28px;
+      }
 
       .filter {
         display: flex;
@@ -45,7 +61,7 @@
           font-size: 18px;
           color: #4a4a4a;
           letter-spacing: 0;
-          margin-right: 13px;
+          margin-right: 10px;
         }
 
         input {
@@ -56,7 +72,7 @@
       }
 
       #reset-all-filters {
-        margin-top: 25px;
+        margin-top: 15px;
         font-weight: 400;
         font-size: 14px;
         color: #4a4a4a;
@@ -72,7 +88,6 @@
 
       @media (min-width: $tablet) {
         max-height: none;
-        padding-top: 95px;
       }
 
       #filters {
@@ -85,8 +100,18 @@
             margin-bottom: 34px;
           }
 
+          @media (min-width: $desktop) {
+            padding-left: 43px;
+            margin-bottom: 31px;
+          }
+
+          @media (min-width: $big-desktop) {
+            padding-left: 56px;
+            margin-bottom: 34px;
+          }
+
           &:first-child {
-            margin-top: 32px;
+            margin-top: 30px;
           }
 
           .heading {
@@ -97,6 +122,10 @@
             padding-bottom: 15px;
             border-bottom: 1px solid #9b9b9b;
             margin-bottom: 9px;
+
+            @media (min-width: $desktop) {
+              margin-bottom: 10px;
+            }
           }
 
           .form-control {
