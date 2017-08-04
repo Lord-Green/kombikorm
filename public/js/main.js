@@ -228,12 +228,12 @@ function product_slider_correct_thumb() {
 
 function product_accordion_button() {
   if (currentWidthWindow >= tabletSize) {
-    var tab_elem = $(".product-page .tabs .tab:first"), tab_height = tab_elem.parent().css('height');
+    var tab_elem = $(".product-page .tabs .tab:first"), tab_height = tab_elem.parent().css('height'), contentAccordionStep = 30;
 
     // т.к. первый элемент у нас активный, то по умолчанию развернём его
     tab_elem.find(".accordion:first").addClass('active');
     tab_elem.find(".content-accordion:first").css('display', 'flex');
-    tab_elem.parent().css("height", Number.parseFloat(tab_elem.find(".content-accordion:first").css('height')) + Number.parseFloat(tab_height));
+    tab_elem.parent().css("height", Number.parseFloat(tab_elem.find(".content-accordion:first").css('height')) + Number.parseFloat(tab_height) + contentAccordionStep);
 
     // у всех табов одинаковая изначально будет одинаковая высота, 
     // чтобы она не менялась во время перестроения - зафиксируем её
@@ -263,7 +263,7 @@ function product_accordion_button() {
       // возьмём высоту содержимого текущего аккордеона и добавим к ней высоту вкладки
       if (currentWidthWindow >= tabletSize) {
         content_height = element.next().css('height');
-        $(this).parent().css("height", Number.parseFloat(content_height) + Number.parseFloat(tab_height));
+        $(this).parent().css("height", Number.parseFloat(content_height) + Number.parseFloat(tab_height) + contentAccordionStep);
       }
     } else {
       element.removeClass('active');
