@@ -44,8 +44,12 @@ footer.footer
 
 .remodal.callback(data-remodal-id="callback" role="dialog")
   form(name="contact" method="post" action="#")#contactform
-    input(type="text" placeholder="Имя *" required).name
-    input(type="tel" placeholder="Телефон *" required).tel
+    .input
+      input(type="text" required).name
+      label Имя *
+    .input
+      input(type="tel" required).tel
+      label Телефон *
     .personal-data
       input(type="checkbox" id="i-agree-give-my-personal-data" required)
       label(for="i-agree-give-my-personal-data") Я даю согласие на обработку моих персональных данных

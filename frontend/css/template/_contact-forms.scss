@@ -22,6 +22,7 @@
       font-weight: 400;
       font-size: 14px;
       color: #4a4a4a;
+      width: 100%;
 
       &::-webkit-input-placeholder {
         font-weight: 400;
@@ -55,6 +56,49 @@
       padding-bottom: 6px;
       max-width: 300px;
       margin-bottom: 30px;
+    }
+
+    .input {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+
+      label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+        color: #4a4a4a;
+        font-weight: 400;
+        transition: top 0.2s, color 0.5s;
+      }
+
+      textarea {
+        display: block;
+        resize: vertical;
+      }
+
+      input,
+      textarea {
+        position: relative;
+        z-index: 1;
+        background: none;
+
+        &:valid {
+          background: #fff;
+        }
+
+        &:focus + label {
+          z-index: 2;
+        }
+      }
+
+      input:focus + label,
+      textarea:focus + label {
+        top: -19px;
+        font-size: 12px;
+        color: #9b9b9b;
+      }
     }
 
     .submit {
@@ -258,7 +302,7 @@
         font-size: 14px;
         color: #4a4a4a;
         font-weight: 400;
-        transition: top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+        transition: top 0.2s, color 0.5s;
       }
 
       textarea {
