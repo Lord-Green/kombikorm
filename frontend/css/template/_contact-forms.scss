@@ -183,10 +183,19 @@
           position: absolute;
           width: 100vw;
           top: 0;
-          left: -30px;
+          left: -22px;
 
           @media (min-width: $tablet) {
             width: 65vw;
+            left: -34px;
+          }
+
+          @media (min-width: $desktop) {
+            left: -42px;
+          }
+
+          @media (min-width: $big-desktop) {
+            left: -55px;
           }
         }
       }
