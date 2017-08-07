@@ -121,17 +121,29 @@ function show_search_form() {
 
 function catalog_accordion_button() {
   $('.catalog .accordion').click(function () {
+    var next_elem = $(this).next();
     if (!$(this).hasClass('active')) {
       $(this).addClass('active');
-      // $(this).css("margin-bottom", "0");
-      $(this).next().css('display', 'flex');
+      if (next_elem.hasClass('content-accordion')) {
+        next_elem.css('display', 'flex');
+      }
     } else {
       $(this).removeClass('active');
-      $(this).next().css('display', 'none');
+      if (next_elem.hasClass('content-accordion')) {
+        next_elem.css('display', 'none');
+      }
     }
   });
 }
+function catalog_accordion_remove_excess_button() {
+  $('.catalog #filters_list').find(".accordion").each(function () {
+    var next_elem = $(this).next();
+    if (!next_elem.hasClass('content-accordion')) {
+      $(this).addClass('empty');
+    }
+  });
 
+}
 function cart_button() {
   var cart = $('.header .cart'), cart_content = cart.find(".cart-content");
 
@@ -194,8 +206,6 @@ function cart_remove_item() {
     cart_all_sum();
   });
 }
-
-
 
 function cart_amount_items() {
   var cart = $(".header .cart .cart-content"), i = 0;
@@ -424,6 +434,7 @@ $(document).ready(function ($) {
 
   /*********    КАТАЛОГ С КАТЕГОРИЯМИ       ********/
   catalog_accordion_button();
+  catalog_accordion_remove_excess_button();
   /*********   END: КАТАЛОГ С КАТЕГОРИЯМИ   ********/
 
 
