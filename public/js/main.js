@@ -47,10 +47,22 @@ function menu_all_products() {
       $(".header .all-product .menu").css("max-height", "none");
       $(".header .all-product .fon").css("display", "block");
       $(".header .all-product").addClass('active');
+
+      $(document).mouseup(function (e) { // событие клика по веб-документу
+        var div = $(".header .all-product .menu"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+          $(".header .all-product .menu").css("max-height", "0");
+          $(".header .all-product .fon").css("display", "none");
+          $(".header .all-product").removeClass('active');
+        }
+      });
     } else {
       $(".header .all-product .menu").css("max-height", "0");
       $(".header .all-product .fon").css("display", "none");
       $(".header .all-product").removeClass('active');
+
+
     }
   });
   $('.header .all-product .menu .title .close').click(function () {
@@ -60,6 +72,8 @@ function menu_all_products() {
       $(".header .all-product").removeClass('active');
     }
   });
+
+
 
   $(".header .all-product .menu ul li .submenu").click(function () {
     $(".header .all-product .menu  ul li").parent("li ul").parent().css("position", "initial");
@@ -284,6 +298,7 @@ function product_accordion_button() {
 }
 
 
+
 // function input_button() {
 //   $('.input input').click(function () {
 //     alert(1);
@@ -428,7 +443,7 @@ $(document).ready(function ($) {
   cart_amount_items();
   cart_all_sum();
   select_button();
-  // input_button();
+  // product_items_fix_jump();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
 

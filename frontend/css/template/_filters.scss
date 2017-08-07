@@ -55,6 +55,17 @@
       .filter {
         display: flex;
         align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          p {
+            color: #ef562d;
+          }
+
+          input {
+            background: url('../img/sprite/content/close--orange--middle.svg') 50% no-repeat;
+          }
+        }
 
         .name {
           font-weight: 400;
@@ -68,6 +79,7 @@
           @mixin bg content/close--gray.svg;
           background-color: transparent;
           border: none;
+          cursor: pointer;
         }
       }
 
@@ -79,6 +91,10 @@
         letter-spacing: 0;
         line-height: 27px;
         width: 100%;
+
+        &:hover {
+          color: #ef562d;
+        }
       }
     }
 
@@ -198,6 +214,10 @@
                 background: #ffffff;
                 border: 1px solid #b7b7b7;
                 box-sizing: border-box;
+              }
+
+              &:hover .param_list {
+                color: #ef562d;
               }
             }
 
