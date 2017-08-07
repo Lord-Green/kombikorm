@@ -274,8 +274,12 @@ function product_accordion_button() {
 }
 
 
+// function input_button() {
+//   $('.input input').click(function () {
+//     alert(1);
 
-
+//   });
+// }
 
 // $("#check_1_1").click(function () {
 //   $("#check_1_1").attr("checked", "checked");
@@ -414,6 +418,7 @@ $(document).ready(function ($) {
   cart_amount_items();
   cart_all_sum();
   select_button();
+  // input_button();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
 

@@ -33,11 +33,21 @@ html(lang="ru")
       input(type="submit" value="Оформить заказ")
       .content
         .title Личные данные
-        input(type="text" placeholder="Фамилия *" required)
-        input(type="text" placeholder="Имя *" required)
-        input(type="text" placeholder="Отчество")
-        input(type="e-mail" placeholder="E-mail *" required)
-        input(type="tel" placeholder="Телефон *" required).last
+        .input
+          input(type="text" required)
+          label Фамилия *
+        .input
+          input(type="text" required)
+          label Имя *
+        .input
+          input(type="text" required)
+          label Отчество
+        .input
+          input(type="e-mail" required)
+          label E-mail *
+        .input
+          input(type="tel" required).last
+          label Телефон *
         .personal-data
           .block
             input(type="checkbox" id="subscribe-on-news--form-for-order" required)
@@ -83,7 +93,9 @@ html(lang="ru")
               option Дрезден
               option Дюссельдорф
               option Кёльн     
-          input(type="text" placeholder="Адрес доставки").last
+          .input
+            input(type="text" required).last
+            label Адрес доставки
         .title Способ оплаты
         form(action="").select
           label.label
