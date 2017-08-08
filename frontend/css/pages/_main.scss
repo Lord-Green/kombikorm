@@ -26,10 +26,12 @@
 
     @media (min-width: $tablet) {
       &:hover {
-        padding-top: 21px;
-        padding-left: 28px;
-        padding-bottom: 22px;
-        padding-right: 13px;
+        .product-item-content {
+          padding-top: 21px;
+          padding-left: 28px;
+          padding-bottom: 22px;
+          padding-right: 13px;
+        }
 
         .title {
           margin-top: 55px;
@@ -43,9 +45,11 @@
 
     @media (min-width: $desktop) {
       &:hover {
-        padding-left: 31px;
-        padding-bottom: 16px;
-        padding-right: 19px;
+        .product-item-content {
+          padding-left: 31px;
+          padding-bottom: 16px;
+          padding-right: 19px;
+        }
 
         .title {
           margin-top: 44px;
@@ -55,10 +59,12 @@
 
     @media (min-width: $big-desktop) {
       &:hover {
-        padding-top: 19px;
-        padding-left: 27px;
-        padding-bottom: 17px;
-        padding-right: 19px;
+        .product-item-content {
+          padding-top: 19px;
+          padding-left: 27px;
+          padding-bottom: 17px;
+          padding-right: 19px;
+        }
 
         .price {
           padding-bottom: 11px;

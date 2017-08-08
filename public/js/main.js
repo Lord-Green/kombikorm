@@ -298,6 +298,38 @@ function product_accordion_button() {
 }
 
 
+function product_items_fix_jump() {
+  var current_height = 0, temp_height = 0;
+
+  $('.content').find(".product-items").each(function () {
+    if (!$(this).hasClass('with-options') && !$(this).hasClass('short-list')) {
+      $(this).find(".product-item").each(function () {
+        temp_height = Number.parseFloat($(this).css('height'));
+
+        if (current_height < temp_height) {
+          current_height = temp_height;
+          $(this).css('height', current_height);
+        } else if (current_height == temp_height) {
+          $(this).css('height', current_height);
+        }
+      })
+    }
+  });
+}
+
+
+// var items = $(".product-items");
+// if (!items.hasClass('with-options') && !items.hasClass('short-list')) {
+
+//   $('.catalog #filters_list').find(".accordion").each(function () {
+//     var next_elem = $(this).next();
+//     if (!next_elem.hasClass('content-accordion')) {
+//       $(this).addClass('empty');
+//     }
+//   });
+
+
+
 
 // function input_button() {
 //   $('.input input').click(function () {
@@ -443,7 +475,7 @@ $(document).ready(function ($) {
   cart_amount_items();
   cart_all_sum();
   select_button();
-  // product_items_fix_jump();
+  product_items_fix_jump();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
 

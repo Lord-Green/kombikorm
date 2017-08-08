@@ -58,7 +58,8 @@
             font-size: 14px;
             color: #ffffff;
             letter-spacing: 0;
-            transition: color 1.5s ease;
+            // transition: color 1.5s ease;
+            transition: color 0.3s ease;
 
             &:hover {
               color: #000000;
@@ -102,7 +103,8 @@
             color: #ffffff;
             letter-spacing: 0;
             display: inline-flex;
-            transition: color 1.5s ease;
+            // transition: color 1.5s ease;
+            transition: color 0.3s ease;
 
             &:hover {
               color: #000000;
@@ -172,7 +174,8 @@
             width: 100%;
             margin-bottom: 15px;
             cursor: pointer;
-            transition: 0.5s ease;
+            // transition: 0.5s ease;
+            transition: 0.3s ease;
           }
 
           .twitter {
@@ -243,7 +246,8 @@
         letter-spacing: 0;
         margin-bottom: 30px;
         padding-right: 30px;
-        transition: color 1.5s ease;
+        // transition: color 1.5s ease;
+        transition: color 0.3s ease;
         cursor: pointer;
 
         &:hover {
@@ -307,7 +311,8 @@
           font-size: 14px;
           color: #4a4a4a;
           letter-spacing: 0;
-          transition: color 1.5s ease;
+          // transition: color 1.5s ease;
+          transition: color 0.3s ease;
 
           @media (min-width: $tablet) {
             margin-top: 6px;
@@ -355,7 +360,8 @@
         letter-spacing: 0;
 
         span {
-          transition: color 1.5s ease;
+          // transition: color 1.5s ease;
+          transition: color 0.3s ease;
           cursor: pointer;
 
           &:hover {

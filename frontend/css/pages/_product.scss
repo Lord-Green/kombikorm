@@ -180,7 +180,8 @@
           letter-spacing: 0;
           background: #ef562d;
           margin-bottom: 25px;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          // transition: 0.3s ease;
 
           &::before {
             @mixin bg header/cart--white.svg;
@@ -194,8 +195,9 @@
 
             &::before {
               @mixin bg header/cart.svg;
-              transition-delay: 0.5s;
-              transition: 0.5 ease;
+              // transition-delay: 0.5s;
+              // transition: 0.5 ease;
+              // transition: 0.3s ease;
             }
           }
         }
@@ -207,7 +209,8 @@
           font-size: 12px;
           color: #4a4a4a;
           letter-spacing: 0;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          transition: 0.3s ease;
 
           &:hover {
             color: #ef562d;
@@ -320,7 +323,8 @@
           color: #4a4a4a;
           letter-spacing: 0;
           line-height: 27px;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          transition: 0.3s ease;
 
           &::before {
             margin-right: 12px;
@@ -346,7 +350,8 @@
           color: #4a4a4a;
           letter-spacing: 0;
           line-height: 27px;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          transition: 0.3s ease;
 
           &::before {
             @mixin bg content/print.svg;
@@ -401,7 +406,7 @@
           text-align: left;
           outline: none;
           background: none;
-          transition: 0.4s;
+          // transition: 0.4s;
           font-weight: 400;
           font-size: 16px;
           line-height: 1;
@@ -412,7 +417,8 @@
           padding-bottom: 27px;
           padding-left: 23px;
           padding-right: 23px;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          transition: 0.3s ease;
 
           @media (min-width: $tablet) {
             // height: 100%;

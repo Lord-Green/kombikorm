@@ -292,9 +292,11 @@
         }
 
         &:hover {
-          padding-top: 19px;
-          padding-left: 27px;
-          padding-right: 18px;
+          .product-item-content {
+            padding-top: 19px;
+            padding-left: 27px;
+            padding-right: 18px;
+          }
 
           .title {
             align-self: flex-end;
@@ -315,9 +317,11 @@
 
       @media (min-width: $desktop) {
         &:hover {
-          padding-top: 20px;
-          padding-left: 33px;
-          padding-right: 21px;
+          .product-item-content {
+            padding-top: 20px;
+            padding-left: 33px;
+            padding-right: 21px;
+          }
 
           .cart {
             margin-bottom: 0px;
@@ -343,10 +347,12 @@
         }
 
         &:hover {
-          padding-top: 16px;
-          padding-bottom: 11px;
-          padding-left: 24px;
-          padding-right: 19px;
+          .product-item-content {
+            padding-top: 16px;
+            padding-bottom: 11px;
+            padding-left: 24px;
+            padding-right: 19px;
+          }
         }
       }
     }
@@ -392,7 +398,8 @@
     margin-top: 33px;
     margin-left: auto;
     margin-right: auto;
-    transition: 1.5s ease;
+    // transition: 1.5s ease;
+    transition: 0.3s ease;
 
     &:hover {
       color: #ffffff;

@@ -57,7 +57,8 @@
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    transition: 1.5s ease;
+    // transition: 1.5s ease;
+    transition: 0.3s ease;
 
     @media (min-width: $tablet) {
       margin-top: 29px;
@@ -79,38 +80,65 @@
     flex-wrap: wrap;
     border: 1px solid #e7e7e7;
     height: 403px;
-    padding-top: 21px;
-    padding-bottom: 20px;
-    padding-left: 21px;
-    padding-right: 35px;
-    align-items: flex-end;
+    position: relative;
+
+    .product-item-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 21px;
+      padding-bottom: 20px;
+      padding-left: 21px;
+      padding-right: 35px;
+      align-items: flex-end;
+      min-height: 100%;
+
+      @media (min-width: $tablet) {
+        padding-right: 25px;
+        padding-left: 30px;
+        align-items: flex-start;
+        padding-top: 45px;
+        padding-bottom: 22px;
+      }
+
+      @media (min-width: $desktop) {
+        padding-top: 47px;
+        padding-bottom: 27px;
+        padding-left: 30px;
+        padding-right: 35px;
+      }
+
+      @media (min-width: $big-desktop) {
+        padding-bottom: 22px;
+        padding-right: 30px;
+        padding-left: 32px;
+      }
+    }
 
     @media (min-width: $tablet) {
       height: 426px;
       width: 33.3%;
-      // width: 33.15%;
-      padding-right: 25px;
-      padding-left: 30px;
-      align-items: flex-start;
-      padding-top: 45px;
-      padding-bottom: 22px;
+      // padding-right: 25px;
+      // padding-left: 30px;
+      // align-items: flex-start;
+      // padding-top: 45px;
+      // padding-bottom: 22px;
     }
 
     @media (min-width: $desktop) {
       height: 401px;
-      padding-top: 47px;
-      padding-bottom: 27px;
-      padding-left: 30px;
-      padding-right: 35px;
+      // padding-top: 47px;
+      // padding-bottom: 27px;
+      // padding-left: 30px;
+      // padding-right: 35px;
     }
 
     @media (min-width: $big-desktop) {
       // height: 423px;
-      padding-bottom: 22px;
+      // padding-bottom: 22px;
       width: 20%;
       height: auto;
-      padding-right: 30px;
-      padding-left: 32px;
+      // padding-right: 30px;
+      // padding-left: 32px;
     }
 
     .text {
@@ -281,7 +309,8 @@
 
       &:hover {
         background: #ffffff !important;
-        transition: background 1.5s ease;
+        // transition: background 1.5s ease;
+        // transition: 0.3s ease;
 
         p {
           color: #ef562d;
@@ -291,19 +320,25 @@
 
     &:hover {
       background: #ef562d;
-      padding-right: 26px;
-      padding-bottom: 18px;
-      // transition: 1.5s ease;
 
-      @media (min-width: $desktop) {
-        padding-right: 21px;
-        padding-bottom: 16px;
-        padding-top: 20px;
-      }
+      .product-item-content {
+        background: #ef562d;
+        padding-right: 26px;
+        padding-bottom: 18px;
+        // transition: 1.5s ease;
+        position: absolute;
+        z-index: 1;
 
-      @media (min-width: $big-desktop) {
-        padding-left: 27px;
-        padding-right: 18px;
+        @media (min-width: $desktop) {
+          padding-right: 21px;
+          padding-bottom: 16px;
+          padding-top: 20px;
+        }
+
+        @media (min-width: $big-desktop) {
+          padding-left: 27px;
+          padding-right: 18px;
+        }
       }
 
       .price {
@@ -366,7 +401,8 @@
 
           &:hover {
             width: 163px;
-            transition: width 1.5s ease;
+            // transition: width 1.5s ease;
+            // transition: 0.3s ease;
             background: #ef562d !important;
 
             p {
@@ -376,7 +412,7 @@
             &::before {
               position: relative;
               display: inline-flex;
-              transition-delay: 1s;
+              // transition-delay: 1s;
 
               // transition: 1.5s ease;
               // display: inline-flex;

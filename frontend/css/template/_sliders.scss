@@ -76,7 +76,8 @@
         top: 50%;
         margin-top: -28px;
         left: 29px;
-        transition: 1.5s ease;
+        // transition: 1.5s ease;
+        transition: 0.3s ease;
 
         @media (min-width: $desktop) {
           margin-top: -33px;
@@ -106,7 +107,8 @@
         top: 50%;
         margin-top: -28px;
         right: 30px;
-        transition: 1.5s ease;
+        // transition: 1.5s ease;
+        transition: 0.3s ease;
 
         @media (min-width: $desktop) {
           margin-top: -33px;
@@ -143,7 +145,8 @@
           width: 15px;
           height: 16px;
           background: #e7e7e7;
-          transition: 1.5s ease;
+          // transition: 1.5s ease;
+          transition: 0.3s ease;
         }
 
         &.active span,
