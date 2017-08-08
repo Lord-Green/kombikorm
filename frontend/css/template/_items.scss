@@ -562,6 +562,8 @@
       margin-right: auto;
       align-self: center;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
       right: 27%;
 
       @media (min-width: $desktop) {

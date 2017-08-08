@@ -274,6 +274,7 @@
 
     @media (min-width: $tablet) {
       width: 67%;
+      height: max-content;
     }
 
     @media (min-width: $big-desktop) {
