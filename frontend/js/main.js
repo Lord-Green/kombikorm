@@ -24,9 +24,23 @@ function preset_button_catalog() {
 
 function view_mode_catalog() {
   $(".content.catalog-page .click-filters .position a").click(function () {
+
+
     if (!$(this).hasClass('active')) {
       $(".content.catalog-page .click-filters .position a.active").removeClass('active');
       $(".content.catalog-page .product-items").attr("class", "product-items " + $(this).attr("class"));
+
+      if ($(this).attr("class") != "multi-colons") {
+        $(".content.catalog-page .product-items").find(".product-item").each(function () {
+          $(this).css('height', "auto");
+          $(this).css('height', $(this).css('height'));
+        });
+      } else {
+        $(".content.catalog-page .product-items").find(".product-item").each(function () {
+          $(this).css('height', "auto");
+        });
+        product_items_fix_jump();
+      }
       $(this).addClass('active');
     }
   });
@@ -475,7 +489,7 @@ $(document).ready(function ($) {
   cart_amount_items();
   cart_all_sum();
   select_button();
-  // product_items_fix_jump();
+  product_items_fix_jump();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
 

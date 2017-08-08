@@ -60,6 +60,10 @@
     padding-left: 23px;
     padding-right: 23px;
 
+    &:last-child {
+      margin-bottom: 30px;
+    }
+
     @media (min-width: $tablet) {
       padding-left: 0px;
       padding-right: 0px;

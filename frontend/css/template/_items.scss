@@ -487,6 +487,20 @@
 .product-items.with-options {
   height: auto;
 
+  &:hover  .product-item-content {
+    .price {
+      align-self: initial;
+    }
+
+    .title {
+      align-self: initial;
+    }
+
+    .cart {
+      align-self: center;
+    }
+  }
+
   .product-item.best.circle .img::before {
     left: -20px;
     top: -20px;
@@ -546,6 +560,7 @@
       margin-right: auto;
       align-self: center;
       position: absolute;
+      right: 27%;
 
       @media (min-width: $desktop) {
         right: 32%;
