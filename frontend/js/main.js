@@ -331,40 +331,6 @@ function product_items_fix_jump() {
   });
 }
 
-
-// var items = $(".product-items");
-// if (!items.hasClass('with-options') && !items.hasClass('short-list')) {
-
-//   $('.catalog #filters_list').find(".accordion").each(function () {
-//     var next_elem = $(this).next();
-//     if (!next_elem.hasClass('content-accordion')) {
-//       $(this).addClass('empty');
-//     }
-//   });
-
-
-
-
-// function input_button() {
-//   $('.input input').click(function () {
-//     alert(1);
-
-//   });
-// }
-
-// $("#check_1_1").click(function () {
-//   $("#check_1_1").attr("checked", "checked");
-// });
-
-// $("#uncheck_1_1").click(function () {
-//   $("#check_1_1").removeAttr("checked");
-// });
-
-// document.getElementById('uncheck_1_1').onclick = function () { document.getElementById('check_1_1').checked = "false" }
-
-
-
-
 function select_button() {
   if (!document.getElementById && !document.createTextNode) { return; }
 
@@ -510,48 +476,5 @@ $(document).ready(function ($) {
   /*********    СТРАНИЦА ПРОДУКТА       ********/
   product_accordion_button();
   product_slider_correct_thumb();
-  // light_slider_for_product_page();  
   /*********   END: СТРАНИЦА ПРОДУКТА   ********/
-
-  // main_slider_init();
 });
-
-
-// function main_slider_init() {
-//   var owl = $('.owl-carousel-for-1');
-//   owl.owlCarousel({
-//     margin: 10,
-//     nav: true,
-//     navText: true,
-//     loop: true,
-//     dots: true,
-//     responsive: {
-//       0: {
-//         items: 1
-//       }
-//     }
-//   })
-// }
-
-// function light_slider_for_product_page() {
-//   var slider_gallery = $('.slider-gallery').lightSlider({
-//     gallery: true,
-//     item: 1,
-//     thumbItem: 5,
-//     slideMargin: 0,
-//     speed: 500,
-//     auto: false,
-//     loop: true,
-//     onSliderLoad: function () {
-//       $('.slider-gallery').removeClass('cS-hidden');
-//     },
-//     responsive: [
-//       {
-//         breakpoint: 767,
-//         settings: {
-//           gallery: false,
-//         }
-//       }
-//     ]
-//   });
-// }
