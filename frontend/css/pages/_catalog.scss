@@ -293,24 +293,39 @@
 
         &:hover {
           .product-item-content {
-            padding-top: 19px;
-            padding-left: 27px;
-            padding-right: 18px;
+            padding-top: 10px;
+            padding-bottom: 11px;
+            padding-right: 7px;
+            padding-left: 7px;
           }
 
           .title {
             align-self: flex-end;
-            margin-top: 51px;
+            margin-top: 0;
+            max-width: 40%;
+            padding-bottom: 0;
           }
 
           .price {
-            padding-bottom: 9px;
+            margin-top: -14px;
             align-self: flex-end;
+            padding-bottom: 0;
+            width: auto;
           }
 
           .cart {
-            margin-bottom: -7px;
             align-self: flex-end;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .text {
+            margin-top: 2px;
+            margin-right: 0;
+
+            a {
+              margin-right: 10px;
+            }
           }
         }
       }
@@ -318,9 +333,8 @@
       @media (min-width: $desktop) {
         &:hover {
           .product-item-content {
-            padding-top: 20px;
-            padding-left: 33px;
-            padding-right: 21px;
+            padding-left: 12px;
+            padding-right: 40px;
           }
 
           .cart {
@@ -332,7 +346,8 @@
           }
 
           .title {
-            margin-top: 43px;
+            max-width: 46%;
+            padding-bottom: 8px;
           }
         }
       }

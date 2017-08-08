@@ -475,7 +475,7 @@ $(document).ready(function ($) {
   cart_amount_items();
   cart_all_sum();
   select_button();
-  product_items_fix_jump();
+  // product_items_fix_jump();
   /*********   END: НА ВСЕХ СТРАНИЦАХ    *********/
 
 
