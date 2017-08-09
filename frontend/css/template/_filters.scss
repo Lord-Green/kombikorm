@@ -182,6 +182,13 @@
               position: absolute;
             }
 
+            &:hover {
+              .param_list,
+              .catalog-filters__counter {
+                color: #ef562d;
+              }
+            }
+
             label {
               cursor: pointer;
               position: absolute;
@@ -214,10 +221,6 @@
                 background: #ffffff;
                 border: 1px solid #b7b7b7;
                 box-sizing: border-box;
-              }
-
-              &:hover .param_list {
-                color: #ef562d;
               }
             }
 
