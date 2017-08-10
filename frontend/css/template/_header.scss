@@ -571,7 +571,16 @@
     }
 
     @media (min-width: $big-desktop) {
-      margin-right: -54px;
+      margin-right: 0;
+      right: 0;
+      transition: right 1s;
+      position: fixed;
+      z-index: 1000;
+      top: 115px;
+
+      &.active {
+        right: 700px;
+      }
     }
 
     .icon {
@@ -621,6 +630,8 @@
       border-bottom: 1px solid #e7e7e7;
       padding-bottom: 30px;
       width: 100vw;
+      height: 100vh;
+      overflow: auto;
 
       @media (min-width: 600px) {
         padding-bottom: 0px;
@@ -632,6 +643,13 @@
         box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.17);
         border: 1px solid #e7e7e7;
         top: -1px;
+        height: auto;
+      }
+
+      @media (min-width: $big-desktop) {
+        right: initial;
+        left: 100%;
+        display: flex !important;
       }
 
       .title {
@@ -840,6 +858,16 @@
       &__footer {
         display: flex;
         flex-wrap: wrap;
+        margin-top: -1px;
+        border-top: 1px solid #e7e7e7;
+
+        @media (min-width: 600px) {
+          border-bottom: 1px solid #e7e7e7;
+        }
+
+        @media (min-width: $desktop) {
+          border-bottom: none;
+        }
 
         .make-order,
         .continue {

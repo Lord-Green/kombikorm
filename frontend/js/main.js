@@ -178,10 +178,16 @@ function cart_button() {
   cart.find('.icon').click(function () {
     if (!cart.hasClass('active')) {
       cart.addClass('active');
-      cart_content.css('display', 'flex');
+      // cart_content.css('display', 'flex');
+      // $("body").css("height", cart_content.css('height'));
+      // $("html").css("overflow-y", "hidden");
+      $("html").css('overflow', 'hidden');
+      cart_content.show().css('overflow', 'auto');
     } else {
+      $('html').css('overflow-y', 'auto');
       cart.removeClass('active');
       cart_content.css('display', 'none');
+
     }
   });
 
@@ -189,11 +195,13 @@ function cart_button() {
   $('.header .cart .title .close').click(function () {
     cart.removeClass('active');
     cart_content.css('display', 'none');
+    $('html').css('overflow', 'auto');
   });
 
   cart_content.find(".cart-content__footer .continue").click(function () {
     cart.removeClass('active');
     cart_content.css('display', 'none');
+    $('html').css('overflow', 'auto');
   });
 }
 
