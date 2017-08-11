@@ -52,16 +52,20 @@
     border: 1px solid #e7e7e7;
     border-radius: 5px;
 
-    // @media (min-width: $tablet) {
-    //   margin-left: 35px;
-    // }
+    @media (min-width: $tablet) {
+      margin-left: 35px;
+    }
 
-    // @media (min-width: $desktop) {
-    //   padding-left: 43px;
-    // }
+    @media (min-width: $desktop) {
+      margin-left: 43px;
+    }
+
+    @media (min-width: $big-desktop) {
+      margin-left: 0;
+    }
 
     .table {
-      overflow-x: scroll;
+      overflow-x: auto;
 
       @media (min-width: $tablet) {
         margin-left: 360px;
@@ -90,6 +94,7 @@
           left: 0;
           border-top: 1px solid #e7e7e7;
           margin-top: -1px;
+          word-wrap: break-word;
         }
       }
 
@@ -116,6 +121,7 @@
         &::before {
           content: attr(data-label);
           font-size: 16px;
+          font-weight: 700;
           width: 100%;
           display: block;
           text-align: center;
@@ -124,6 +130,8 @@
           padding-left: 10px;
           padding-right: 10px;
           box-sizing: border-box;
+          border-top: 1px solid #e7e7e7;
+          border-bottom: 1px solid #e7e7e7;
 
           @media (min-width: $desktop) {
             content: none;
@@ -168,12 +176,11 @@
         }
 
         p.title {
-          color: red;
-          font-weight: 400px;
-          font-size: 24px;
-          margin-bottom: 10px;
-          padding-left: 10px;
-          padding-right: 10px;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 1.3;
+          color: #4a4a4a;
+          margin-bottom: 30px;
         }
 
         p.description {
@@ -232,13 +239,12 @@
         min-height: 50px;
         position: absolute;
         border-bottom: none;
+      }
 
-
-        // .title {
-        //   &.for-href {
-        //     margin-top: 20px;
-        //   }
-        // }
+      .select {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .buttons {
@@ -248,9 +254,47 @@
 
         .difference {
           margin-bottom: 20px;
+          background: #ef562d;
+          border: 1px solid #ef562d;
+          border-radius: 60px;
+          height: 50px;
+          max-width: 300px;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          transition: 0.3s ease;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+
+          &:hover {
+            background: #fff;
+            color: #ef562d;
+          }
         }
 
         .all-parameters {
+          background: #fff;
+          border: 1px solid #ef562d;
+          border-radius: 60px;
+          height: 50px;
+          max-width: 300px;
+          color: #ef562d;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          transition: 0.3s ease;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
+
+          &:hover {
+            background: #ef562d;
+            color: #fff;
+          }
         }
       }
     }
