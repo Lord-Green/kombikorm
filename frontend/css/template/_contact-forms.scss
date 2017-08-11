@@ -436,85 +436,85 @@
       margin-left: 55px;
     }
   }
+}
 
-  .select--title {
-    width: 100%;
-    max-width: 300px;
-    display: flex;
-    font-weight: 400;
-    font-size: 14px;
-    color: #4a4a4a;
-    padding-bottom: 6px;
-    border-bottom: 1px solid #979797;
-    margin-bottom: 30px;
+.select--title {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4a4a4a;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    position: relative;
+  }
+
+  &::after {
+    @mixin bg content/accordion--open.svg;
+    content: "";
+    margin-left: auto;
 
     @media (min-width: $tablet) {
-      position: relative;
-    }
-
-    &::after {
-      @mixin bg content/accordion--open.svg;
-      content: "";
-      margin-left: auto;
-
-      @media (min-width: $tablet) {
-        top: 6px;
-        right: -2px;
-        position: absolute;
-      }
-    }
-
-    &.active {
-      border-bottom-color: #e7e7e7;
-      margin-bottom: 0px;
-
-      & ~ .select--body {
-        display: block;
-        margin-bottom: 30px;
-      }
-
-      &::after {
-        @mixin bg content/accordion--close.svg;
-      }
+      top: 6px;
+      right: -2px;
+      position: absolute;
     }
   }
 
-  .select--body {
-    position: relative;
-    display: none;
-    max-width: 300px;
+  &.active {
+    border-bottom-color: #e7e7e7;
+    margin-bottom: 0px;
 
-    ul {
-      height: 200px;
-      overflow-y: scroll;
-      border: 1px solid #e7e7e7;
-      border-top: none;
-      list-style-type: none;
-      width: 100%;
-      position: absolute;
-      z-index: 3;
+    & ~ .select--body {
+      display: block;
+      margin-bottom: 30px;
+    }
 
-      li {
-        padding: 20px;
-        background: #ffffff;
+    &::after {
+      @mixin bg content/accordion--close.svg;
+    }
+  }
+}
 
-        &:first-child {
-          display: none;
-        }
+.select--body {
+  position: relative;
+  display: none;
+  max-width: 300px;
 
-        &:hover {
-          background: #ef562d;
+  ul {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    list-style-type: none;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
 
-          a {
-            color: #ffffff;
-          }
-        }
+    li {
+      padding: 20px;
+      background: #ffffff;
+
+      &:first-child {
+        display: none;
+      }
+
+      &:hover {
+        background: #ef562d;
 
         a {
-          font-weight: 400;
-          font-size: 14px;
-          color: #4a4a4a;
+          color: #ffffff;
         }
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 14px;
+        color: #4a4a4a;
       }
     }
   }
