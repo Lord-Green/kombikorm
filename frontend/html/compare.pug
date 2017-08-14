@@ -1,8 +1,11 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" , class_delimiter :  ' | ' })
+
 doctype html
 html(lang="ru")
   head
     meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width")
     title Страница сравнения  	
     meta(name="HandheldFriendly" content="true")
     meta(name="format-detection", content="telephone=no")
@@ -11,18 +14,19 @@ html(lang="ru")
     link(rel="apple-touch-icon", href="img/favicon.ico")
     link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic' rel='stylesheet')   
     link(href="js/remodal/remodal.css" rel="stylesheet")
-    link(href="js/remodal/remodal-default-theme.css" rel="stylesheet")  
+    link(href="js/remodal/remodal-default-theme.css" rel="stylesheet")
+    link(href="js/owl.carousel/owl.carousel.min.css" rel="stylesheet")
+    link(href="js/owl.carousel/owl.theme.default.min.css" rel="stylesheet")  
     link(rel='stylesheet' href='styles/style.css')
-    
-  include template/header.pug 
-  .compare--header
-    h1.title Таблица сравнения
-  main.content.compare
-    .wrapp-table
-      .button
-        .prev
-        .next       
-      .filters
+
+mixin compare-table(data)  
+  +b.compare-table
+    +b.compare-table-button
+      +e.prev
+      +e.next
+    +b.compare-table-aside
+      +b.compare-table-aside-filters
+        //- +e.title Категория товаров
         form(action="").select
           label.label
           select.turnintodropdown_demo2
@@ -32,112 +36,73 @@ html(lang="ru")
             option Шотландия
             option Уэльс
             option Австралия
-        .buttons
-          a(href="#").difference Различающиеся
-          a(href="#").all-parameters Все параметры
-      .table       
-        .line.title
-          .row
-            .img.circle: img(src="img/content/main/item--1.jpg")
-            p.title iPhone 99
-            p.description Якобы самый лучший телефон :) 
-            a(href="#").buy: p В корзину
-          .row
-            .img: img(src="img/content/main/item--2.jpg")
-            p.title Huawei P10 Lite 32Gb RAM 3Gb
-            p.description Очень длинная аннотация к данному товару Очень длинная аннотация к данному товару Очень длинная аннотация к данному товару Очень длинная аннотация к данному товару
-            a(href="#").buy: p В корзину
-          .row
-            .img: img(src="img/content/main/item--3.jpg")
-            p.title Длинное название телефона с кучей клёвых слов ведь это выглядит важно в глазах ничего не понимающего покупателя
-            p.description Здесь кратко
-            a(href="#").buy: p В корзину
-          .row
-            .img: img(src="img/content/main/item--4.jpg")
-            p.title Название товара
-            a(href="#").buy: p В корзину
-          .row
-            .img: img(src="img/content/main/item--5.jpg")
-            p.title Название товара 2
-            a(href="#").buy: p В корзину
-          .row
-            .img: img(src="img/content/main/item--1.jpg")
-            p.title Название товара 3
-            a(href="#").buy: p В корзину
-        .line
-          .feature  Производитель
-          .row(data-label="Производитель")
-            p.text Apple Corp 
-          .row(data-label="Производитель")
-            p.text Huawei
-          .row(data-label="Производитель")
-            p.text хз
-          .row(data-label="Производитель")
-            p.text Значение
-          .row(data-label="Производитель")
-            p.text Значение
-          .row(data-label="Производитель")
-            p.text Значение
-        .line
-          .feature  Очень длинная характеристика, очень
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Описание
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Описание длинной характеристики
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Описание для третьего продукта
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Значение
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Описание для третьего продукта
-          .row(data-label="Очень длинная характеристика, очень")  
-            p.text Значение
-        .line
-          .feature  Мощность двигателя
-          .row(data-label="Мощность двигателя") 
-            p.text Про мощность двигателя dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg
-          .row(data-label="Мощность двигателя")
-            p.text Про мощность двигателя
-          .row(data-label="Мощность двигателя")
-            p.text Про мощность двигателя dfghfg fgdg dfgdfg dfghfg fgdg dfgdfg dfghfg fgdg
-          .row(data-label="Мощность двигателя")
-            p.text -
-          .row(data-label="Мощность двигателя")
-            p.text -
-          .row(data-label="Мощность двигателя")
-            p.text -
-        .line
-          .feature  Характеристика 99
-          .row(data-label="Характеристика 99")
-            p.text Значение 1 для 99
-          .row(data-label="Характеристика 99")
-            p.text Значение 2 для 99
-          .row(data-label="Характеристика 99")
-            p.text Значение 3 для 99
-          .row(data-label="Характеристика 99")
-            p.text Значение
-          .row(data-label="Характеристика 99")
-            p.text Значение 3 для 99
-          .row(data-label="Характеристика 99")
-            p.text Значение
-        .line
-          .feature  Характеристика 100
-          .row(data-label="Характеристика 100")
-            p.text Значение 1 для 100
-          .row(data-label="Характеристика 100")
-            p.text Значение 2 для 100
-          .row(data-label="Характеристика 100")
-            p.text Значение 3 для 100
-          .row(data-label="Характеристика 100")
-            p.text Значение
-          .row(data-label="Характеристика 100")
-            p.text Значение 3 для 100
-          .row(data-label="Характеристика 100")
-            p.text Значение
-  
-   
-  include template/footer.pug
+      +b.compare-table-aside-buttons
+        +e.difference(href="#") Различающиеся
+        +e.all-parameters(href="#") Все параметры
+      +b.compare-table-aside-parameters
+        each j in data.feature_index              
+          +e.parameter-name
+            p #{data.item_feature[j]}
+    +b.compare-table-body.owl-carousel.compare-products-slider
+      each i in data.items_index
+        +b.product-item
+          +b.product-item-title
+            +e.img
+              +e.IMG(src='img/content/' + data.item_img)
+            +e.P.title #{data.item_title[i]}
+            +e.P.description #{data.item_desc[i]}
+            +e.price
+              .title Цена:
+              .value 6 890 руб.
+            +e.buy(href="#") Купить
+          +b.product-item-info
+            each j in data.feature_index              
+              +b.product-item-info-block(data-label=data.item_feature[j])
+                +e.P.value #{data.item_feature_value[j][i]}
+
+
+
+include template/header.pug 
+.compare-container
+  +b.compare-header 
+    +e.H1.title Таблица сравнения
+    +compare-table({
+      "items_index": [0, 1, 2, 3, 4, 5],
+      "item_title": ["OnePlus 5", "iPhone 6", "Galaxy S7", "Honor 9", "HTC 10", "Sony XPERIA"],
+      "item_img": "catalog/block--1.jpg",
+      "item_desc": ["Один из самых лучших телефонов", "Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон", "Неплохой телефон", "Красивый телефон", "Говорят неплохой", "Так себе"],
+      "feature_index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "item_feature": ["Производитель", "Год релиза", "Цвет (спереди/cзади/сбоку)", "Поддержка сетей", "Количество SIM-карт", "Диагональ экрана", "Разрешение экрана", "Операционная система",  "Количество мегапикселей основной камеры Количество мегапикселей основной камеры Количество мегапикселей основной камеры Количество мегапикселей основной камеры", "Цена"],
+      "item_feature_value": [["OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["2017", "2014", "2016", "2017", "2016","2016"], ["Серый", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"]]
+    })  
+include template/footer.pug
 
   script(src="js/jquery.min.js")
   script(src="js/remodal/remodal.min.js")
+  script(src="js/owl.carousel/owl.carousel.min.js")
+  script.
+    var owl = $('.compare-products-slider');
+    owl.owlCarousel({
+      nav: true,
+      navText: true,      
+      items: 3,
+      responsive: {
+        0: {
+          items: 1,
+          dots: true,
+        },
+        768: {
+          dots: false,
+          items: 1
+        },
+        1024: {
+          items: 2,
+          dots: false
+        },
+        1440: {
+          items: 3,
+          dots: false
+        }
+      }
+    });
   script(src="js/main.js")
