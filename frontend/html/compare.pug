@@ -37,8 +37,8 @@ mixin compare-table(data)
             option Уэльс
             option Австралия
       +b.compare-table-aside-buttons
-        +e.difference(href="#") Различающиеся
-        +e.all-parameters(href="#") Все параметры
+        +e.difference Различающиеся
+        +e.all-parameters Все параметры
       +b.compare-table-aside-parameters
         each j in data.feature_index              
           +e.parameter-name
@@ -73,7 +73,7 @@ include template/header.pug
       "item_desc": ["Один из самых лучших телефонов", "Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон Якобы самый лучший телефон", "Неплохой телефон", "Красивый телефон", "Говорят неплохой", "Так себе"],
       "feature_index": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
       "item_feature": ["Производитель", "Год релиза", "Цвет (спереди/cзади/сбоку)", "Поддержка сетей", "Количество SIM-карт", "Диагональ экрана", "Разрешение экрана", "Операционная система",  "Количество мегапикселей основной камеры Количество мегапикселей основной камеры Количество мегапикселей основной камеры Количество мегапикселей основной камеры", "Цена"],
-      "item_feature_value": [["OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["2017", "2014", "2016", "2017", "2016","2016"], ["Серый", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"]]
+      "item_feature_value": [["OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["2017", "2014", "2016", "2017", "2016","2016"], ["Серый", "Серый", "Серый", "Серый", "Серый","Серый"],["OnePlus", "Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple Apple Apple Apple  Apple  Apple  Apple  Apple Apple  Apple  Apple  Apple", "Samsung", "Huavei", "HTC","Sony"],["2", "2", "2", "2", "2","2"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"], ["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"],["12", "12", "12", "12", "12","12"],["OnePlus", "Apple", "Samsung", "Huavei", "HTC","Sony"]]
     })  
 include template/footer.pug
 

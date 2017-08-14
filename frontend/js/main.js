@@ -2,6 +2,8 @@ var currentWidthWindow = document.documentElement.clientWidth;
 var tabletSize = 768, desktopSize = 1024;
 var widthColumn = 360;
 var currentScrollPosition = 0;
+var compare_table_amount_elements = 0;
+var compare_table_amount_items = 0;
 
 
 
@@ -463,12 +465,17 @@ function compareTableParametersMove() {
 
 function compareTableFixHeight() {
   var product_item = $(".compare-table-body .product-item"), temp_height, max_height_title = 0,
-    amount_elements = 0, arr = [];
+    arr = [];
 
   //подсчитаем количество блоков с характеристиками
   $(".compare-table-aside-parameters").find(".compare-table-aside-parameters__parameter-name").each(function () {
-    amount_elements++;
+    compare_table_amount_elements++;
     arr.push(parseFloat($(this).css("height")));
+  });
+
+  //подсчитаем количество товаров
+  $(".compare-table-body").find(".product-item").each(function () {
+    compare_table_amount_items++;
   });
 
   //узнаем высоту наибольшего заголовка среди всех блоков с товарами
@@ -504,6 +511,40 @@ function compareTableFixHeight() {
   $(".compare-table-aside-parameters").find(".compare-table-aside-parameters__parameter-name").each(function () {
     $(this).css("height", arr[j]);
     j++;
+  });
+}
+
+function compareTableParametersDiff() {
+  var arr_diff = [];
+
+  for (var i = 1; i < compare_table_amount_elements; i++) {
+    var temp_value = $(".compare-table-body").find(".owl-item:nth-child(1) .product-item-info-block:nth-child(" + i + ")").text();
+
+    for (var j = 2; j < compare_table_amount_items; j++) {
+      if (temp_value != $(".compare-table-body").find(".owl-item:nth-child(" + j + ") .product-item-info-block:nth-child(" + i + ")").text()) {
+        break;
+      } else if (j == (compare_table_amount_items - 1)) {
+        arr_diff.push(i);
+      }
+    }
+  }
+
+  $(".compare-table-aside-buttons__difference").click(function () {
+    $.each(arr_diff, function (i, value) {
+      $(".compare-table-body").find(".owl-item").each(function () {
+        $(this).find(".product-item-info-block:nth-child(" + value + ")").addClass("identical-items");
+      });
+      $(".compare-table-aside-parameters .compare-table-aside-parameters__parameter-name:nth-child(" + value + ")").addClass("identical-items");
+    });
+  });
+
+  $(".compare-table-aside-buttons__all-parameters").click(function () {
+    $.each(arr_diff, function (i, value) {
+      $(".compare-table-body").find(".owl-item").each(function () {
+        $(this).find(".product-item-info-block:nth-child(" + value + ")").removeClass("identical-items");
+      });
+      $(".compare-table-aside-parameters .compare-table-aside-parameters__parameter-name:nth-child(" + value + ")").removeClass("identical-items");
+    });
   });
 }
 
@@ -544,16 +585,12 @@ $(document).ready(function ($) {
   /*********    СТРАНИЦА СРАВНЕНИЯ      ********/
   compareTableFixHeight();
   compareTableParametersMove();
-  // compare_table_width_column();
-  // compare_table_height_for_feature();
-  // compare_table_arrows();
-  // compare_table_resize();
-  // dragAndDrop();
+  compareTableParametersDiff();
 
-  $(window).on('resize', function () {
-    compareTableFixHeight();
-    compareTableParametersMove();
-  });
+  // $(window).on('resize', function () {
+  //   compareTableFixHeight();
+  //   compareTableParametersMove();
+  // });
 
 
   /*********   END: СТРАНИЦА СРАВНЕНИЯ   ********/

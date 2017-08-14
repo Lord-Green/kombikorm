@@ -522,6 +522,7 @@ $width-column-table: 360px;
       margin-left: auto;
       margin-right: auto;
       width: 100%;
+      cursor: pointer;
     }
 
     &__difference {
@@ -560,11 +561,16 @@ $width-column-table: 360px;
 
     &__parameter-name {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: center;
       width: 100%;
       padding: 10px;
       border-top: 1px solid #e7e7e7;
+      text-align: center;
+
+      &.identical-items {
+        display: none;
+      }
 
       p {
         font-size: 16px;
@@ -620,7 +626,6 @@ $width-column-table: 360px;
     }
 
     @media (min-width: $desktop) {
-      // width: $width-column-table;
       width: 100%;
     }
 
@@ -631,6 +636,7 @@ $width-column-table: 360px;
       justify-content: center;
       align-items: center;
       padding: 20px;
+      text-align: center;
 
       @media (max-width: 767px) {
         height: auto !important;
@@ -732,7 +738,8 @@ $width-column-table: 360px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
+        text-align: center;
 
         @media (max-width: 767px) {
           height: auto !important;
@@ -740,6 +747,10 @@ $width-column-table: 360px;
 
         @media (min-width: $tablet) {
           border-top: 1px solid #e7e7e7;
+        }
+
+        &.identical-items {
+          display: none;
         }
 
         &::before {
