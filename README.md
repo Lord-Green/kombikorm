@@ -1,4 +1,4 @@
-# ГЛАВНАЯ СТРАНИЦА
+# ГЛАВНАЯ 
 https://lord-green.github.io/kombikorm/public/main.html 
 
 # КАТАЛОГ ТОВАРОВ
