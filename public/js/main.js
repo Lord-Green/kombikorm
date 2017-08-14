@@ -550,11 +550,11 @@ $(document).ready(function ($) {
   // compare_table_resize();
   // dragAndDrop();
 
+  $(window).on('resize', function () {
+    compareTableFixHeight();
+    compareTableParametersMove();
+  });
 
 
-  // window.onresize = function () {
-  //   compare_table_resize();
-  //   // compare_table_width_column();
-  // }
   /*********   END: СТРАНИЦА СРАВНЕНИЯ   ********/
 });

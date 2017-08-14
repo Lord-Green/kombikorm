@@ -632,6 +632,10 @@ $width-column-table: 360px;
       align-items: center;
       padding: 20px;
 
+      @media (max-width: 767px) {
+        height: auto !important;
+      }
+
       &__img {
         width: 200px;
         height: 200px;
@@ -729,6 +733,10 @@ $width-column-table: 360px;
         flex-wrap: wrap;
         justify-content: center;
         align-items: baseline;
+
+        @media (max-width: 767px) {
+          height: auto !important;
+        }
 
         @media (min-width: $tablet) {
           border-top: 1px solid #e7e7e7;

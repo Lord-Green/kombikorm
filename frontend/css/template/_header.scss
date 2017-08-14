@@ -703,41 +703,23 @@
           padding-bottom: 23px;
           padding-left: 22px;
           padding-right: 22px;
+          flex-wrap: nowrap;
         }
 
         img {
           height: auto;
-          // max-width: 31vw;
-          // max-height: 31vw;
           max-width: 100px;
           max-height: 100px;
 
-          @media (min-width: 650px) {
-            // max-width: 200px;
-            // max-height: 200px;
-          }
-
           @media (min-width: $desktop) {
-            // max-width: 10vw;
-            // max-height: 10vw;
             margin-left: auto;
             margin-right: auto;
           }
 
           &.circle {
             border-radius: 50%;
-            // width: 31vw;
-            // height: 31vw;
-
-            // @media (min-width: 650px) {
-            //   width: 200px;
-            //   height: 200px;
-            // }
-
-            // @media (min-width: $desktop) {
-            //   width: 10vw;
-            //   height: 10vw;
-            // }
+            width: 100px;
+            height: 100px;
           }
         }
 
