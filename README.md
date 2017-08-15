@@ -1,20 +1,20 @@
-# ГЛАВНАЯ 
+## Главная
 https://lord-green.github.io/kombikorm/public/main.html 
 
-# КАТАЛОГ ТОВАРОВ
+## Каталог товаров
 https://lord-green.github.io/kombikorm/public/catalog-page.html
 
-# СРАВНЕНИЕ ТОВАРОВ
+## Таблица сравнения товаров
 https://lord-green.github.io/kombikorm/public/main.html 
 
-# СТРАНИЦА КАТЕГОРИЙ
+## Страница категорий
 https://lord-green.github.io/kombikorm/public/catalog.html 
 
-# СТРАНИЦА ТОВАРА
+## Страница товара
 https://lord-green.github.io/kombikorm/public/product.html 
 
-# СТРАНИЦА ЗАКАЗА
+## Страница заказа
 https://lord-green.github.io/kombikorm/public/order.html 
 
-# КОНТЕНТНАЯ СТРАНИЦА
+## Контентная страница
 https://lord-green.github.io/kombikorm/public/test.html
