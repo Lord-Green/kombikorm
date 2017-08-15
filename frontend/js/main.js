@@ -65,7 +65,9 @@ function menu_all_products() {
   $(".header .all-product > a").click(function () {
     if (!$(".header .all-product").hasClass('active')) {
       $(".header .all-product .menu").css("max-height", "none");
+      $(".header .all-product .menu").css("overflow", "auto");
       $(".header .all-product .fon").css("display", "block");
+      // $("html").css('overflow', 'hidden');
       $(".header .all-product").addClass('active');
 
       $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -80,6 +82,7 @@ function menu_all_products() {
     } else {
       $(".header .all-product .menu").css("max-height", "0");
       $(".header .all-product .fon").css("display", "none");
+      $('html').css('overflow-y', 'auto');
       $(".header .all-product").removeClass('active');
 
 
@@ -117,11 +120,14 @@ function menu_gamburger() {
     if (!$(".header .top-menu").hasClass('active')) {
       $('.header .top-menu nav').css('display', 'flex');
       $(".header .top-menu").addClass('active');
+      $("html").css('overflow', 'hidden');
+      $('.header .top-menu nav').css('overflow', 'auto');
     }
   });
   $('.header .top-menu nav .close .button').click(function () {
     if ($(".header .top-menu").hasClass('active')) {
       $('.header .top-menu nav').css('display', 'none');
+      $('html').css('overflow-y', 'auto');
       $(".header .top-menu").removeClass('active');
     }
   });
