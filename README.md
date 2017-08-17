@@ -5,7 +5,7 @@ https://maxim-buslaev.github.io/kombikorm/public/main.html
 https://maxim-buslaev.github.io/kombikorm/public/catalog-page.html
 
 ## Таблица сравнения товаров
-https://maxim-buslaev.github.io/kombikorm/public/main.html 
+https://maxim-buslaev.github.io/kombikorm/public/compare.html 
 
 ## Страница категорий
 https://maxim-buslaev.github.io/kombikorm/public/catalog.html 
