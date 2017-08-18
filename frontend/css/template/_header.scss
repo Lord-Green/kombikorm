@@ -5,14 +5,10 @@
   padding-top: 3px;
 
   @media (min-width: $tablet) {
-    // position: relative;
     padding-top: 26px;
     padding-bottom: 20px;
     padding-right: 34px;
     padding-left: 34px;
-    // max-width: 95.58%;
-    // margin-left: auto;
-    // margin-right: auto;
   }
 
   @media (min-width: $desktop) {
@@ -21,7 +17,6 @@
   }
 
   @media (min-width: $big-desktop) {
-    // max-width: 1384px;
     max-width: $big-desktop;
     margin-left: auto;
     margin-right: auto;
@@ -56,7 +51,6 @@
 
     @media (min-width: $tablet) {
       margin: 0;
-      // max-width: 28%;
       max-width: 30%;
       margin-right: auto;
       font-size: 24px;
@@ -555,9 +549,6 @@
 
     @media (min-width: $tablet) {
       background-color: #ef562d;
-      // position: absolute;
-      // right: -21px;
-      // top: 100px;
       margin-left: auto;
       margin-right: -34px;
       order: 6;

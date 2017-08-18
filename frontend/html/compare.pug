@@ -26,7 +26,6 @@ mixin compare-table(data)
       +e.next
     +b.compare-table-aside
       +b.compare-table-aside-filters
-        //- +e.title Категория товаров
         form(action="").select
           label.label
           select.turnintodropdown_demo2
@@ -38,7 +37,8 @@ mixin compare-table(data)
             option Австралия
       +b.compare-table-aside-buttons
         +e.difference Различающиеся
-        +e.all-parameters Все параметры
+        +e.all-parameters.active Все параметры
+        +e.A(href="/compare_clear").compare-clear Удалить все товары
       +b.compare-table-aside-parameters
         each j in data.feature_index              
           +e.parameter-name
@@ -46,7 +46,7 @@ mixin compare-table(data)
     +b.compare-table-body.owl-carousel.compare-products-slider
       each i in data.items_index
         +b.product-item
-          +b.product-item-title
+          +b.product-item-title            
             +e.img
               +e.IMG(src='img/content/' + data.item_img)
             +e.P.title #{data.item_title[i]}
@@ -55,6 +55,7 @@ mixin compare-table(data)
               .title Цена:
               .value 6 890 руб.
             +e.buy(href="#") Купить
+            +e.close
           +b.product-item-info
             each j in data.feature_index              
               +b.product-item-info-block(data-label=data.item_feature[j])

@@ -465,9 +465,7 @@ function select_button() {
 }
 
 
-function compareTableParametersMove() {
-  $(".compare-table").find(".compare-table-aside-parameters").css("top", $(".compare-table-body").find(".product-item-title").css("height"));
-}
+
 
 function compareTableFixHeight() {
   var product_item = $(".compare-table-body .product-item"), temp_height, max_height_title = 0,
@@ -521,7 +519,9 @@ function compareTableFixHeight() {
 }
 
 function compareTableParametersDiff() {
-  var arr_diff = [];
+  var arr_diff = [],
+    button__diff = $(".compare-table-aside-buttons__difference"),
+    button__all_parameters = $(".compare-table-aside-buttons__all-parameters");
 
   for (var i = 1; i < compare_table_amount_elements; i++) {
     var temp_value = $(".compare-table-body").find(".owl-item:nth-child(1) .product-item-info-block:nth-child(" + i + ")").text();
@@ -535,22 +535,26 @@ function compareTableParametersDiff() {
     }
   }
 
-  $(".compare-table-aside-buttons__difference").click(function () {
+  button__diff.click(function () {
     $.each(arr_diff, function (i, value) {
       $(".compare-table-body").find(".owl-item").each(function () {
         $(this).find(".product-item-info-block:nth-child(" + value + ")").addClass("identical-items");
       });
       $(".compare-table-aside-parameters .compare-table-aside-parameters__parameter-name:nth-child(" + value + ")").addClass("identical-items");
     });
+    button__diff.addClass("active");
+    button__all_parameters.removeClass("active");
   });
 
-  $(".compare-table-aside-buttons__all-parameters").click(function () {
+  button__all_parameters.click(function () {
     $.each(arr_diff, function (i, value) {
       $(".compare-table-body").find(".owl-item").each(function () {
         $(this).find(".product-item-info-block:nth-child(" + value + ")").removeClass("identical-items");
       });
       $(".compare-table-aside-parameters .compare-table-aside-parameters__parameter-name:nth-child(" + value + ")").removeClass("identical-items");
     });
+    button__diff.removeClass("active");
+    button__all_parameters.addClass("active");
   });
 }
 
@@ -590,14 +594,6 @@ $(document).ready(function ($) {
 
   /*********    СТРАНИЦА СРАВНЕНИЯ      ********/
   compareTableFixHeight();
-  compareTableParametersMove();
   compareTableParametersDiff();
-
-  // $(window).on('resize', function () {
-  //   compareTableFixHeight();
-  //   compareTableParametersMove();
-  // });
-
-
   /*********   END: СТРАНИЦА СРАВНЕНИЯ   ********/
 });
