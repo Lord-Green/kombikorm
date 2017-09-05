@@ -16,9 +16,10 @@
 @import "pages/_order.scss";
 @import "pages/_product.scss";
 @import "pages/_compare.scss";
+@import "pages/_custom.scss";
 
-// html {
-//   @media (min-width: $desktop) {
-//     overflow: auto !important;
-//   }
-// }
+html {
+  @media (min-width: $desktop) {
+    overflow: auto !important;
+  }
+}
